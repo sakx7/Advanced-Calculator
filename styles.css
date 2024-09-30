@@ -31,22 +31,69 @@ body {
     margin: 0 auto;
 }
 
+
+#output {
+    display: flex;
+    background-color: #0b0b2e;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#main-latexdisplay {
+    display: flex;
+    flex-direction: column;
+    width: 58%; /* Adjust as needed */
+}
+
 #latexdisplay {
-    background-color: #000033;
-    border: 1px solid #2a2a6e;
-    border-radius: 5px;
+    background-color: #202060; /* Matching #set-keys1 background */
+    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
+    border-bottom: none; /* Remove bottom border */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     font-size: 1.5rem;
     color: #ffffff;
-    height: 355px;
+    height: 100px;
     width: 100%;
     max-width: 100%;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: normal;
     padding: 10px;
     box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+#error-holder {
+    background-color: #2A2A6E; /* Matching #latexdisplay background */
+    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
+    border-top: none; /* Remove top border */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+#ans {
+    background-color: #202060; /* Matching other elements */
+    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 42%; /* Complementary to main-latexdisplay width */
+    max-width: 100%;
 }
 
 #latexdisplay .MathJax {
@@ -55,6 +102,9 @@ body {
     width: 100%;
     text-align: center;
 }
+
+
+
 
 #export {
     display: flex;

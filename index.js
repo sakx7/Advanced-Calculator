@@ -2,13 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const keyinputs = document.getElementById('keyinputs');
     const latexDisplay = document.getElementById('latexdisplay');
 
-    const keyConfig = {
-        'Backspace': backSpace,
-        'ArrowLeft': moveBack,
-        'ArrowRight': moveForward,
-        ' ': addSpace,
-        'Enter': enter
-    };
+
+    let isFocused = false;
+    keyinputs.addEventListener('blur', function () {
+        isFocused = false;
+    });
+
 
     function debounce(func, wait) {
         let timeout;
@@ -58,24 +57,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function backSpace() {
+        
+        if (document.activeElement !== keyinputs) {
+            keyinputs.focus();
+            keyinputs.setSelectionRange(keyinputs.value.length, keyinputs.value.length);
+        } // auto-at-end
+        
         const start = keyinputs.selectionStart;
         const end = keyinputs.selectionEnd;
-
+    
         if (start !== end) {
             keyinputs.value = keyinputs.value.slice(0, start) + keyinputs.value.slice(end);
             keyinputs.setSelectionRange(start, start);
-        } else if (start > 0) {
+        } 
+        else if (start > 0) {
             keyinputs.value = keyinputs.value.slice(0, start - 1) + keyinputs.value.slice(start);
             keyinputs.setSelectionRange(start - 1, start - 1);
         }
-        debouncedUpdateLatexDisplay(keyinputs.value)
+    
+        debouncedUpdateLatexDisplay(keyinputs.value);
     }
+    
 
     function clearKeyInputs() {
         keyinputs.value = '';
         previousValue = '';
         debouncedUpdateLatexDisplay(keyinputs.value)
     }
+
+    const errorholder = document.getElementById('error-holder')
 
     function updateLatexDisplay(input) {
         let asciiMathToLatex = AMTparseAMtoTeX(input);
@@ -84,33 +94,44 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < asciiMathToLatex.length; i++) {
             const char = asciiMathToLatex[i];
             if (char === '+' || char === '-' || asciiMathToLatex.slice(i, i + 5) === '\\cdot') {
-                const operator = char === '\\' ? '\\cdot' : char;
+                const operator = asciiMathToLatex.slice(i, i + 5) === '\\cdot' ? '\\cdot' : char;
                 const operatorLength = operator.length;
                 const prev = i > 0 && /\S/.test(asciiMathToLatex[i - 1]);
                 const next = i + operatorLength < asciiMathToLatex.length && /\S/.test(asciiMathToLatex[i + operatorLength]);
                 const isFirstTerm = i === 0 || asciiMathToLatex[i - 1] === '=';
+                result.push(operator);
+                if (isFirstTerm && !(char === '-')) {result.push('\\,');}    
                 if (!isFirstTerm && (!prev || !next)) {
-                    if (prev) { result.push('\\;'); }
-                    result.push(operator);
-                    if (next) { result.push('\\;'); }
-                    i += operatorLength - 1;
-                    continue;
+                    if (prev) { result.push('\\,'); }
+                    if (next) { result.push('\\,'); }
                 }
+                i += operatorLength - 1;
+                continue;
             }
             result.push(char);
         }
-
         latexDisplay.innerHTML = `$$${result.join('')}$$`;
-        MathJax.typesetPromise([latexDisplay]).catch(function (err) {
+    // Use MathJax to typeset the LaTeX
+    MathJax.typesetPromise([latexDisplay])
+        .then(() => {
+            latexDisplay.scrollLeft = latexDisplay.scrollWidth; // Scroll to the right
+            
+            const errorElements = latexDisplay.querySelectorAll('.mjx-merror');
+            for (const errorElement of errorElements) {
+                const errorMessage = errorElement.getAttribute('data-mjx-merror');
+                console.log(errorMessage);
+            }
+        })
+        .catch((err) => {
             console.error("MathJax rendering failed: ", err);
+            latexDisplay.innerHTML = "Error rendering LaTeX: " + err.message;
         });
-    }
+}
 
     document.querySelectorAll('#keys button').forEach(button => {
-        button.addEventListener('click', function () {
-            console.log(`Button clicked: ${this.textContent}`);
-            const className = this.className;
-    
+        button.addEventListener('mousedown', function (event) {
+            event.preventDefault(); 
+            const className = this.className;    
             if (className.includes('clear')) {
                 clearKeyInputs();
             } else if (className.includes('backspace')) {
@@ -126,7 +147,11 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 appendToKeyInputs(this.textContent);
             }
-            keyinputs.focus();
+            if (!isFocused && !className.includes('clear')) {
+                keyinputs.focus();
+                isFocused = true;
+            }
+            
         });
     });
 
