@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const pos = keyinputs.selectionStart;
         keyinputs.value = keyinputs.value.slice(0, pos) + character + keyinputs.value.slice(pos);
         keyinputs.setSelectionRange(pos + character.length, pos + character.length);
+        debouncedUpdateLatexDisplay(keyinputs.value)
     }
 
     function moveBack() {
@@ -67,11 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
             keyinputs.value = keyinputs.value.slice(0, start - 1) + keyinputs.value.slice(start);
             keyinputs.setSelectionRange(start - 1, start - 1);
         }
+        debouncedUpdateLatexDisplay(keyinputs.value)
     }
 
     function clearKeyInputs() {
         keyinputs.value = '';
         previousValue = '';
+        debouncedUpdateLatexDisplay(keyinputs.value)
     }
 
     function updateLatexDisplay(input) {
@@ -98,17 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         latexDisplay.innerHTML = `$$${result.join('')}$$`;
-        MathJax.typesetPromise([latexDisplay]).then(() => {
-            latexDisplay.scrollLeft = latexDisplay.scrollWidth;
-        }).catch(function (err) {
+        MathJax.typesetPromise([latexDisplay]).catch(function (err) {
             console.error("MathJax rendering failed: ", err);
         });
     }
 
     document.querySelectorAll('#keys button').forEach(button => {
-        button.addEventListener('mousedown', event => event.preventDefault());
         button.addEventListener('click', function () {
+            console.log(`Button clicked: ${this.textContent}`);
             const className = this.className;
+    
             if (className.includes('clear')) {
                 clearKeyInputs();
             } else if (className.includes('backspace')) {
@@ -127,4 +129,5 @@ document.addEventListener("DOMContentLoaded", function () {
             keyinputs.focus();
         });
     });
+
 });
