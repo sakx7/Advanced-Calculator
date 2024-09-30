@@ -1,0 +1,344 @@
+@import 'simplebar/dist/simplebar.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e0e0ff;
+}
+
+#main {
+    background-color: #151533;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    min-width: 360px;
+    max-width: 800px;
+    width: 750px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#latexdisplay {
+    background-color: #000033;
+    border: 1px solid #2a2a6e;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    height: 355px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#latexdisplay .MathJax {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#export {
+    display: flex;
+    background-color: #0b0b2e;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#keyinputs {
+    width: 70%;
+    background-color: #202060;
+    padding: 10px;
+    border: 1px solid #2a2a6e;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    caret-color: white;
+}
+
+#keyinputs::selection {
+    background-color: #5555ff; /* or any color you prefer */
+    color: #ffffff; /* optional: to make selected text more readable */
+}
+
+.enter {
+    width: 30%;
+}
+
+#keys {
+    display: flex;
+    gap: 10px;
+    background-color: #0b0b2e;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#set-keys1, #set-keys2, #set-keys3 {
+    display: grid;
+    gap: 7px;
+    padding: 7px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+#set-keys1 {
+    grid-template-columns: repeat(4, 65px);
+    background-color: #202060;
+}
+
+#set-keys2 {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #202060;
+}
+
+#set-keys3 {
+    max-height: 208px;
+    min-width: 250px;
+    background-color: #202060;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#set-keys3 .simplebar-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 7px;
+    column-gap: 7px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#set-keys3 button {
+    width: 73px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#set-keys3 .MathJax {
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
+}
+
+.simplebar-content::before,
+.simplebar-content::after {
+    content: none !important;
+}
+
+#set-keys3 .simplebar-scrollbar::before {
+    background-color: #505080;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #2a2a6e;
+    color: #e0e0ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    max-height: 43px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333399;
+}
+
+.operator-btn {
+    background-color: #333399;
+}
+
+.operator-btn:hover {
+    background-color: #4d4db8;
+}
+
+.backspace {
+    grid-column: span 2;
+}
+
+.space {
+    grid-column: span 2;
+}
+
+.clear {
+    grid-column: span 2;
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#420000, #190000);
+    border-radius: 8px;
+    border-width: 0;
+    border: 1px solid #444;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 52px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.clear:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.clear:active {
+    outline: 0;
+}
+
+.enter {
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#000033, rgb(0, 0, 0));
+    border-radius: 8px;
+    border-width: 0;
+    border: 1px solid #2a2a6e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 52px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.enter:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.enter:active {
+    outline: 0;
+}
+
+@media (max-width: 420px) {
+    .enter {
+        height: 48px;
+    }
+}
+
+.back, .forward, .backspace, .enter, .space {
+    background-color: #3a3a8c;
+}
+
+.equals:hover, .back:hover, .forward:hover, .backspace:hover, .space:hover {
+    background-color: #4d4db8;
+}
+
+.backspace, .space {
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a3a8c;
+    color: #e0e0ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.backspace:hover, .space:hover {
+    background-color: #4d4db8;
+}
+
+.backspace img {
+    fill: white;
+    width: 30px;
+    height: 35px;
+}
+
+.space img {
+    fill: white;
+    width: 100px;
+    height: 40px;
+}
+
+.back, .forward {
+    max-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a3a8c;
+    color: #e0e0ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back:hover, .forward:hover {
+    background-color: #4d4db8;
+}
+
+.back img, .forward img {
+    fill: white;
+    width: 30px;
+    height: 35px;
+}
