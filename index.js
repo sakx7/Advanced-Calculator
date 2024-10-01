@@ -1,3 +1,5 @@
+import { enter } from './mathinput.js';
+
 document.addEventListener("DOMContentLoaded", function () {
     const keyinputs = document.getElementById('keyinputs');
     const latexDisplay = document.getElementById('latexdisplay');
@@ -17,19 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
-    let previousValue = keyinputs.value;  // Keep track of the previous value
+    let previousValue = keyinputs.value; 
     const debouncedUpdateLatexDisplay = debounce(updateLatexDisplay, 50);
 
     keyinputs.addEventListener('input', function () {
         if (keyinputs.value !== previousValue) {
-            previousValue = keyinputs.value;  // Update the previous value
-            debouncedUpdateLatexDisplay(previousValue);  // Update the LaTeX display
+            previousValue = keyinputs.value;
+            debouncedUpdateLatexDisplay(previousValue);
         }
     });
 
-    function enter() {
-        console.log(AMTparseAMtoTeX(keyinputs.value));
-    }
 
     function appendToKeyInputs(character) {
         const pos = keyinputs.selectionStart;
@@ -78,19 +77,16 @@ document.addEventListener("DOMContentLoaded", function () {
         debouncedUpdateLatexDisplay(keyinputs.value);
     }
     
-
     function clearKeyInputs() {
         keyinputs.value = '';
         previousValue = '';
         debouncedUpdateLatexDisplay(keyinputs.value)
     }
 
-    const errorholder = document.getElementById('error-holder')
-
+    let lastSuccessfulRender = ''; 
     function updateLatexDisplay(input) {
         let asciiMathToLatex = AMTparseAMtoTeX(input);
         let result = [];
-        
         for (let i = 0; i < asciiMathToLatex.length; i++) {
             const char = asciiMathToLatex[i];
             if (char === '+' || char === '-' || asciiMathToLatex.slice(i, i + 5) === '\\cdot') {
@@ -110,23 +106,39 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             result.push(char);
         }
-        latexDisplay.innerHTML = `$$${result.join('')}$$`;
-    // Use MathJax to typeset the LaTeX
-    MathJax.typesetPromise([latexDisplay])
-        .then(() => {
-            latexDisplay.scrollLeft = latexDisplay.scrollWidth; // Scroll to the right
-            
-            const errorElements = latexDisplay.querySelectorAll('.mjx-merror');
-            for (const errorElement of errorElements) {
-                const errorMessage = errorElement.getAttribute('data-mjx-merror');
-                console.log(errorMessage);
-            }
-        })
-        .catch((err) => {
-            console.error("MathJax rendering failed: ", err);
-            latexDisplay.innerHTML = "Error rendering LaTeX: " + err.message;
-        });
-}
+        const newContent = `$$${result.join('')}$$`;
+        latexDisplay.innerHTML = newContent;
+        MathJax.typesetPromise([latexDisplay])
+            .then(() => {
+                latexDisplay.scrollLeft = latexDisplay.scrollWidth;
+                const math = MathJax.startup.document.getMathItemsWithin(latexDisplay)[0];
+                if (math && math.root) {
+                    const errors = [];
+                    math.root.walkTree(node => {
+                        if (node.isKind('merror')) {
+                            errors.push(node.attributes.get('data-mjx-error') || 'Unknown error');
+                        }
+                    });
+                    if (errors.length > 0) {
+                        latexDisplay.innerHTML = `
+                            <div class="previous-content">${lastSuccessfulRender}</div>
+                            <div class="error">Error: ${errors.join(', ')}</div>
+                        `;                        
+                        MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
+                    } else {
+                        lastSuccessfulRender = newContent;
+                    }
+                }
+            })
+            .catch((err) => {
+                console.error("MathJax rendering failed: ", err);
+                latexDisplay.innerHTML = `
+                    <div class="previous-content">${lastSuccessfulRender}</div>
+                    <div class="error">Error rendering LaTeX: ${err.message}</div>
+                `;
+                MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
+            });
+        }
 
     document.querySelectorAll('#keys button').forEach(button => {
         button.addEventListener('mousedown', function (event) {
@@ -142,17 +154,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 moveForward();
             } else if (className.includes('space')) {
                 addSpace();
-            } else if (className.includes('enter')) {
-                enter();
             } else {
                 appendToKeyInputs(this.textContent);
             }
             if (!isFocused && !className.includes('clear')) {
                 keyinputs.focus();
                 isFocused = true;
-            }
-            
+            }     
         });
     });
+
+    const enterButton = document.querySelector('#export .enter');
+    enterButton.addEventListener('mousedown', function (event) {
+        event.preventDefault();
+        enter(keyinputs, latexDisplay);
+        if (!isFocused) {
+            keyinputs.focus();
+        }
+    });
+
+
 
 });

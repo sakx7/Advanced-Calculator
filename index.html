@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="\simplebar\dist\simplebar.css">
     <script src="simplebar/dist/simplebar.min.js"></script>
+    
+
+    <script src="setting.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <script src="asciimathml/ASCIIMathML.js"></script>
     <script src="asciimathml/LaTeXMathML.js"></script>
     <script src="asciimathml/asciimath-based/ASCIIMathTeXImg.js"></script>
@@ -18,10 +23,7 @@
         <div id="main">
             
             <div id="output">
-                <div id="main-latexdisplay">    
-                    <div id="latexdisplay"></div>
-                    <div id="error-holder"></div>
-                </div>
+                <div id="latexdisplay"></div>
                 <div id="ans"></div>
             </div>
             
@@ -86,7 +88,8 @@
                 </div>
             </div>
         </div>
+        <script type="module" src="mathinput.js"></script>
         <script type="module" src="simple.js"></script>
-        <script src="index.js" defer></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>

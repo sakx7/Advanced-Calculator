@@ -40,60 +40,64 @@ body {
     border-radius: 10px;
 }
 
-#main-latexdisplay {
-    display: flex;
-    flex-direction: column;
-    width: 58%; /* Adjust as needed */
-}
 
 #latexdisplay {
-    background-color: #202060; /* Matching #set-keys1 background */
-    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
-    border-bottom: none; /* Remove bottom border */
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; 
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    font-size: 1.5rem;
-    color: #ffffff;
-    height: 100px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    background-color: #202060;
+    border: 1px solid #2a2a6e;
+    border-radius: 5px;
+    height: 200px;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    display: flex;
     justify-content: center;
     align-items: center;
     white-space: normal;
     padding: 10px;
-    box-sizing: border-box;
     margin-bottom: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    color: #d493ff;
+    position: relative;
 }
 
-#error-holder {
-    background-color: #2A2A6E; /* Matching #latexdisplay background */
-    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
-    border-top: none; /* Remove top border */
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: #ffffff;
+
+#latexdisplay .previous-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.8;
+    filter: blur(4px);
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#latexdisplay .error {
+    position: relative;
+    z-index: 1;
+    color: #c6c6ec;
+    /* font-family: 'Advent Pro'; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 10px;
-    box-sizing: border-box;
-    margin-top: 0;
-}
-
-#ans {
-    background-color: #202060; /* Matching other elements */
-    border: 1px solid #2a2a6e; /* Matching #keyinputs border */
     border-radius: 5px;
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding: 10px;
-    box-sizing: border-box;
-    width: 42%; /* Complementary to main-latexdisplay width */
-    max-width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 #latexdisplay .MathJax {
@@ -101,9 +105,19 @@ body {
     max-width: 100%;
     width: 100%;
     text-align: center;
+    color: #ffffff;
 }
 
-
+#ans {
+    background-color: #202060;
+    border: 1px solid #2a2a6e;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 10px;
+    width: 42%;
+    max-width: 100%;
+}
 
 
 #export {
@@ -115,7 +129,7 @@ body {
 }
 
 #keyinputs {
-    width: 70%;
+    width: 100%;
     background-color: #202060;
     padding: 10px;
     border: 1px solid #2a2a6e;
@@ -126,12 +140,12 @@ body {
 }
 
 #keyinputs::selection {
-    background-color: #5555ff; /* or any color you prefer */
-    color: #ffffff; /* optional: to make selected text more readable */
+    background-color: #5555ff;
+    color: #ffffff;
 }
 
 .enter {
-    width: 30%;
+    width: 20%;
 }
 
 #keys {
