@@ -8,7 +8,6 @@ git commit -m "Your commit message"
 git push -u origin main
 ```
 
-'''markdown
 ### To do list
 
 ## More buttons
@@ -23,4 +22,3 @@ git push -u origin main
 - etc
 
 ## Parameter input
-'''
