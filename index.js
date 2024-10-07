@@ -1,8 +1,11 @@
+
 import { enter } from './mathinput.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const keyinputs = document.getElementById('keyinputs');
     const latexDisplay = document.getElementById('latexdisplay');
+    const paramater = document.getElementById('parameters')
 
 
     let isFocused = false;
@@ -83,9 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         debouncedUpdateLatexDisplay(keyinputs.value)
     }
 
-    let lastSuccessfulRender = ''; 
-    function updateLatexDisplay(input) {
-        let asciiMathToLatex = AMTparseAMtoTeX(input);
+    function processLatexString(asciiMathToLatex) {
         let result = [];
         for (let i = 0; i < asciiMathToLatex.length; i++) {
             const char = asciiMathToLatex[i];
@@ -106,8 +107,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             result.push(char);
         }
-        const newContent = `$$${result.join('')}$$`;
+        return result.join('');
+    }
+    
+    let lastSuccessfulRender = ''; 
+    function updateLatexDisplay(input) {
+        let asciiMathToLatex = AMTparseAMtoTeX(input);
+        const processedLatex = processLatexString(asciiMathToLatex);
+        const newContent = `$$${processedLatex}$$`;
         latexDisplay.innerHTML = newContent;
+        enter(keyinputs.value, paramater.value, newContent);
         MathJax.typesetPromise([latexDisplay])
             .then(() => {
                 latexDisplay.scrollLeft = latexDisplay.scrollWidth;
@@ -123,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         latexDisplay.innerHTML = `
                             <div class="previous-content">${lastSuccessfulRender}</div>
                             <div class="error">Error: ${errors.join(', ')}</div>
-                        `;                        
+                        `;
                         MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
                     } else {
                         lastSuccessfulRender = newContent;
@@ -138,7 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
             });
-        }
+    }
+    
 
     document.querySelectorAll('#keys button').forEach(button => {
         button.addEventListener('mousedown', function (event) {
@@ -167,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const enterButton = document.querySelector('#export .enter');
     enterButton.addEventListener('mousedown', function (event) {
         event.preventDefault();
-        enter(keyinputs, latexDisplay);
+        enter(keyinputs.value, paramater.value, lastSuccessfulRender);
         if (!isFocused) {
             keyinputs.focus();
         }
