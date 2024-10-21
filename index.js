@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const latexDisplay = document.getElementById('latexdisplay');
     const paramater = document.getElementById('parameters')
 
-
-
     let isFocused = false;
     keyinputs.addEventListener('blur', function () {
         isFocused = false;
@@ -24,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let previousValue = keyinputs.value; 
-    const debouncedUpdateLatexDisplay = debounce(updateLatexDisplay, 50);
+    const debouncedUpdateLatexDisplay = debounce(updateLatexDisplay, 100);
 
     keyinputs.addEventListener('input', function () {
         if (keyinputs.value !== previousValue) {
