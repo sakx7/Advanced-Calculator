@@ -54,8 +54,6 @@ body {
     overflow-y: hidden;
     justify-content: center;
     align-items: center;
-    white-space: normal;
-    padding: 10px;
     margin-bottom: 0;
     font-family: "Courier New", Courier, monospace;
     font-size: 1.5em;
@@ -64,7 +62,6 @@ body {
     color: #d493ff;
     position: relative;
 }
-
 
 #latexdisplay .previous-content {
     position: absolute;
@@ -86,8 +83,7 @@ body {
     position: relative;
     z-index: 1;
     color: #c6c6ec;
-    /* font-family: 'Advent Pro'; */
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -107,6 +103,45 @@ body {
     text-align: center;
     color: #ffffff;
 }
+#latexdisplay > * {
+    padding: 10px;
+}
+
+.scrollable-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Maintain vertical stacking */
+    width: 100%; /* Adjust width as necessary */
+    background-color: #202060; /* Same background color */
+    border: 1px solid #2a2a6e; /* Match border style */
+    border-radius: 5px; /* Consistent border radius */
+    height: 200px; /* Maintain height */
+    max-width: 100%; /* Ensures responsiveness */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-bottom: 0; /* No margin at the bottom */
+    font-family: "Courier New", Courier, monospace; /* Font styling */
+    font-size: 1.5em; /* Font size */
+    letter-spacing: 0.05em; /* Letter spacing */
+    line-height: 1.2em; /* Line height */
+    color: #d493ff; /* Text color */
+    position: relative; /* Position for absolute children */
+}
+.simplebar-scrollable-x {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    white-space: nowrap; /* Prevent line breaks, keep content in a single line */
+}
+
+.scrollable-content > * {
+    padding: 10px; /* Padding around child elements */
+}
+.simplebar-scrollbar.simplebar-scrollbar-x {
+    height: 1px; /* Height of horizontal scrollbar */
+}
+
+
 
 #ans {
     background-color: #202060;

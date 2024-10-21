@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const paramater = document.getElementById('parameters')
 
 
+
     let isFocused = false;
     keyinputs.addEventListener('blur', function () {
         isFocused = false;
@@ -109,18 +110,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return result.join('');
     }
+
+    let lastSuccessfulRender = '';
     
-    let lastSuccessfulRender = ''; 
     function updateLatexDisplay(input) {
+        if (input.trim() === '') {
+            latexDisplay.innerHTML = ''; 
+            lastSuccessfulRender = '';
+            return;
+        }
+    
+        // Convert ASCII math to LaTeX
         let asciiMathToLatex = AMTparseAMtoTeX(input);
-        const processedLatex = processLatexString(asciiMathToLatex);
-        const newContent = `$$${processedLatex}$$`;
-        latexDisplay.innerHTML = newContent;
-        enter(keyinputs.value, paramater.value, newContent);
-        MathJax.typesetPromise([latexDisplay])
+        const processedLatex = processLatexString(asciiMathToLatex); // Process the LaTeX string
+        const newContent = `<mjx-container>$$${processedLatex}$$</mjx-container>`; // Wrap the LaTeX in <mjx-container>
+    
+        // Create a div to wrap the new content
+        const contentWrapper = document.createElement('div');
+        contentWrapper.classList.add('scrollable-content'); // Add a class for styling or targeting
+        contentWrapper.innerHTML = newContent; // Set the new content
+    
+        // Clear previous content and append the new content
+        latexDisplay.innerHTML = ''; // Clear previous content
+        latexDisplay.appendChild(contentWrapper); // Append new content
+    
+        // Initialize SimpleBar on the new content wrapper
+        new SimpleBar(contentWrapper);
+    
+        // Use MathJax to render the LaTeX
+        MathJax.typesetPromise([contentWrapper])
             .then(() => {
-                latexDisplay.scrollLeft = latexDisplay.scrollWidth;
-                const math = MathJax.startup.document.getMathItemsWithin(latexDisplay)[0];
+                const math = MathJax.startup.document.getMathItemsWithin(contentWrapper)[0]; // Get rendered math item
+                let logMessages = [];
+    
                 if (math && math.root) {
                     const errors = [];
                     math.root.walkTree(node => {
@@ -128,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             errors.push(node.attributes.get('data-mjx-error') || 'Unknown error');
                         }
                     });
+    
                     if (errors.length > 0) {
                         latexDisplay.innerHTML = `
                             <div class="previous-content">${lastSuccessfulRender}</div>
@@ -135,7 +158,47 @@ document.addEventListener("DOMContentLoaded", function () {
                         `;
                         MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
                     } else {
+                        const mjxMathElement = latexDisplay.querySelector('mjx-math');
+                        const mathWidth = mjxMathElement ? mjxMathElement.offsetWidth : 0;
+                        const displayWidth = latexDisplay.offsetWidth;
+    
+                        logMessages.push({ message: 'Math Width', data: mathWidth });
+                        logMessages.push({ message: 'Display Width', data: displayWidth });
+    
+                        const cursorPosition = keyinputs.selectionStart;
+                        const isTypingAtEnd = cursorPosition === input.length;
+                        const simplebarContentWrapper = document.querySelector('.simplebar-content-wrapper');
+
+                        if (isTypingAtEnd) {
+                            simplebarContentWrapper.scrollLeft = simplebarContentWrapper.scrollWidth;
+                        } else {
+                            const currentScrollPosition = simplebarContentWrapper.scrollLeft;
+                            const contentWidth = simplebarContentWrapper.scrollWidth;
+                            const displayWidth = simplebarContentWrapper.clientWidth;
+    
+                            if (contentWidth > displayWidth) {
+                                const threshold = displayWidth * 0.20;
+                                const estimatedCursorPosition = (cursorPosition / input.length) * contentWidth;
+                                const cursorViewPosition = estimatedCursorPosition - currentScrollPosition;
+                                let scrollAdjustment = 0;
+    
+                                if (cursorViewPosition < threshold) {
+                                    scrollAdjustment = cursorViewPosition - threshold;
+                                } else if (cursorViewPosition > displayWidth - threshold) {
+                                    scrollAdjustment = cursorViewPosition - (displayWidth - threshold);
+                                }
+                                if (scrollAdjustment !== 0) {
+                                    simplebarContentWrapper.scrollBy({
+                                        left: scrollAdjustment,
+                                        behavior: 'auto'
+                                    });
+                                }
+                            }
+                        }     
                         lastSuccessfulRender = newContent;
+                        logMessages.forEach(log => {
+                            console.log(`${log.message}:`, log.data);
+                        });                    
                     }
                 }
             })
@@ -149,6 +212,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
     
+    
+
 
     document.querySelectorAll('#keys button').forEach(button => {
         button.addEventListener('mousedown', function (event) {
@@ -177,10 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const enterButton = document.querySelector('#export .enter');
     enterButton.addEventListener('mousedown', function (event) {
         event.preventDefault();
-        enter(keyinputs.value, paramater.value, lastSuccessfulRender);
         if (!isFocused) {
             keyinputs.focus();
         }
+        enter(keyinputs.value, paramater.value, lastSuccessfulRender); // sends to mathinput.js for API
     });
 
 
