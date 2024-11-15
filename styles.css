@@ -16,6 +16,14 @@ body {
     color: #e0e0ff;
 }
 
+#calc{
+    display: flex;
+    background-color: #0b0b2e;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 #main {
     background-color: #151533;
     border-radius: 10px;
@@ -32,23 +40,58 @@ body {
 }
 
 
+#ans {
+    background-color: #151533;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    min-width: 360px;
+    max-width: 800px;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+#ansoutput {
+    display: flex;
+    height: 100%;
+    background-color: #0b0b2e;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#ans1 {
+    background-color: #202060;
+    border: 1px solid #2a2a6e;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 10px;
+    width: 450px;
+    max-width: 100%;
+}
+
+
+
 #output {
     display: flex;
+    min-height: 130px;
     background-color: #0b0b2e;
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
-
 #latexdisplay {
     display: flex;
     flex-direction: column;
-    width: 58%;
+    width: 100%;
     background-color: #202060;
     border: 1px solid #2a2a6e;
     border-radius: 5px;
-    height: 200px;
+    height: 100%;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -56,8 +99,8 @@ body {
     align-items: center;
     margin-bottom: 0;
     font-family: "Courier New", Courier, monospace;
-    font-size: 1.5em;
-    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    letter-spacing: 0.02em;
     line-height: 1.2em;
     color: #d493ff;
     position: relative;
@@ -84,10 +127,12 @@ body {
     z-index: 1;
     color: #c6c6ec;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* Center multi-line text */
     padding: 10px;
+    width: 100%; /* Ensure it spans the parent */
     border-radius: 5px;
     font-size: 1rem;
     background: transparent;
@@ -108,56 +153,49 @@ body {
 }
 
 .scrollable-content {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Maintain vertical stacking */
-    width: 100%; /* Adjust width as necessary */
-    background-color: #202060; /* Same background color */
-    border: 1px solid #2a2a6e; /* Match border style */
-    border-radius: 5px; /* Consistent border radius */
-    height: 200px; /* Maintain height */
-    max-width: 100%; /* Ensures responsiveness */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    margin-bottom: 0; /* No margin at the bottom */
-    font-family: "Courier New", Courier, monospace; /* Font styling */
-    font-size: 1.5em; /* Font size */
-    letter-spacing: 0.05em; /* Letter spacing */
-    line-height: 1.2em; /* Line height */
-    color: #d493ff; /* Text color */
-    position: relative; /* Position for absolute children */
-}
-.simplebar-scrollable-x {
-    overflow-x: auto; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
-    white-space: nowrap; /* Prevent line breaks, keep content in a single line */
-}
-
-.scrollable-content > * {
-    padding: 10px; /* Padding around child elements */
-}
-.simplebar-scrollbar.simplebar-scrollbar-x {
-    height: 1px; /* Height of horizontal scrollbar */
-}
-
-
-
-#ans {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: #202060;
     border: 1px solid #2a2a6e;
     border-radius: 5px;
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding: 10px;
-    width: 42%;
     max-width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    color: #d493ff;
+    position: relative;
+}
+
+.simplebar-scrollable-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+
+.scrollable-content > * {
+    padding: 10px;
 }
 
 
-
-
-
+.simplebar-scrollbar::before {
+    height: 10px !important;
+    min-height: 10px !important;
+    max-height: 10px !important;
+    background-color: #d493ff !important;
+    border-radius: 5px !important;
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
 
 
 
