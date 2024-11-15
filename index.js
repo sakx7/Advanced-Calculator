@@ -160,8 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         const mathWidth = mjxMathElement ? mjxMathElement.offsetWidth : 0;
                         const displayWidth = latexDisplay.offsetWidth;
     
-                        logMessages.push({ message: 'Math Width', data: mathWidth });
-                        logMessages.push({ message: 'Display Width', data: displayWidth });
+                        // logMessages.push({ message: 'Math Width', data: mathWidth });
+                        // logMessages.push({ message: 'Display Width', data: displayWidth });
     
                         const cursorPosition = keyinputs.selectionStart;
                         const isTypingAtEnd = cursorPosition === input.length;
@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         if (isTypingAtEnd) {
                             simplebarContentWrapper.scrollLeft = simplebarContentWrapper.scrollWidth;
+                            showScrollbarTemporarily();
                         } else {
                             const currentScrollPosition = simplebarContentWrapper.scrollLeft;
                             const contentWidth = simplebarContentWrapper.scrollWidth;
@@ -209,10 +210,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 MathJax.typesetPromise([latexDisplay.querySelector('.previous-content')]);
             });
     }
-    
-    
 
+    
+    let scrollbarTimeoutId;
 
+    function showScrollbarTemporarily() {
+        const scrollbar = document.querySelector('.simplebar-scrollbar');
+        if (scrollbar) {
+            if (scrollbarTimeoutId) {
+                clearTimeout(scrollbarTimeoutId);
+                scrollbar.classList.remove('simplebar-visible');
+            }
+            void scrollbar.offsetWidth;
+            scrollbar.classList.add('simplebar-visible');
+            scrollbarTimeoutId = setTimeout(() => {
+                scrollbar.classList.remove('simplebar-visible');
+            }, 1000);
+        }
+    }
+    
+    document.addEventListener('keydown', function(event) {
+        if (!isFocused) {
+            keyinputs.focus();
+            isFocused = true;
+        }        
+    });
+    
+        
     document.querySelectorAll('#keys button').forEach(button => {
         button.addEventListener('mousedown', function (event) {
             event.preventDefault(); 
