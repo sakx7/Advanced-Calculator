@@ -173,22 +173,21 @@ document.addEventListener("DOMContentLoaded", function () {
                         } else {
                             const currentScrollPosition = simplebarContentWrapper.scrollLeft;
                             const contentWidth = simplebarContentWrapper.scrollWidth;
-                            const displayWidth = simplebarContentWrapper.clientWidth;
-    
+                            const displayWidth = simplebarContentWrapper.clientWidth;    
                             if (contentWidth > displayWidth) {
                                 const threshold = displayWidth * 0.20;
                                 const estimatedCursorPosition = (cursorPosition / input.length) * contentWidth;
                                 const cursorViewPosition = estimatedCursorPosition - currentScrollPosition;
-                                let scrollAdjustment = 0;
-    
                                 if (cursorViewPosition < threshold) {
-                                    scrollAdjustment = cursorViewPosition - threshold;
+                                    const targetScrollPosition = Math.max(0, estimatedCursorPosition - threshold);
+                                    simplebarContentWrapper.scrollTo({
+                                        left: targetScrollPosition,
+                                        behavior: 'auto'
+                                    });
                                 } else if (cursorViewPosition > displayWidth - threshold) {
-                                    scrollAdjustment = cursorViewPosition - (displayWidth - threshold);
-                                }
-                                if (scrollAdjustment !== 0) {
-                                    simplebarContentWrapper.scrollBy({
-                                        left: scrollAdjustment,
+                                    const targetScrollPosition = Math.min(contentWidth - displayWidth, estimatedCursorPosition + threshold);
+                                    simplebarContentWrapper.scrollTo({
+                                        left: targetScrollPosition,
                                         behavior: 'auto'
                                     });
                                 }
