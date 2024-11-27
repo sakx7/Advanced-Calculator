@@ -148,6 +148,7 @@ body {
     text-align: center;
     color: #ffffff;
 }
+
 mjx-container[jax="CHTML"][display="true"] mjx-math {
     padding: 10px;
 }
@@ -341,18 +342,19 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
     text-align: center;
 }
 
-.simplebar-content::before,
+.simplebar-content::before{
+    opacity: 0;
+    content: none !important; 
+}
 .simplebar-content::after {
     content: none !important;
 }
-
 #set-keys3 .simplebar-scrollbar::before {
     background-color: #505080;
     border-radius: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.5s ease-out;
 }
-
 #set-keys3 .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1;
 }

@@ -58,15 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function backSpace() {
-        
         if (document.activeElement !== keyinputs) {
             keyinputs.focus();
             keyinputs.setSelectionRange(keyinputs.value.length, keyinputs.value.length);
         } // auto-at-end
-        
         const start = keyinputs.selectionStart;
         const end = keyinputs.selectionEnd;
-    
         if (start !== end) {
             keyinputs.value = keyinputs.value.slice(0, start) + keyinputs.value.slice(end);
             keyinputs.setSelectionRange(start, start);
@@ -75,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
             keyinputs.value = keyinputs.value.slice(0, start - 1) + keyinputs.value.slice(start);
             keyinputs.setSelectionRange(start - 1, start - 1);
         }
-    
         debouncedUpdateLatexDisplay(keyinputs.value);
     }
     
@@ -89,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let result = [];
         for (let i = 0; i < asciiMathToLatex.length; i++) {
             const char = asciiMathToLatex[i];
-            if (char === '+' || char === '-' || asciiMathToLatex.slice(i, i + 5) === '\\cdot') {
-                const operator = asciiMathToLatex.slice(i, i + 5) === '\\cdot' ? '\\cdot' : char;
+            if (char === '+' || char === '-' || asciiMathToLatex.slice(i,i+5)==='\\cdot') {
+                const operator = asciiMathToLatex.slice(i,i+5)==='\\cdot'?'\\cdot':char;
                 const operatorLength = operator.length;
                 const prev = i > 0 && /\S/.test(asciiMathToLatex[i - 1]);
                 const next = i + operatorLength < asciiMathToLatex.length && /\S/.test(asciiMathToLatex[i + operatorLength]);
@@ -110,35 +106,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let lastSuccessfulRender = '';
-    
+    let rawLatexExpression = ''
     function updateLatexDisplay(input) {
         if (input.trim() === '') {
             latexDisplay.innerHTML = ''; 
             lastSuccessfulRender = '';
+            rawLatexExpression = ''; 
             return;
         }
-    
-        // Convert ASCII math to LaTeX
         let asciiMathToLatex = AMTparseAMtoTeX(input);
-        const processedLatex = processLatexString(asciiMathToLatex); // Process the LaTeX string
-        const newContent = `<mjx-container>$$${processedLatex}$$</mjx-container>`; // Wrap the LaTeX in <mjx-container>
-    
-        // Create a div to wrap the new content
+        const processedLatex = processLatexString(asciiMathToLatex);
+        
+        rawLatexExpression = processedLatex;  
+        
+        const newContent = `<mjx-container>$$${processedLatex}$$</mjx-container>`;
         const contentWrapper = document.createElement('div');
-        contentWrapper.classList.add('scrollable-content'); // Add a class for styling or targeting
-        contentWrapper.innerHTML = newContent; // Set the new content
-    
-        // Clear previous content and append the new content
-        latexDisplay.innerHTML = ''; // Clear previous content
-        latexDisplay.appendChild(contentWrapper); // Append new content
-    
-        // Initialize SimpleBar on the new content wrapper
+        contentWrapper.classList.add('scrollable-content');
+        contentWrapper.innerHTML = newContent;
+        latexDisplay.innerHTML = '';
+        latexDisplay.appendChild(contentWrapper);
         new SimpleBar(contentWrapper);
-    
-        // Use MathJax to render the LaTeX
         MathJax.typesetPromise([contentWrapper])
             .then(() => {
-                const math = MathJax.startup.document.getMathItemsWithin(contentWrapper)[0]; // Get rendered math item
+                const math = MathJax.startup.document.getMathItemsWithin(contentWrapper)[0];
                 let logMessages = [];
     
                 if (math && math.root) {
@@ -175,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             const contentWidth = simplebarContentWrapper.scrollWidth;
                             const displayWidth = simplebarContentWrapper.clientWidth;    
                             if (contentWidth > displayWidth) {
-                                const threshold = displayWidth * 0.20;
+                                const threshold = displayWidth * 0.05;
                                 const estimatedCursorPosition = (cursorPosition / input.length) * contentWidth;
                                 const cursorViewPosition = estimatedCursorPosition - currentScrollPosition;
                                 if (cursorViewPosition < threshold) {
@@ -234,6 +224,29 @@ document.addEventListener("DOMContentLoaded", function () {
             isFocused = true;
         }        
     });
+
+
+
+    function applyStyles(element) {
+        if (element.matches('mjx-container[jax="CHTML"][display="true"] mjx-math')) {
+            element.style.padding = '10px';
+        }
+    }
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        applyStyles(node);
+                        node.querySelectorAll('mjx-container[jax="CHTML"][display="true"] mjx-math').forEach(applyStyles);
+                    }
+                });
+            }
+        });
+    });
+    document.querySelectorAll('mjx-container[jax="CHTML"][display="true"] mjx-math').forEach(applyStyles);
+    observer.observe(document.body, { childList: true, subtree: true });
+
     
         
     document.querySelectorAll('#keys button').forEach(button => {
@@ -266,9 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isFocused) {
             keyinputs.focus();
         }
-        enter(keyinputs.value, paramater.value, lastSuccessfulRender); // sends to mathinput.js for API
+        enter(keyinputs.value, paramater.value, rawLatexExpression); // sends to mathinput.js
     });
-
-
-
 });

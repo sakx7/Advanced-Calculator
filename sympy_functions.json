@@ -1,0 +1,4092 @@
+[
+  {
+    "name": "E1",
+    "description": "Classical case of the generalized exponential integral",
+    "related_terms": [
+      "classical",
+      "case",
+      "generalized"
+    ]
+  },
+  {
+    "name": "Eijk",
+    "description": "Represent the Levi-Civita symbol",
+    "related_terms": [
+      "represent",
+      "symbol"
+    ]
+  },
+  {
+    "name": "GramSchmidt",
+    "description": "Apply the Gram-Schmidt process to a set of vectors",
+    "related_terms": [
+      "apply",
+      "process",
+      "set"
+    ]
+  },
+  {
+    "name": "LC",
+    "description": "Return the leading coefficient of ``f``",
+    "related_terms": [
+      "return",
+      "leading",
+      "coefficient"
+    ]
+  },
+  {
+    "name": "LM",
+    "description": "Return the leading monomial of ``f``",
+    "related_terms": [
+      "return",
+      "leading",
+      "monomial"
+    ]
+  },
+  {
+    "name": "LT",
+    "description": "Return the leading term of ``f``",
+    "related_terms": [
+      "return",
+      "leading",
+      "term"
+    ]
+  },
+  {
+    "name": "N",
+    "description": "Calls x",
+    "related_terms": [
+      "calls",
+      "x"
+    ]
+  },
+  {
+    "name": "POSform",
+    "description": "The POSform function uses simplified_pairs and a redundant-group\neliminating algorithm to convert the list of all input combinations\nthat generate '1' (the minterms) into the smallest product-of-sums form",
+    "related_terms": [
+      "posform",
+      "function",
+      "uses"
+    ]
+  },
+  {
+    "name": "SOPform",
+    "description": "The SOPform function uses simplified_pairs and a redundant group-\neliminating algorithm to convert the list of all input combos that\ngenerate '1' (the minterms) into the smallest sum-of-products form",
+    "related_terms": [
+      "sopform",
+      "function",
+      "uses"
+    ]
+  },
+  {
+    "name": "Ynm_c",
+    "description": "Conjugate spherical harmonics defined as",
+    "related_terms": [
+      "conjugate",
+      "spherical",
+      "harmonics"
+    ]
+  },
+  {
+    "name": "__sympy_debug",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "abundance",
+    "description": "Returns the difference between the sum of the positive\nproper divisors of a number and the number",
+    "related_terms": [
+      "number",
+      "returns",
+      "difference"
+    ]
+  },
+  {
+    "name": "all_roots",
+    "description": "Returns the real and complex roots of ``f`` with multiplicities",
+    "related_terms": [
+      "returns",
+      "real",
+      "complex"
+    ]
+  },
+  {
+    "name": "apart",
+    "description": "Compute partial fraction decomposition of a rational function",
+    "related_terms": [
+      "compute",
+      "partial",
+      "fraction"
+    ]
+  },
+  {
+    "name": "apart_list",
+    "description": "Compute partial fraction decomposition of a rational function\nand return the result in structured form",
+    "related_terms": [
+      "compute",
+      "partial",
+      "fraction"
+    ]
+  },
+  {
+    "name": "apply_finite_diff",
+    "description": "Calculates the finite difference approximation of\nthe derivative of requested order at ``x0`` from points\nprovided in ``x_list`` and ``y_list``",
+    "related_terms": [
+      "calculates",
+      "finite",
+      "difference"
+    ]
+  },
+  {
+    "name": "approximants",
+    "description": "Return a generator for consecutive Pade approximants for a series",
+    "related_terms": [
+      "return",
+      "generator",
+      "consecutive"
+    ]
+  },
+  {
+    "name": "are_similar",
+    "description": "Are two geometrical entities similar",
+    "related_terms": [
+      "two",
+      "geometrical",
+      "entities"
+    ]
+  },
+  {
+    "name": "arity",
+    "description": "Return the arity of the function if it is known, else None",
+    "related_terms": [
+      "return",
+      "arity",
+      "function"
+    ]
+  },
+  {
+    "name": "ask",
+    "description": "Function to evaluate the proposition with assumptions",
+    "related_terms": [
+      "function",
+      "evaluate",
+      "proposition"
+    ]
+  },
+  {
+    "name": "assemble_partfrac_list",
+    "description": "Reassemble a full partial fraction decomposition\nfrom a structured result obtained by the function ``apart_list``",
+    "related_terms": [
+      "reassemble",
+      "full",
+      "partial"
+    ]
+  },
+  {
+    "name": "assuming",
+    "description": "Context manager for assumptions",
+    "related_terms": [
+      "context",
+      "manager",
+      "assumptions"
+    ]
+  },
+  {
+    "name": "banded",
+    "description": "Returns a SparseMatrix from the given dictionary describing\nthe diagonals of the matrix",
+    "related_terms": [
+      "returns",
+      "sparsematrix",
+      "given"
+    ]
+  },
+  {
+    "name": "besselsimp",
+    "description": "Simplify bessel-type functions",
+    "related_terms": [
+      "simplify",
+      "functions"
+    ]
+  },
+  {
+    "name": "binomial_coefficients",
+    "description": "Return a dictionary containing pairs :math:`{(k1,k2) : C_kn}` where\n:math:`C_kn` are binomial coefficients and :math:`n=k1+k2`",
+    "related_terms": [
+      "math",
+      "return",
+      "dictionary"
+    ]
+  },
+  {
+    "name": "binomial_coefficients_list",
+    "description": "Return a list of binomial coefficients as rows of the Pascal's\ntriangle",
+    "related_terms": [
+      "return",
+      "list",
+      "binomial"
+    ]
+  },
+  {
+    "name": "block_collapse",
+    "description": "Evaluates a block matrix expression\n\n>>> from sympy import MatrixSymbol, BlockMatrix, symbols, Identity, ZeroMatrix, block_collapse\n>>> n,m,l = symbols('n m l')\n>>> X = MatrixSymbol('X', n, n)\n>>> Y = MatrixSymbol('Y', m, m)\n>>> Z = MatrixSymbol('Z', n, m)\n>>> B = BlockMatrix([[X, Z], [ZeroMatrix(m, n), Y]])\n>>> print(B)\nMatrix([\n[X, Z],\n[0, Y]])\n\n>>> C = BlockMatrix([[Identity(n), Z]])\n>>> print(C)\nMatrix([[I, Z]])\n\n>>> print(block_collapse(C*B))\nMatrix([[X, Z + Z*Y]])",
+    "related_terms": [
+      "z",
+      "n",
+      "x"
+    ]
+  },
+  {
+    "name": "blockcut",
+    "description": "Cut a matrix expression into Blocks\n\n>>> from sympy import ImmutableMatrix, blockcut\n>>> M = ImmutableMatrix(4, 4, range(16))\n>>> B = blockcut(M, (1, 3), (1, 3))\n>>> type(B)",
+    "related_terms": [
+      "immutablematrix",
+      "blockcut",
+      "4"
+    ]
+  },
+  {
+    "name": "bool_map",
+    "description": "Return the simplified version of *bool1*, and the mapping of variables\nthat makes the two expressions *bool1* and *bool2* represent the same\nlogical behaviour for some correspondence between the variables\nof each",
+    "related_terms": [
+      "bool1",
+      "variables",
+      "return"
+    ]
+  },
+  {
+    "name": "bottom_up",
+    "description": "Apply ``F`` to all expressions in an expression tree from the\nbottom up",
+    "related_terms": [
+      "apply",
+      "f",
+      "expressions"
+    ]
+  },
+  {
+    "name": "bspline_basis_set",
+    "description": "Return the ``len(knots)-d-1`` B-splines at *x* of degree *d*\nwith *knots*",
+    "related_terms": [
+      "knots",
+      "return",
+      "len"
+    ]
+  },
+  {
+    "name": "cacheit",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "cancel",
+    "description": "Cancel common factors in a rational function ``f``",
+    "related_terms": [
+      "cancel",
+      "common",
+      "factors"
+    ]
+  },
+  {
+    "name": "capture",
+    "description": "Return the printed output of func()",
+    "related_terms": [
+      "return",
+      "printed",
+      "output"
+    ]
+  },
+  {
+    "name": "casoratian",
+    "description": "Given linear difference operator L of order 'k' and homogeneous\nequation Ly = 0 we want to compute kernel of L, which is a set\nof 'k' sequences: a(n), b(n),",
+    "related_terms": [
+      "l",
+      "k",
+      "n"
+    ]
+  },
+  {
+    "name": "cbrt",
+    "description": "Returns the principal cube root",
+    "related_terms": [
+      "returns",
+      "principal",
+      "cube"
+    ]
+  },
+  {
+    "name": "ccode",
+    "description": "Converts an expr to a string of c code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "centroid",
+    "description": "Find the centroid (center of mass) of the collection containing only Points,\nSegments or Polygons",
+    "related_terms": [
+      "find",
+      "centroid",
+      "center"
+    ]
+  },
+  {
+    "name": "chebyshevt_poly",
+    "description": "Generates the Chebyshev polynomial of the first kind `T_n(x)`",
+    "related_terms": [
+      "generates",
+      "chebyshev",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "chebyshevu_poly",
+    "description": "Generates the Chebyshev polynomial of the second kind `U_n(x)`",
+    "related_terms": [
+      "generates",
+      "chebyshev",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "check_assumptions",
+    "description": "Checks whether assumptions of ``expr`` match the T/F assumptions\ngiven (or possessed by ``against``)",
+    "related_terms": [
+      "assumptions",
+      "checks",
+      "whether"
+    ]
+  },
+  {
+    "name": "checkodesol",
+    "description": "Substitutes ``sol`` into ``ode`` and checks that the result is ``0``",
+    "related_terms": [
+      "substitutes",
+      "sol",
+      "ode"
+    ]
+  },
+  {
+    "name": "checkpdesol",
+    "description": "Checks if the given solution satisfies the partial differential\nequation",
+    "related_terms": [
+      "checks",
+      "given",
+      "solution"
+    ]
+  },
+  {
+    "name": "checksol",
+    "description": "Checks whether sol is a solution of equation f == 0",
+    "related_terms": [
+      "checks",
+      "whether",
+      "sol"
+    ]
+  },
+  {
+    "name": "classify_ode",
+    "description": "Returns a tuple of possible :py:meth:`~sympy",
+    "related_terms": [
+      "returns",
+      "tuple",
+      "possible"
+    ]
+  },
+  {
+    "name": "classify_pde",
+    "description": "Returns a tuple of possible pdsolve() classifications for a PDE",
+    "related_terms": [
+      "returns",
+      "tuple",
+      "possible"
+    ]
+  },
+  {
+    "name": "closest_points",
+    "description": "Return the subset of points from a set of points that were\nthe closest to each other in the 2D plane",
+    "related_terms": [
+      "points",
+      "return",
+      "subset"
+    ]
+  },
+  {
+    "name": "cofactors",
+    "description": "Compute GCD and cofactors of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "gcd",
+      "cofactors"
+    ]
+  },
+  {
+    "name": "collect",
+    "description": "Collect additive terms of an expression",
+    "related_terms": [
+      "collect",
+      "additive",
+      "terms"
+    ]
+  },
+  {
+    "name": "collect_const",
+    "description": "A non-greedy collection of terms with similar number coefficients in\nan Add expr",
+    "related_terms": [
+      "collection",
+      "terms",
+      "similar"
+    ]
+  },
+  {
+    "name": "combsimp",
+    "description": "Simplify combinatorial expressions",
+    "related_terms": [
+      "simplify",
+      "combinatorial",
+      "expressions"
+    ]
+  },
+  {
+    "name": "comp",
+    "description": "Return a bool indicating whether the error between z1 and z2\nis $\\le$ ``tol``",
+    "related_terms": [
+      "return",
+      "bool",
+      "indicating"
+    ]
+  },
+  {
+    "name": "compose",
+    "description": "Compute functional composition ``f(g)``",
+    "related_terms": [
+      "compute",
+      "functional",
+      "composition"
+    ]
+  },
+  {
+    "name": "composite",
+    "description": "Return the nth composite number, with the composite numbers indexed as\ncomposite(1) = 4, composite(2) = 6, etc",
+    "related_terms": [
+      "composite",
+      "return",
+      "nth"
+    ]
+  },
+  {
+    "name": "compositepi",
+    "description": "Return the number of positive composite numbers less than or equal to n",
+    "related_terms": [
+      "return",
+      "number",
+      "positive"
+    ]
+  },
+  {
+    "name": "construct_domain",
+    "description": "Construct a minimal domain for a list of expressions",
+    "related_terms": [
+      "construct",
+      "minimal",
+      "domain"
+    ]
+  },
+  {
+    "name": "content",
+    "description": "Compute GCD of coefficients of ``f``",
+    "related_terms": [
+      "compute",
+      "gcd",
+      "coefficients"
+    ]
+  },
+  {
+    "name": "continued_fraction",
+    "description": "Return the continued fraction representation of a Rational or\nquadratic irrational",
+    "related_terms": [
+      "return",
+      "continued",
+      "fraction"
+    ]
+  },
+  {
+    "name": "continued_fraction_convergents",
+    "description": "Return an iterator over the convergents of a continued fraction (cf)",
+    "related_terms": [
+      "return",
+      "iterator",
+      "convergents"
+    ]
+  },
+  {
+    "name": "continued_fraction_iterator",
+    "description": "Return continued fraction expansion of x as iterator",
+    "related_terms": [
+      "return",
+      "continued",
+      "fraction"
+    ]
+  },
+  {
+    "name": "continued_fraction_periodic",
+    "description": "Find the periodic continued fraction expansion of a quadratic irrational",
+    "related_terms": [
+      "find",
+      "periodic",
+      "continued"
+    ]
+  },
+  {
+    "name": "continued_fraction_reduce",
+    "description": "Reduce a continued fraction to a rational or quadratic irrational",
+    "related_terms": [
+      "reduce",
+      "continued",
+      "fraction"
+    ]
+  },
+  {
+    "name": "convex_hull",
+    "description": "The convex hull surrounding the Points contained in the list of entities",
+    "related_terms": [
+      "convex",
+      "hull",
+      "surrounding"
+    ]
+  },
+  {
+    "name": "convolution",
+    "description": "Performs convolution by determining the type of desired\nconvolution using hints",
+    "related_terms": [
+      "convolution",
+      "performs",
+      "determining"
+    ]
+  },
+  {
+    "name": "cosine_transform",
+    "description": "Compute the unitary, ordinary-frequency cosine transform of `f`, defined\nas",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "cosine"
+    ]
+  },
+  {
+    "name": "count_ops",
+    "description": "Return a representation (integer or expression) of the operations in expr",
+    "related_terms": [
+      "return",
+      "representation",
+      "integer"
+    ]
+  },
+  {
+    "name": "count_roots",
+    "description": "Return the number of roots of ``f`` in ``[inf, sup]`` interval",
+    "related_terms": [
+      "return",
+      "number",
+      "roots"
+    ]
+  },
+  {
+    "name": "covering_product",
+    "description": "Returns the covering product of given sequences",
+    "related_terms": [
+      "returns",
+      "covering",
+      "product"
+    ]
+  },
+  {
+    "name": "cse",
+    "description": "Perform common subexpression elimination on an expression",
+    "related_terms": [
+      "perform",
+      "common",
+      "subexpression"
+    ]
+  },
+  {
+    "name": "cxxcode",
+    "description": "C++ equivalent of :func:`~",
+    "related_terms": [
+      "equivalent",
+      "func"
+    ]
+  },
+  {
+    "name": "cycle_length",
+    "description": "For a given iterated sequence, return a generator that gives\nthe length of the iterated cycle (lambda) and the length of terms\nbefore the cycle begins (mu); if ``values`` is True then the\nterms of the sequence will be returned instead",
+    "related_terms": [
+      "iterated",
+      "sequence",
+      "length"
+    ]
+  },
+  {
+    "name": "cyclotomic_poly",
+    "description": "Generates cyclotomic polynomial of order `n` in `x`",
+    "related_terms": [
+      "generates",
+      "cyclotomic",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "decompogen",
+    "description": "Computes General functional decomposition of ``f``",
+    "related_terms": [
+      "computes",
+      "general",
+      "functional"
+    ]
+  },
+  {
+    "name": "decompose",
+    "description": "Compute functional decomposition of ``f``",
+    "related_terms": [
+      "compute",
+      "functional",
+      "decomposition"
+    ]
+  },
+  {
+    "name": "default_sort_key",
+    "description": "Return a key that can be used for sorting",
+    "related_terms": [
+      "return",
+      "key",
+      "used"
+    ]
+  },
+  {
+    "name": "deg",
+    "description": "Return the degree value for the given radians (pi = 180 degrees)",
+    "related_terms": [
+      "return",
+      "degree",
+      "value"
+    ]
+  },
+  {
+    "name": "degree",
+    "description": "Return the degree of ``f`` in the given variable",
+    "related_terms": [
+      "return",
+      "degree",
+      "f"
+    ]
+  },
+  {
+    "name": "degree_list",
+    "description": "Return a list of degrees of ``f`` in all variables",
+    "related_terms": [
+      "return",
+      "list",
+      "degrees"
+    ]
+  },
+  {
+    "name": "denom",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "derive_by_array",
+    "description": "Derivative by arrays",
+    "related_terms": [
+      "derivative",
+      "arrays"
+    ]
+  },
+  {
+    "name": "det",
+    "description": "Matrix Determinant\n\nExamples\n========\n\n>>> from sympy import MatrixSymbol, det, eye\n>>> A = MatrixSymbol('A', 3, 3)\n>>> det(A)\nDeterminant(A)\n>>> det(eye(3))\n1",
+    "related_terms": [
+      "det",
+      "3",
+      "determinant"
+    ]
+  },
+  {
+    "name": "det_quick",
+    "description": "Return ``det(M)`` assuming that either\nthere are lots of zeros or the size of the matrix\nis small",
+    "related_terms": [
+      "return",
+      "det",
+      "assuming"
+    ]
+  },
+  {
+    "name": "diag",
+    "description": "Returns a matrix with the provided values placed on the\ndiagonal",
+    "related_terms": [
+      "returns",
+      "matrix",
+      "provided"
+    ]
+  },
+  {
+    "name": "diagonalize_vector",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "dict_merge",
+    "description": "Merge dictionaries into a single dictionary",
+    "related_terms": [
+      "merge",
+      "dictionaries",
+      "single"
+    ]
+  },
+  {
+    "name": "diff",
+    "description": "Differentiate f with respect to symbols",
+    "related_terms": [
+      "differentiate",
+      "f",
+      "respect"
+    ]
+  },
+  {
+    "name": "difference_delta",
+    "description": "Difference Operator",
+    "related_terms": [
+      "difference",
+      "operator"
+    ]
+  },
+  {
+    "name": "differentiate_finite",
+    "description": "Differentiate expr and replace Derivatives with finite differences",
+    "related_terms": [
+      "differentiate",
+      "expr",
+      "replace"
+    ]
+  },
+  {
+    "name": "diophantine",
+    "description": "Simplify the solution procedure of diophantine equation ``eq`` by\nconverting it into a product of terms which should equal zero",
+    "related_terms": [
+      "simplify",
+      "solution",
+      "procedure"
+    ]
+  },
+  {
+    "name": "discrete_log",
+    "description": "Compute the discrete logarithm of ``a`` to the base ``b`` modulo ``n``",
+    "related_terms": [
+      "compute",
+      "discrete",
+      "logarithm"
+    ]
+  },
+  {
+    "name": "discriminant",
+    "description": "Compute discriminant of ``f``",
+    "related_terms": [
+      "compute",
+      "discriminant",
+      "f"
+    ]
+  },
+  {
+    "name": "div",
+    "description": "Compute polynomial division of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "division"
+    ]
+  },
+  {
+    "name": "divisor_count",
+    "description": "Return the number of divisors of ``n``",
+    "related_terms": [
+      "return",
+      "number",
+      "divisors"
+    ]
+  },
+  {
+    "name": "divisors",
+    "description": "Return all divisors of n sorted from 1",
+    "related_terms": [
+      "return",
+      "divisors",
+      "n"
+    ]
+  },
+  {
+    "name": "dotprint",
+    "description": "DOT description of a SymPy expression tree\n\nParameters\n==========\n\nstyles : list of lists composed of (Class, mapping), optional\n    Styles for different classes",
+    "related_terms": [
+      "styles",
+      "dot",
+      "description"
+    ]
+  },
+  {
+    "name": "dsolve",
+    "description": "Solves any (supported) kind of ordinary differential equation and\nsystem of ordinary differential equations",
+    "related_terms": [
+      "ordinary",
+      "differential",
+      "solves"
+    ]
+  },
+  {
+    "name": "egyptian_fraction",
+    "description": "Return the list of denominators of an Egyptian fraction\nexpansion [1]_ of the said rational `r`",
+    "related_terms": [
+      "return",
+      "list",
+      "denominators"
+    ]
+  },
+  {
+    "name": "epath",
+    "description": "Manipulate parts of an expression selected by a path",
+    "related_terms": [
+      "manipulate",
+      "parts",
+      "expression"
+    ]
+  },
+  {
+    "name": "euler_equations",
+    "description": "Find the Euler-Lagrange equations [1]_ for a given Lagrangian",
+    "related_terms": [
+      "find",
+      "equations",
+      "1"
+    ]
+  },
+  {
+    "name": "expand",
+    "description": "Expand an expression using methods given as hints",
+    "related_terms": [
+      "expand",
+      "expression",
+      "using"
+    ]
+  },
+  {
+    "name": "expand_complex",
+    "description": "Wrapper around expand that only uses the complex hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_func",
+    "description": "Wrapper around expand that only uses the func hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_log",
+    "description": "Wrapper around expand that only uses the log hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_mul",
+    "description": "Wrapper around expand that only uses the mul hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_multinomial",
+    "description": "Wrapper around expand that only uses the multinomial hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_power_base",
+    "description": "Wrapper around expand that only uses the power_base hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_power_exp",
+    "description": "Wrapper around expand that only uses the power_exp hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "expand_trig",
+    "description": "Wrapper around expand that only uses the trig hint",
+    "related_terms": [
+      "wrapper",
+      "around",
+      "expand"
+    ]
+  },
+  {
+    "name": "exptrigsimp",
+    "description": "Simplifies exponential / trigonometric / hyperbolic functions",
+    "related_terms": [
+      "simplifies",
+      "exponential",
+      "trigonometric"
+    ]
+  },
+  {
+    "name": "exquo",
+    "description": "Compute polynomial exact quotient of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "exact"
+    ]
+  },
+  {
+    "name": "eye",
+    "description": "Create square identity matrix n x n\n\nSee Also\n========\n\ndiag\nzeros\nones",
+    "related_terms": [
+      "n",
+      "create",
+      "square"
+    ]
+  },
+  {
+    "name": "factor",
+    "description": "Compute the factorization of expression, ``f``, into irreducibles",
+    "related_terms": [
+      "compute",
+      "factorization",
+      "expression"
+    ]
+  },
+  {
+    "name": "factor_list",
+    "description": "Compute a list of irreducible factors of ``f``",
+    "related_terms": [
+      "compute",
+      "list",
+      "irreducible"
+    ]
+  },
+  {
+    "name": "factor_nc",
+    "description": "Return the factored form of ``expr`` while handling non-commutative\nexpressions",
+    "related_terms": [
+      "return",
+      "factored",
+      "form"
+    ]
+  },
+  {
+    "name": "factor_terms",
+    "description": "Remove common factors from terms in all arguments without\nchanging the underlying structure of the expr",
+    "related_terms": [
+      "remove",
+      "common",
+      "factors"
+    ]
+  },
+  {
+    "name": "factorint",
+    "description": "Given a positive integer ``n``, ``factorint(n)`` returns a dict containing\nthe prime factors of ``n`` as keys and their respective multiplicities\nas values",
+    "related_terms": [
+      "n",
+      "given",
+      "positive"
+    ]
+  },
+  {
+    "name": "factorrat",
+    "description": "Given a Rational ``r``, ``factorrat(r)`` returns a dict containing\nthe prime factors of ``r`` as keys and their respective multiplicities\nas values",
+    "related_terms": [
+      "r",
+      "given",
+      "rational"
+    ]
+  },
+  {
+    "name": "failing_assumptions",
+    "description": "Return a dictionary containing assumptions with values not\nmatching those of the passed assumptions",
+    "related_terms": [
+      "assumptions",
+      "return",
+      "dictionary"
+    ]
+  },
+  {
+    "name": "farthest_points",
+    "description": "Return the subset of points from a set of points that were\nthe furthest apart from each other in the 2D plane",
+    "related_terms": [
+      "points",
+      "return",
+      "subset"
+    ]
+  },
+  {
+    "name": "fcode",
+    "description": "Converts an expr to a string of fortran code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "fft",
+    "description": "Performs the Discrete Fourier Transform (**DFT**) in the complex domain",
+    "related_terms": [
+      "performs",
+      "discrete",
+      "fourier"
+    ]
+  },
+  {
+    "name": "field",
+    "description": "Construct new rational function field returning (field, x1,",
+    "related_terms": [
+      "field",
+      "construct",
+      "new"
+    ]
+  },
+  {
+    "name": "field_isomorphism",
+    "description": "Find an embedding of one number field into another",
+    "related_terms": [
+      "find",
+      "embedding",
+      "one"
+    ]
+  },
+  {
+    "name": "filldedent",
+    "description": "Strips leading and trailing empty lines from a copy of ``s``, then dedents,\nfills and returns it",
+    "related_terms": [
+      "strips",
+      "leading",
+      "trailing"
+    ]
+  },
+  {
+    "name": "finite_diff_weights",
+    "description": "Calculates the finite difference weights for an arbitrarily spaced\none-dimensional grid (``x_list``) for derivatives at ``x0`` of order\n0, 1,",
+    "related_terms": [
+      "calculates",
+      "finite",
+      "difference"
+    ]
+  },
+  {
+    "name": "flatten",
+    "description": "Recursively denest iterable containers",
+    "related_terms": [
+      "recursively",
+      "denest",
+      "iterable"
+    ]
+  },
+  {
+    "name": "fourier_series",
+    "description": "Computes the Fourier trigonometric series expansion",
+    "related_terms": [
+      "computes",
+      "fourier",
+      "trigonometric"
+    ]
+  },
+  {
+    "name": "fourier_transform",
+    "description": "Compute the unitary, ordinary-frequency Fourier transform of ``f``, defined\nas",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "fourier"
+    ]
+  },
+  {
+    "name": "fps",
+    "description": "Generates Formal Power Series of ``f``",
+    "related_terms": [
+      "generates",
+      "formal",
+      "power"
+    ]
+  },
+  {
+    "name": "fraction",
+    "description": "Returns a pair with expression's numerator and denominator",
+    "related_terms": [
+      "returns",
+      "pair",
+      "expression"
+    ]
+  },
+  {
+    "name": "fu",
+    "description": "Attempt to simplify expression by using transformation rules given\nin the algorithm by Fu et al",
+    "related_terms": [
+      "attempt",
+      "simplify",
+      "expression"
+    ]
+  },
+  {
+    "name": "fwht",
+    "description": "Performs the Walsh Hadamard Transform (**WHT**), and uses Hadamard\nordering for the sequence",
+    "related_terms": [
+      "hadamard",
+      "performs",
+      "walsh"
+    ]
+  },
+  {
+    "name": "galois_group",
+    "description": "Compute the Galois group for polynomials *f* up to degree 6",
+    "related_terms": [
+      "compute",
+      "galois",
+      "group"
+    ]
+  },
+  {
+    "name": "gammasimp",
+    "description": "Simplify expressions with gamma functions",
+    "related_terms": [
+      "simplify",
+      "expressions",
+      "gamma"
+    ]
+  },
+  {
+    "name": "gcd",
+    "description": "Compute GCD of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "gcd",
+      "f"
+    ]
+  },
+  {
+    "name": "gcd_list",
+    "description": "Compute GCD of a list of polynomials",
+    "related_terms": [
+      "compute",
+      "gcd",
+      "list"
+    ]
+  },
+  {
+    "name": "gcd_terms",
+    "description": "Compute the GCD of ``terms`` and put them together",
+    "related_terms": [
+      "compute",
+      "gcd",
+      "terms"
+    ]
+  },
+  {
+    "name": "gcdex",
+    "description": "Extended Euclidean algorithm of ``f`` and ``g``",
+    "related_terms": [
+      "extended",
+      "euclidean",
+      "algorithm"
+    ]
+  },
+  {
+    "name": "get_contraction_structure",
+    "description": "Determine dummy indices of ``expr`` and describe its structure\n\nBy *dummy* we mean indices that are summation indices",
+    "related_terms": [
+      "indices",
+      "dummy",
+      "determine"
+    ]
+  },
+  {
+    "name": "get_indices",
+    "description": "Determine the outer indices of expression ``expr``\n\nBy *outer* we mean indices that are not summation indices",
+    "related_terms": [
+      "indices",
+      "outer",
+      "determine"
+    ]
+  },
+  {
+    "name": "gff",
+    "description": "Compute greatest factorial factorization of ``f``",
+    "related_terms": [
+      "compute",
+      "greatest",
+      "factorial"
+    ]
+  },
+  {
+    "name": "gff_list",
+    "description": "Compute a list of greatest factorial factors of ``f``",
+    "related_terms": [
+      "compute",
+      "list",
+      "greatest"
+    ]
+  },
+  {
+    "name": "glsl_code",
+    "description": "Converts an expr to a string of GLSL code\n\n    Parameters\n    ==========\n\n    expr : Expr\n        A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "groebner",
+    "description": "Computes the reduced Groebner basis for a set of polynomials",
+    "related_terms": [
+      "computes",
+      "reduced",
+      "groebner"
+    ]
+  },
+  {
+    "name": "ground_roots",
+    "description": "Compute roots of ``f`` by factorization in the ground domain",
+    "related_terms": [
+      "compute",
+      "roots",
+      "f"
+    ]
+  },
+  {
+    "name": "group",
+    "description": "Splits a sequence into a list of lists of equal, adjacent elements",
+    "related_terms": [
+      "splits",
+      "sequence",
+      "list"
+    ]
+  },
+  {
+    "name": "gruntz",
+    "description": "Compute the limit of e(z) at the point z0 using the Gruntz algorithm",
+    "related_terms": [
+      "compute",
+      "limit",
+      "e"
+    ]
+  },
+  {
+    "name": "hadamard_product",
+    "description": "Return the elementwise (aka Hadamard) product of matrices",
+    "related_terms": [
+      "return",
+      "elementwise",
+      "aka"
+    ]
+  },
+  {
+    "name": "half_gcdex",
+    "description": "Half extended Euclidean algorithm of ``f`` and ``g``",
+    "related_terms": [
+      "half",
+      "extended",
+      "euclidean"
+    ]
+  },
+  {
+    "name": "hankel_transform",
+    "description": "Compute the Hankel transform of `f`, defined as",
+    "related_terms": [
+      "compute",
+      "hankel",
+      "transform"
+    ]
+  },
+  {
+    "name": "has_dups",
+    "description": "Return True if there are any duplicate elements in ``seq``",
+    "related_terms": [
+      "return",
+      "true",
+      "duplicate"
+    ]
+  },
+  {
+    "name": "has_variety",
+    "description": "Return True if there are any different elements in ``seq``",
+    "related_terms": [
+      "return",
+      "true",
+      "different"
+    ]
+  },
+  {
+    "name": "hermite_poly",
+    "description": "Generates the Hermite polynomial `H_n(x)`",
+    "related_terms": [
+      "generates",
+      "hermite",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "hermite_prob_poly",
+    "description": "Generates the probabilist's Hermite polynomial `He_n(x)`",
+    "related_terms": [
+      "generates",
+      "probabilist",
+      "hermite"
+    ]
+  },
+  {
+    "name": "hessian",
+    "description": "Compute Hessian matrix for a function f wrt parameters in varlist\nwhich may be given as a sequence or a row/column vector",
+    "related_terms": [
+      "compute",
+      "hessian",
+      "matrix"
+    ]
+  },
+  {
+    "name": "homogeneous_order",
+    "description": "Returns the order `n` if `g` is homogeneous and ``None`` if it is not\nhomogeneous",
+    "related_terms": [
+      "homogeneous",
+      "returns",
+      "order"
+    ]
+  },
+  {
+    "name": "horner",
+    "description": "Rewrite a polynomial in Horner form",
+    "related_terms": [
+      "rewrite",
+      "polynomial",
+      "horner"
+    ]
+  },
+  {
+    "name": "hyperexpand",
+    "description": "Expand hypergeometric functions",
+    "related_terms": [
+      "expand",
+      "hypergeometric",
+      "functions"
+    ]
+  },
+  {
+    "name": "hypersimilar",
+    "description": "Returns True if ``f`` and ``g`` are hyper-similar",
+    "related_terms": [
+      "returns",
+      "true",
+      "f"
+    ]
+  },
+  {
+    "name": "hypersimp",
+    "description": "Given combinatorial term f(k) simplify its consecutive term ratio\ni",
+    "related_terms": [
+      "term",
+      "given",
+      "combinatorial"
+    ]
+  },
+  {
+    "name": "idiff",
+    "description": "Return ``dy/dx`` assuming that ``eq == 0``",
+    "related_terms": [
+      "return",
+      "assuming",
+      "eq"
+    ]
+  },
+  {
+    "name": "ifft",
+    "description": "Performs the Discrete Fourier Transform (**DFT**) in the complex domain",
+    "related_terms": [
+      "performs",
+      "discrete",
+      "fourier"
+    ]
+  },
+  {
+    "name": "ifwht",
+    "description": "Performs the Walsh Hadamard Transform (**WHT**), and uses Hadamard\nordering for the sequence",
+    "related_terms": [
+      "hadamard",
+      "performs",
+      "walsh"
+    ]
+  },
+  {
+    "name": "ilcm",
+    "description": "Computes integer least common multiple",
+    "related_terms": [
+      "computes",
+      "integer",
+      "least"
+    ]
+  },
+  {
+    "name": "imageset",
+    "description": "Return an image of the set under transformation ``f``",
+    "related_terms": [
+      "return",
+      "image",
+      "set"
+    ]
+  },
+  {
+    "name": "init_printing",
+    "description": "Initializes pretty-printer depending on the environment",
+    "related_terms": [
+      "initializes",
+      "depending",
+      "environment"
+    ]
+  },
+  {
+    "name": "init_session",
+    "description": "Initialize an embedded IPython or Python session",
+    "related_terms": [
+      "initialize",
+      "embedded",
+      "ipython"
+    ]
+  },
+  {
+    "name": "integer_log",
+    "description": "Returns ``(e, bool)`` where e is the largest nonnegative integer\nsuch that :math:`|n| \\geq |b^e|` and ``bool`` is True if $n = b^e$",
+    "related_terms": [
+      "e",
+      "bool",
+      "returns"
+    ]
+  },
+  {
+    "name": "integer_nthroot",
+    "description": "Return a tuple containing x = floor(y**(1/n))\nand a boolean indicating whether the result is exact (that is,\nwhether x**n == y)",
+    "related_terms": [
+      "x",
+      "whether",
+      "return"
+    ]
+  },
+  {
+    "name": "integrate",
+    "description": "integrate(f, var,",
+    "related_terms": [
+      "integrate",
+      "f",
+      "var"
+    ]
+  },
+  {
+    "name": "interactive_traversal",
+    "description": "Traverse a tree asking a user which branch to choose",
+    "related_terms": [
+      "traverse",
+      "tree",
+      "asking"
+    ]
+  },
+  {
+    "name": "interpolate",
+    "description": "Construct an interpolating polynomial for the data points\nevaluated at point x (which can be symbolic or numeric)",
+    "related_terms": [
+      "construct",
+      "interpolating",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "interpolating_poly",
+    "description": "Construct Lagrange interpolating polynomial for ``n``\ndata points",
+    "related_terms": [
+      "construct",
+      "lagrange",
+      "interpolating"
+    ]
+  },
+  {
+    "name": "interpolating_spline",
+    "description": "Return spline of degree *d*, passing through the given *X*\nand *Y* values",
+    "related_terms": [
+      "return",
+      "spline",
+      "degree"
+    ]
+  },
+  {
+    "name": "intersecting_product",
+    "description": "Returns the intersecting product of given sequences",
+    "related_terms": [
+      "returns",
+      "intersecting",
+      "product"
+    ]
+  },
+  {
+    "name": "intersection",
+    "description": "The intersection of a collection of GeometryEntity instances",
+    "related_terms": [
+      "intersection",
+      "collection",
+      "geometryentity"
+    ]
+  },
+  {
+    "name": "intervals",
+    "description": "Compute isolating intervals for roots of ``f``",
+    "related_terms": [
+      "compute",
+      "isolating",
+      "intervals"
+    ]
+  },
+  {
+    "name": "intt",
+    "description": "Performs the Number Theoretic Transform (**NTT**), which specializes the\nDiscrete Fourier Transform (**DFT**) over quotient ring `Z/pZ` for prime\n`p` instead of complex numbers `C`",
+    "related_terms": [
+      "transform",
+      "performs",
+      "number"
+    ]
+  },
+  {
+    "name": "inv_quick",
+    "description": "Return the inverse of ``M``, assuming that either\nthere are lots of zeros or the size of the matrix\nis small",
+    "related_terms": [
+      "return",
+      "inverse",
+      "assuming"
+    ]
+  },
+  {
+    "name": "inverse_cosine_transform",
+    "description": "Compute the unitary, ordinary-frequency inverse cosine transform of `F`,\ndefined as",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "inverse"
+    ]
+  },
+  {
+    "name": "inverse_fourier_transform",
+    "description": "Compute the unitary, ordinary-frequency inverse Fourier transform of `F`,\ndefined as",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "inverse"
+    ]
+  },
+  {
+    "name": "inverse_hankel_transform",
+    "description": "Compute the inverse Hankel transform of `F` defined as",
+    "related_terms": [
+      "compute",
+      "inverse",
+      "hankel"
+    ]
+  },
+  {
+    "name": "inverse_laplace_transform",
+    "description": "Compute the inverse Laplace transform of `F(s)`, defined as",
+    "related_terms": [
+      "compute",
+      "inverse",
+      "laplace"
+    ]
+  },
+  {
+    "name": "inverse_mellin_transform",
+    "description": "Compute the inverse Mellin transform of `F(s)` over the fundamental\nstrip given by ``strip=(a, b)``",
+    "related_terms": [
+      "compute",
+      "inverse",
+      "mellin"
+    ]
+  },
+  {
+    "name": "inverse_mobius_transform",
+    "description": "Performs the Mobius Transform for subset lattice with indices of\nsequence as bitmasks",
+    "related_terms": [
+      "performs",
+      "mobius",
+      "transform"
+    ]
+  },
+  {
+    "name": "inverse_sine_transform",
+    "description": "Compute the unitary, ordinary-frequency inverse sine transform of `F`,\ndefined as",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "inverse"
+    ]
+  },
+  {
+    "name": "invert",
+    "description": "Invert ``f`` modulo ``g`` when possible",
+    "related_terms": [
+      "invert",
+      "f",
+      "modulo"
+    ]
+  },
+  {
+    "name": "is_abundant",
+    "description": "Returns True if ``n`` is an abundant number, else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "n"
+    ]
+  },
+  {
+    "name": "is_amicable",
+    "description": "Returns True if the numbers `m` and `n` are \"amicable\", else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "numbers"
+    ]
+  },
+  {
+    "name": "is_carmichael",
+    "description": "Returns True if the numbers `n` is Carmichael number, else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "numbers"
+    ]
+  },
+  {
+    "name": "is_convex",
+    "description": "Determines the  convexity of the function passed in the argument",
+    "related_terms": [
+      "determines",
+      "convexity",
+      "function"
+    ]
+  },
+  {
+    "name": "is_decreasing",
+    "description": "Return whether the function is decreasing in the given interval",
+    "related_terms": [
+      "return",
+      "whether",
+      "function"
+    ]
+  },
+  {
+    "name": "is_deficient",
+    "description": "Returns True if ``n`` is a deficient number, else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "n"
+    ]
+  },
+  {
+    "name": "is_increasing",
+    "description": "Return whether the function is increasing in the given interval",
+    "related_terms": [
+      "return",
+      "whether",
+      "function"
+    ]
+  },
+  {
+    "name": "is_mersenne_prime",
+    "description": "Returns True if  ``n`` is a Mersenne prime, else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "n"
+    ]
+  },
+  {
+    "name": "is_monotonic",
+    "description": "Return whether the function is monotonic in the given interval",
+    "related_terms": [
+      "return",
+      "whether",
+      "function"
+    ]
+  },
+  {
+    "name": "is_nthpow_residue",
+    "description": "Returns True if ``x**n == a (mod m)`` has solutions",
+    "related_terms": [
+      "returns",
+      "true",
+      "x"
+    ]
+  },
+  {
+    "name": "is_perfect",
+    "description": "Returns True if ``n`` is a perfect number, else False",
+    "related_terms": [
+      "returns",
+      "true",
+      "n"
+    ]
+  },
+  {
+    "name": "is_primitive_root",
+    "description": "Returns True if ``a`` is a primitive root of ``p``",
+    "related_terms": [
+      "returns",
+      "true",
+      "primitive"
+    ]
+  },
+  {
+    "name": "is_quad_residue",
+    "description": "Returns True if ``a`` (mod ``p``) is in the set of squares mod ``p``,\ni",
+    "related_terms": [
+      "mod",
+      "p",
+      "returns"
+    ]
+  },
+  {
+    "name": "is_strictly_decreasing",
+    "description": "Return whether the function is strictly decreasing in the given interval",
+    "related_terms": [
+      "return",
+      "whether",
+      "function"
+    ]
+  },
+  {
+    "name": "is_strictly_increasing",
+    "description": "Return whether the function is strictly increasing in the given interval",
+    "related_terms": [
+      "return",
+      "whether",
+      "function"
+    ]
+  },
+  {
+    "name": "is_zero_dimensional",
+    "description": "Checks if the ideal generated by a Groebner basis is zero-dimensional",
+    "related_terms": [
+      "checks",
+      "ideal",
+      "generated"
+    ]
+  },
+  {
+    "name": "isolate",
+    "description": "Find a rational isolating interval for a real algebraic number",
+    "related_terms": [
+      "find",
+      "rational",
+      "isolating"
+    ]
+  },
+  {
+    "name": "isprime",
+    "description": "Test if n is a prime number (True) or not (False)",
+    "related_terms": [
+      "test",
+      "n",
+      "prime"
+    ]
+  },
+  {
+    "name": "itermonomials",
+    "description": "``max_degrees`` and ``min_degrees`` are either both integers or both lists",
+    "related_terms": [
+      "either",
+      "integers",
+      "lists"
+    ]
+  },
+  {
+    "name": "jacobi_normalized",
+    "description": "Jacobi polynomial $P_n^{\\left(\\alpha, \\beta\\right)}(x)$",
+    "related_terms": [
+      "jacobi",
+      "polynomial",
+      "x"
+    ]
+  },
+  {
+    "name": "jacobi_poly",
+    "description": "Generates the Jacobi polynomial `P_n^{(a,b)}(x)`",
+    "related_terms": [
+      "generates",
+      "jacobi",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "jn_zeros",
+    "description": "Zeros of the spherical Bessel function of the first kind",
+    "related_terms": [
+      "zeros",
+      "spherical",
+      "bessel"
+    ]
+  },
+  {
+    "name": "jordan_cell",
+    "description": "Create a Jordan block:\n\nExamples\n========\n\n>>> from sympy import jordan_cell\n>>> from sympy",
+    "related_terms": [
+      "sympy",
+      "create",
+      "jordan"
+    ]
+  },
+  {
+    "name": "jscode",
+    "description": "Converts an expr to a string of javascript code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "julia_code",
+    "description": "Converts `expr` to a string of Julia code",
+    "related_terms": [
+      "converts",
+      "expr",
+      "string"
+    ]
+  },
+  {
+    "name": "kronecker_product",
+    "description": "The Kronecker product of two or more arguments",
+    "related_terms": [
+      "kronecker",
+      "product",
+      "two"
+    ]
+  },
+  {
+    "name": "kroneckersimp",
+    "description": "Simplify expressions with KroneckerDelta",
+    "related_terms": [
+      "simplify",
+      "expressions",
+      "kroneckerdelta"
+    ]
+  },
+  {
+    "name": "laguerre_poly",
+    "description": "Generates the Laguerre polynomial `L_n^{(\\alpha)}(x)`",
+    "related_terms": [
+      "generates",
+      "laguerre",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "lambdify",
+    "description": "Convert a SymPy expression into a function that allows for fast\nnumeric evaluation",
+    "related_terms": [
+      "convert",
+      "sympy",
+      "expression"
+    ]
+  },
+  {
+    "name": "laplace_correspondence",
+    "description": "This helper function takes a function `f` that is the result of a\n``laplace_transform`` or an ``inverse_laplace_transform``",
+    "related_terms": [
+      "function",
+      "helper",
+      "takes"
+    ]
+  },
+  {
+    "name": "laplace_initial_conds",
+    "description": "This helper function takes a function `f` that is the result of a\n``laplace_transform``",
+    "related_terms": [
+      "function",
+      "helper",
+      "takes"
+    ]
+  },
+  {
+    "name": "laplace_transform",
+    "description": "Compute the Laplace Transform `F(s)` of `f(t)`,",
+    "related_terms": [
+      "f",
+      "compute",
+      "laplace"
+    ]
+  },
+  {
+    "name": "lazy_function",
+    "description": "Create a lazy proxy for a function in a module",
+    "related_terms": [
+      "create",
+      "lazy",
+      "proxy"
+    ]
+  },
+  {
+    "name": "lcm",
+    "description": "Compute LCM of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "lcm",
+      "f"
+    ]
+  },
+  {
+    "name": "lcm_list",
+    "description": "Compute LCM of a list of polynomials",
+    "related_terms": [
+      "compute",
+      "lcm",
+      "list"
+    ]
+  },
+  {
+    "name": "legendre_poly",
+    "description": "Generates the Legendre polynomial `P_n(x)`",
+    "related_terms": [
+      "generates",
+      "legendre",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "limit",
+    "description": "Computes the limit of ``e(z)`` at the point ``z0``",
+    "related_terms": [
+      "computes",
+      "limit",
+      "e"
+    ]
+  },
+  {
+    "name": "limit_seq",
+    "description": "Finds the limit of a sequence as index ``n`` tends to infinity",
+    "related_terms": [
+      "finds",
+      "limit",
+      "sequence"
+    ]
+  },
+  {
+    "name": "line_integrate",
+    "description": "line_integrate(field, Curve, variables)\n\nCompute the line integral",
+    "related_terms": [
+      "field",
+      "curve",
+      "variables"
+    ]
+  },
+  {
+    "name": "linear_eq_to_matrix",
+    "description": "Converts a given System of Equations into Matrix form",
+    "related_terms": [
+      "converts",
+      "given",
+      "system"
+    ]
+  },
+  {
+    "name": "linsolve",
+    "description": "Solve system of $N$ linear equations with $M$ variables; both\nunderdetermined and overdetermined systems are supported",
+    "related_terms": [
+      "solve",
+      "system",
+      "n"
+    ]
+  },
+  {
+    "name": "list2numpy",
+    "description": "Converts Python list of SymPy expressions to a NumPy array",
+    "related_terms": [
+      "converts",
+      "python",
+      "list"
+    ]
+  },
+  {
+    "name": "logcombine",
+    "description": "Takes logarithms and combines them using the following rules:\n\n- log(x) + log(y) == log(x*y) if both are positive\n- a*log(x) == log(x**a) if x is positive and a is real\n\nIf ``force`` is ``True`` then the assumptions above will be assumed to hold if\nthere is no assumption already in place on a quantity",
+    "related_terms": [
+      "log",
+      "x",
+      "positive"
+    ]
+  },
+  {
+    "name": "maple_code",
+    "description": "Converts ``expr`` to a string of Maple code",
+    "related_terms": [
+      "converts",
+      "expr",
+      "string"
+    ]
+  },
+  {
+    "name": "mathematica_code",
+    "description": "Converts an expr to a string of the Wolfram Mathematica code\n\nExamples\n========\n\n>>> from sympy import mathematica_code as mcode, symbols, sin\n>>> x = symbols('x')\n>>> mcode(sin(x)",
+    "related_terms": [
+      "x",
+      "mcode",
+      "symbols"
+    ]
+  },
+  {
+    "name": "matrix2numpy",
+    "description": "Converts SymPy's matrix to a NumPy array",
+    "related_terms": [
+      "converts",
+      "sympy",
+      "matrix"
+    ]
+  },
+  {
+    "name": "matrix_multiply_elementwise",
+    "description": "Return the Hadamard product (elementwise product) of A and B\n\n>>> from sympy import Matrix, matrix_multiply_elementwise\n>>> A = Matrix([[0, 1, 2], [3, 4, 5]])\n>>> B = Matrix([[1, 10, 100], [100, 10, 1]])\n>>> matrix_multiply_elementwise(A, B)\nMatrix([\n[  0, 10, 200],\n[300, 40,   5]])\n\nSee Also\n========\n\nsympy",
+    "related_terms": [
+      "matrix",
+      "b",
+      "1"
+    ]
+  },
+  {
+    "name": "matrix_symbols",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "maximum",
+    "description": "Returns the maximum value of a function in the given domain",
+    "related_terms": [
+      "returns",
+      "maximum",
+      "value"
+    ]
+  },
+  {
+    "name": "mellin_transform",
+    "description": "Compute the Mellin transform `F(s)` of `f(x)`,",
+    "related_terms": [
+      "f",
+      "compute",
+      "mellin"
+    ]
+  },
+  {
+    "name": "memoize_property",
+    "description": "Property decorator that caches the value of potentially expensive\n``propfunc`` after the first evaluation",
+    "related_terms": [
+      "property",
+      "decorator",
+      "caches"
+    ]
+  },
+  {
+    "name": "mersenne_prime_exponent",
+    "description": "Returns the exponent ``i`` for the nth Mersenne prime (which\nhas the form `2^i - 1`)",
+    "related_terms": [
+      "returns",
+      "exponent",
+      "nth"
+    ]
+  },
+  {
+    "name": "minimal_polynomial",
+    "description": "Computes the minimal polynomial of an algebraic element",
+    "related_terms": [
+      "computes",
+      "minimal",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "minimum",
+    "description": "Returns the minimum value of a function in the given domain",
+    "related_terms": [
+      "returns",
+      "minimum",
+      "value"
+    ]
+  },
+  {
+    "name": "minpoly",
+    "description": "This is a synonym for :py:func:`~",
+    "related_terms": [
+      "synonym",
+      "py",
+      "func"
+    ]
+  },
+  {
+    "name": "mobius_transform",
+    "description": "Performs the Mobius Transform for subset lattice with indices of\nsequence as bitmasks",
+    "related_terms": [
+      "performs",
+      "mobius",
+      "transform"
+    ]
+  },
+  {
+    "name": "mod_inverse",
+    "description": "Return the number $c$ such that, $a \\times c = 1 \\pmod{m}$\nwhere $c$ has the same sign as $m$",
+    "related_terms": [
+      "c",
+      "return",
+      "number"
+    ]
+  },
+  {
+    "name": "monic",
+    "description": "Divide all coefficients of ``f`` by ``LC(f)``",
+    "related_terms": [
+      "f",
+      "divide",
+      "coefficients"
+    ]
+  },
+  {
+    "name": "multiline_latex",
+    "description": "This function generates a LaTeX equation with a multiline right-hand side\nin an ``align*``, ``eqnarray`` or ``IEEEeqnarray`` environment",
+    "related_terms": [
+      "function",
+      "generates",
+      "latex"
+    ]
+  },
+  {
+    "name": "multinomial_coefficients",
+    "description": "Return a dictionary containing pairs ``{(k1,k2,",
+    "related_terms": [
+      "return",
+      "dictionary",
+      "containing"
+    ]
+  },
+  {
+    "name": "multiplicity",
+    "description": "Find the greatest integer m such that p**m divides n",
+    "related_terms": [
+      "find",
+      "greatest",
+      "integer"
+    ]
+  },
+  {
+    "name": "n_order",
+    "description": "Returns the order of ``a`` modulo ``n``",
+    "related_terms": [
+      "returns",
+      "order",
+      "modulo"
+    ]
+  },
+  {
+    "name": "nextprime",
+    "description": "Return the ith prime greater than n",
+    "related_terms": [
+      "return",
+      "ith",
+      "prime"
+    ]
+  },
+  {
+    "name": "nfloat",
+    "description": "Make all Rationals in expr Floats except those in exponents\n(unless the exponents flag is set to True) and those in undefined\nfunctions",
+    "related_terms": [
+      "exponents",
+      "make",
+      "rationals"
+    ]
+  },
+  {
+    "name": "nonlinsolve",
+    "description": "Solve system of $N$ nonlinear equations with $M$ variables, which means both\nunder and overdetermined systems are supported",
+    "related_terms": [
+      "solve",
+      "system",
+      "n"
+    ]
+  },
+  {
+    "name": "not_empty_in",
+    "description": "Finds the domain of the functions in ``finset_intersection`` in which the\n``finite_set`` is not-empty",
+    "related_terms": [
+      "finds",
+      "domain",
+      "functions"
+    ]
+  },
+  {
+    "name": "npartitions",
+    "description": "Calculate the partition function P(n), i",
+    "related_terms": [
+      "calculate",
+      "partition",
+      "function"
+    ]
+  },
+  {
+    "name": "nroots",
+    "description": "Compute numerical approximations of roots of ``f``",
+    "related_terms": [
+      "compute",
+      "numerical",
+      "approximations"
+    ]
+  },
+  {
+    "name": "nsimplify",
+    "description": "Find a simple representation for a number or, if there are free symbols or\nif ``rational=True``, then replace Floats with their Rational equivalents",
+    "related_terms": [
+      "find",
+      "simple",
+      "representation"
+    ]
+  },
+  {
+    "name": "nsolve",
+    "description": "Solve a nonlinear equation system numerically: ``nsolve(f, [args,] x0,\nmodules=['mpmath'], **kwargs)``",
+    "related_terms": [
+      "solve",
+      "nonlinear",
+      "equation"
+    ]
+  },
+  {
+    "name": "nth_power_roots_poly",
+    "description": "Construct a polynomial with n-th powers of roots of ``f``",
+    "related_terms": [
+      "construct",
+      "polynomial",
+      "powers"
+    ]
+  },
+  {
+    "name": "nthroot_mod",
+    "description": "Find the solutions to ``x**n = a mod p``",
+    "related_terms": [
+      "find",
+      "solutions",
+      "x"
+    ]
+  },
+  {
+    "name": "ntt",
+    "description": "Performs the Number Theoretic Transform (**NTT**), which specializes the\nDiscrete Fourier Transform (**DFT**) over quotient ring `Z/pZ` for prime\n`p` instead of complex numbers `C`",
+    "related_terms": [
+      "transform",
+      "performs",
+      "number"
+    ]
+  },
+  {
+    "name": "num_digits",
+    "description": "Return the number of digits needed to express n in give base",
+    "related_terms": [
+      "return",
+      "number",
+      "digits"
+    ]
+  },
+  {
+    "name": "numbered_symbols",
+    "description": "Generate an infinite stream of Symbols consisting of a prefix and\nincreasing subscripts provided that they do not occur in ``exclude``",
+    "related_terms": [
+      "generate",
+      "infinite",
+      "stream"
+    ]
+  },
+  {
+    "name": "numer",
+    "description": "No description available.",
+    "related_terms": [
+      "description",
+      "available"
+    ]
+  },
+  {
+    "name": "octave_code",
+    "description": "Converts `expr` to a string of Octave (or Matlab) code",
+    "related_terms": [
+      "converts",
+      "expr",
+      "string"
+    ]
+  },
+  {
+    "name": "ode_order",
+    "description": "Returns the order of a given differential\nequation with respect to func",
+    "related_terms": [
+      "returns",
+      "order",
+      "given"
+    ]
+  },
+  {
+    "name": "ones",
+    "description": "Returns a matrix of ones with ``rows`` rows and ``cols`` columns;\nif ``cols`` is omitted a square matrix will be returned",
+    "related_terms": [
+      "matrix",
+      "rows",
+      "cols"
+    ]
+  },
+  {
+    "name": "ordered",
+    "description": "Return an iterator of the seq where keys are used to break ties\nin a conservative fashion: if, after applying a key, there are no\nties then no other keys will be computed",
+    "related_terms": [
+      "keys",
+      "ties",
+      "return"
+    ]
+  },
+  {
+    "name": "pager_print",
+    "description": "Prints expr using the pager, in pretty form",
+    "related_terms": [
+      "prints",
+      "expr",
+      "using"
+    ]
+  },
+  {
+    "name": "parallel_poly_from_expr",
+    "description": "Construct polynomials from expressions",
+    "related_terms": [
+      "construct",
+      "polynomials",
+      "expressions"
+    ]
+  },
+  {
+    "name": "parse_expr",
+    "description": "Converts the string ``s`` to a SymPy expression, in ``local_dict``",
+    "related_terms": [
+      "converts",
+      "string",
+      "sympy"
+    ]
+  },
+  {
+    "name": "pde_separate",
+    "description": "Separate variables in partial differential equation either by additive\nor multiplicative separation approach",
+    "related_terms": [
+      "separate",
+      "variables",
+      "partial"
+    ]
+  },
+  {
+    "name": "pde_separate_add",
+    "description": "Helper function for searching additive separable solutions",
+    "related_terms": [
+      "helper",
+      "function",
+      "searching"
+    ]
+  },
+  {
+    "name": "pde_separate_mul",
+    "description": "Helper function for searching multiplicative separable solutions",
+    "related_terms": [
+      "helper",
+      "function",
+      "searching"
+    ]
+  },
+  {
+    "name": "pdiv",
+    "description": "Compute polynomial pseudo-division of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "f"
+    ]
+  },
+  {
+    "name": "pdsolve",
+    "description": "Solves any (supported) kind of partial differential equation",
+    "related_terms": [
+      "solves",
+      "supported",
+      "kind"
+    ]
+  },
+  {
+    "name": "per",
+    "description": "Matrix Permanent\n\nExamples\n========\n\n>>> from sympy import MatrixSymbol, Matrix, per, ones\n>>> A = MatrixSymbol('A', 3, 3)\n>>> per(A)\nPermanent(A)\n>>> per(ones(5, 5))\n120\n>>> M = Matrix([1, 2, 5])\n>>> per(M)\n8",
+    "related_terms": [
+      "per",
+      "matrix",
+      "5"
+    ]
+  },
+  {
+    "name": "perfect_power",
+    "description": "Return ``(b, e)`` such that ``n`` == ``b**e`` if ``n`` is a unique\nperfect power with ``e > 1``, else ``False`` (e",
+    "related_terms": [
+      "e",
+      "b",
+      "n"
+    ]
+  },
+  {
+    "name": "periodicity",
+    "description": "Tests the given function for periodicity in the given symbol",
+    "related_terms": [
+      "given",
+      "tests",
+      "function"
+    ]
+  },
+  {
+    "name": "permutedims",
+    "description": "Permutes the indices of an array",
+    "related_terms": [
+      "permutes",
+      "indices",
+      "array"
+    ]
+  },
+  {
+    "name": "pexquo",
+    "description": "Compute polynomial exact pseudo-quotient of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "exact"
+    ]
+  },
+  {
+    "name": "piecewise_exclusive",
+    "description": "Rewrite :class:`Piecewise` with mutually exclusive conditions",
+    "related_terms": [
+      "rewrite",
+      "class",
+      "piecewise"
+    ]
+  },
+  {
+    "name": "piecewise_fold",
+    "description": "Takes an expression containing a piecewise function and returns the\nexpression in piecewise form",
+    "related_terms": [
+      "expression",
+      "piecewise",
+      "takes"
+    ]
+  },
+  {
+    "name": "plot",
+    "description": "Plots a function of a single variable as a curve",
+    "related_terms": [
+      "plots",
+      "function",
+      "single"
+    ]
+  },
+  {
+    "name": "plot_implicit",
+    "description": "A plot function to plot implicit equations / inequalities",
+    "related_terms": [
+      "plot",
+      "function",
+      "implicit"
+    ]
+  },
+  {
+    "name": "plot_parametric",
+    "description": "Plots a 2D parametric curve",
+    "related_terms": [
+      "plots",
+      "2d",
+      "parametric"
+    ]
+  },
+  {
+    "name": "polarify",
+    "description": "Turn all numbers in eq into their polar equivalents (under the standard\nchoice of argument)",
+    "related_terms": [
+      "turn",
+      "numbers",
+      "eq"
+    ]
+  },
+  {
+    "name": "pollard_pm1",
+    "description": "Use Pollard's p-1 method to try to extract a nontrivial factor\nof ``n``",
+    "related_terms": [
+      "use",
+      "pollard",
+      "method"
+    ]
+  },
+  {
+    "name": "pollard_rho",
+    "description": "Use Pollard's rho method to try to extract a nontrivial factor\nof ``n``",
+    "related_terms": [
+      "use",
+      "pollard",
+      "rho"
+    ]
+  },
+  {
+    "name": "poly",
+    "description": "Efficiently transform an expression into a polynomial",
+    "related_terms": [
+      "efficiently",
+      "transform",
+      "expression"
+    ]
+  },
+  {
+    "name": "poly_from_expr",
+    "description": "Construct a polynomial from an expression",
+    "related_terms": [
+      "construct",
+      "polynomial",
+      "expression"
+    ]
+  },
+  {
+    "name": "posify",
+    "description": "Return ``eq`` (with generic symbols made positive) and a\ndictionary containing the mapping between the old and new\nsymbols",
+    "related_terms": [
+      "symbols",
+      "return",
+      "eq"
+    ]
+  },
+  {
+    "name": "postfixes",
+    "description": "Generate all postfixes of a sequence",
+    "related_terms": [
+      "generate",
+      "postfixes",
+      "sequence"
+    ]
+  },
+  {
+    "name": "postorder_traversal",
+    "description": "Do a postorder traversal of a tree",
+    "related_terms": [
+      "postorder",
+      "traversal",
+      "tree"
+    ]
+  },
+  {
+    "name": "powdenest",
+    "description": "Collect exponents on powers as assumptions allow",
+    "related_terms": [
+      "collect",
+      "exponents",
+      "powers"
+    ]
+  },
+  {
+    "name": "powsimp",
+    "description": "Reduce expression by combining powers with similar bases and exponents",
+    "related_terms": [
+      "reduce",
+      "expression",
+      "combining"
+    ]
+  },
+  {
+    "name": "pprint",
+    "description": "Prints expr in pretty form",
+    "related_terms": [
+      "prints",
+      "expr",
+      "pretty"
+    ]
+  },
+  {
+    "name": "pprint_try_use_unicode",
+    "description": "See if unicode output is available and leverage it if possible",
+    "related_terms": [
+      "see",
+      "unicode",
+      "output"
+    ]
+  },
+  {
+    "name": "pprint_use_unicode",
+    "description": "Set whether pretty-printer should use unicode by default",
+    "related_terms": [
+      "set",
+      "whether",
+      "use"
+    ]
+  },
+  {
+    "name": "pquo",
+    "description": "Compute polynomial pseudo-quotient of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "f"
+    ]
+  },
+  {
+    "name": "prefixes",
+    "description": "Generate all prefixes of a sequence",
+    "related_terms": [
+      "generate",
+      "prefixes",
+      "sequence"
+    ]
+  },
+  {
+    "name": "prem",
+    "description": "Compute polynomial pseudo-remainder of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "f"
+    ]
+  },
+  {
+    "name": "pretty_print",
+    "description": "Prints expr in pretty form",
+    "related_terms": [
+      "prints",
+      "expr",
+      "pretty"
+    ]
+  },
+  {
+    "name": "preview",
+    "description": "View expression or LaTeX markup in PNG, DVI, PostScript or PDF form",
+    "related_terms": [
+      "view",
+      "expression",
+      "latex"
+    ]
+  },
+  {
+    "name": "prevprime",
+    "description": "Return the largest prime smaller than n",
+    "related_terms": [
+      "return",
+      "largest",
+      "prime"
+    ]
+  },
+  {
+    "name": "prime",
+    "description": "Return the nth prime, with the primes indexed as prime(1) = 2,\nprime(2) = 3, etc",
+    "related_terms": [
+      "prime",
+      "2",
+      "return"
+    ]
+  },
+  {
+    "name": "prime_decomp",
+    "description": "Compute the decomposition of rational prime *p* in a number field",
+    "related_terms": [
+      "compute",
+      "decomposition",
+      "rational"
+    ]
+  },
+  {
+    "name": "prime_valuation",
+    "description": "Compute the *P*-adic valuation for an integral ideal *I*",
+    "related_terms": [
+      "compute",
+      "p",
+      "valuation"
+    ]
+  },
+  {
+    "name": "primefactors",
+    "description": "Return a sorted list of n's prime factors, ignoring multiplicity\nand any composite factor that remains if the limit was set too low\nfor complete factorization",
+    "related_terms": [
+      "return",
+      "sorted",
+      "list"
+    ]
+  },
+  {
+    "name": "primerange",
+    "description": "Generate a list of all prime numbers in the range [2, a),\nor [a, b)",
+    "related_terms": [
+      "generate",
+      "list",
+      "prime"
+    ]
+  },
+  {
+    "name": "primitive",
+    "description": "Compute content and the primitive form of ``f``",
+    "related_terms": [
+      "compute",
+      "content",
+      "primitive"
+    ]
+  },
+  {
+    "name": "primitive_element",
+    "description": "Find a single generator for a number field given by several generators",
+    "related_terms": [
+      "find",
+      "single",
+      "generator"
+    ]
+  },
+  {
+    "name": "primitive_root",
+    "description": "Returns a primitive root of ``p`` or None",
+    "related_terms": [
+      "returns",
+      "primitive",
+      "root"
+    ]
+  },
+  {
+    "name": "primorial",
+    "description": "Returns the product of the first n primes (default) or\nthe primes less than or equal to n (when ``nth=False``)",
+    "related_terms": [
+      "n",
+      "primes",
+      "returns"
+    ]
+  },
+  {
+    "name": "print_ccode",
+    "description": "Prints C representation of the given expression",
+    "related_terms": [
+      "prints",
+      "c",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_fcode",
+    "description": "Prints the Fortran representation of the given expression",
+    "related_terms": [
+      "prints",
+      "fortran",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_glsl",
+    "description": "Prints the GLSL representation of the given expression",
+    "related_terms": [
+      "prints",
+      "glsl",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_gtk",
+    "description": "Print to Gtkmathview, a gtk widget capable of rendering MathML",
+    "related_terms": [
+      "print",
+      "gtkmathview",
+      "gtk"
+    ]
+  },
+  {
+    "name": "print_jscode",
+    "description": "Prints the Javascript representation of the given expression",
+    "related_terms": [
+      "prints",
+      "javascript",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_latex",
+    "description": "Prints LaTeX representation of the given expression",
+    "related_terms": [
+      "prints",
+      "latex",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_maple_code",
+    "description": "Prints the Maple representation of the given expression",
+    "related_terms": [
+      "prints",
+      "maple",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_mathml",
+    "description": "Prints a pretty representation of the MathML code for expr",
+    "related_terms": [
+      "prints",
+      "pretty",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_python",
+    "description": "Print output of python() function",
+    "related_terms": [
+      "print",
+      "output",
+      "python"
+    ]
+  },
+  {
+    "name": "print_rcode",
+    "description": "Prints R representation of the given expression",
+    "related_terms": [
+      "prints",
+      "r",
+      "representation"
+    ]
+  },
+  {
+    "name": "print_tree",
+    "description": "Prints a tree representation of \"node\"",
+    "related_terms": [
+      "prints",
+      "tree",
+      "representation"
+    ]
+  },
+  {
+    "name": "prod",
+    "description": "Return product of elements of a",
+    "related_terms": [
+      "return",
+      "product",
+      "elements"
+    ]
+  },
+  {
+    "name": "product",
+    "description": "Compute the product",
+    "related_terms": [
+      "compute",
+      "product"
+    ]
+  },
+  {
+    "name": "proper_divisor_count",
+    "description": "Return the number of proper divisors of ``n``",
+    "related_terms": [
+      "return",
+      "number",
+      "proper"
+    ]
+  },
+  {
+    "name": "proper_divisors",
+    "description": "Return all divisors of n except n, sorted by default",
+    "related_terms": [
+      "n",
+      "return",
+      "divisors"
+    ]
+  },
+  {
+    "name": "public",
+    "description": "Append ``obj``'s name to global ``__all__`` variable (call site)",
+    "related_terms": [
+      "append",
+      "obj",
+      "name"
+    ]
+  },
+  {
+    "name": "pycode",
+    "description": "Converts an expr to a string of Python code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "python",
+    "description": "Return Python interpretation of passed expression\n(can be passed to the exec() function without any modifications)",
+    "related_terms": [
+      "passed",
+      "return",
+      "python"
+    ]
+  },
+  {
+    "name": "quadratic_congruence",
+    "description": "Find the solutions to `a x^2 + b x + c \\equiv 0 \\pmod{n}`",
+    "related_terms": [
+      "find",
+      "solutions",
+      "b"
+    ]
+  },
+  {
+    "name": "quadratic_residues",
+    "description": "Returns the list of quadratic residues",
+    "related_terms": [
+      "returns",
+      "list",
+      "quadratic"
+    ]
+  },
+  {
+    "name": "quo",
+    "description": "Compute polynomial quotient of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "quotient"
+    ]
+  },
+  {
+    "name": "rad",
+    "description": "Return the radian value for the given degrees (pi = 180 degrees)",
+    "related_terms": [
+      "degrees",
+      "return",
+      "radian"
+    ]
+  },
+  {
+    "name": "radsimp",
+    "description": "Rationalize the denominator by removing square roots",
+    "related_terms": [
+      "rationalize",
+      "denominator",
+      "removing"
+    ]
+  },
+  {
+    "name": "randMatrix",
+    "description": "Create random matrix with dimensions ``r`` x ``c``",
+    "related_terms": [
+      "create",
+      "random",
+      "matrix"
+    ]
+  },
+  {
+    "name": "random_poly",
+    "description": "Generates a polynomial of degree ``n`` with coefficients in\n``[inf, sup]``",
+    "related_terms": [
+      "generates",
+      "polynomial",
+      "degree"
+    ]
+  },
+  {
+    "name": "randprime",
+    "description": "Return a random prime number in the range [a, b)",
+    "related_terms": [
+      "return",
+      "random",
+      "prime"
+    ]
+  },
+  {
+    "name": "rational_interpolate",
+    "description": "Returns a rational interpolation, where the data points are element of\nany integral domain",
+    "related_terms": [
+      "returns",
+      "rational",
+      "interpolation"
+    ]
+  },
+  {
+    "name": "ratsimp",
+    "description": "Put an expression over a common denominator, cancel and reduce",
+    "related_terms": [
+      "put",
+      "expression",
+      "common"
+    ]
+  },
+  {
+    "name": "ratsimpmodprime",
+    "description": "Simplifies a rational expression ``expr`` modulo the prime ideal\ngenerated by ``G``",
+    "related_terms": [
+      "simplifies",
+      "rational",
+      "expression"
+    ]
+  },
+  {
+    "name": "rcode",
+    "description": "Converts an expr to a string of r code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "rcollect",
+    "description": "Recursively collect sums in an expression",
+    "related_terms": [
+      "recursively",
+      "collect",
+      "sums"
+    ]
+  },
+  {
+    "name": "real_root",
+    "description": "Return the real *n*'th-root of *arg* if possible",
+    "related_terms": [
+      "return",
+      "real",
+      "n"
+    ]
+  },
+  {
+    "name": "real_roots",
+    "description": "Returns the real roots of ``f`` with multiplicities",
+    "related_terms": [
+      "returns",
+      "real",
+      "roots"
+    ]
+  },
+  {
+    "name": "reduce_abs_inequalities",
+    "description": "Reduce a system of inequalities with nested absolute values",
+    "related_terms": [
+      "reduce",
+      "system",
+      "inequalities"
+    ]
+  },
+  {
+    "name": "reduce_abs_inequality",
+    "description": "Reduce an inequality with nested absolute values",
+    "related_terms": [
+      "reduce",
+      "inequality",
+      "nested"
+    ]
+  },
+  {
+    "name": "reduce_inequalities",
+    "description": "Reduce a system of inequalities with rational coefficients",
+    "related_terms": [
+      "reduce",
+      "system",
+      "inequalities"
+    ]
+  },
+  {
+    "name": "reduced",
+    "description": "Reduces a polynomial ``f`` modulo a set of polynomials ``G``",
+    "related_terms": [
+      "reduces",
+      "polynomial",
+      "f"
+    ]
+  },
+  {
+    "name": "refine",
+    "description": "Simplify an expression using assumptions",
+    "related_terms": [
+      "simplify",
+      "expression",
+      "using"
+    ]
+  },
+  {
+    "name": "refine_root",
+    "description": "Refine an isolating interval of a root to the given precision",
+    "related_terms": [
+      "refine",
+      "isolating",
+      "interval"
+    ]
+  },
+  {
+    "name": "register_handler",
+    "description": "Register a handler in the ask system",
+    "related_terms": [
+      "register",
+      "handler",
+      "ask"
+    ]
+  },
+  {
+    "name": "rem",
+    "description": "Compute polynomial remainder of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "polynomial",
+      "remainder"
+    ]
+  },
+  {
+    "name": "remove_handler",
+    "description": "Removes a handler from the ask system",
+    "related_terms": [
+      "removes",
+      "handler",
+      "ask"
+    ]
+  },
+  {
+    "name": "reshape",
+    "description": "Reshape the sequence according to the template in ``how``",
+    "related_terms": [
+      "reshape",
+      "sequence",
+      "according"
+    ]
+  },
+  {
+    "name": "residue",
+    "description": "Finds the residue of ``expr`` at the point x=x0",
+    "related_terms": [
+      "finds",
+      "residue",
+      "expr"
+    ]
+  },
+  {
+    "name": "resultant",
+    "description": "Compute resultant of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "resultant",
+      "f"
+    ]
+  },
+  {
+    "name": "ring",
+    "description": "Construct a polynomial ring returning ``(ring, x_1,",
+    "related_terms": [
+      "ring",
+      "construct",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "root",
+    "description": "Returns the *k*-th *n*-th root of ``arg``",
+    "related_terms": [
+      "returns",
+      "k",
+      "n"
+    ]
+  },
+  {
+    "name": "rootof",
+    "description": "An indexed root of a univariate polynomial",
+    "related_terms": [
+      "indexed",
+      "root",
+      "univariate"
+    ]
+  },
+  {
+    "name": "roots",
+    "description": "Computes symbolic roots of a univariate polynomial",
+    "related_terms": [
+      "computes",
+      "symbolic",
+      "roots"
+    ]
+  },
+  {
+    "name": "rot_axis1",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 1-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_axis2",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 2-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_axis3",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 3-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_ccw_axis1",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 1-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_ccw_axis2",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 2-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_ccw_axis3",
+    "description": "Returns a rotation matrix for a rotation of theta (in radians)\nabout the 3-axis",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "matrix"
+    ]
+  },
+  {
+    "name": "rot_givens",
+    "description": "Returns a a Givens rotation matrix, a a rotation in the\nplane spanned by two coordinates axes",
+    "related_terms": [
+      "rotation",
+      "returns",
+      "givens"
+    ]
+  },
+  {
+    "name": "rotations",
+    "description": "Return a generator giving the items in s as list where\neach subsequent list has the items rotated to the left (default)\nor right (``dir=-1``) relative to the previous list",
+    "related_terms": [
+      "list",
+      "items",
+      "return"
+    ]
+  },
+  {
+    "name": "round_two",
+    "description": "Zassenhaus's \"Round 2\" algorithm",
+    "related_terms": [
+      "zassenhaus",
+      "round",
+      "2"
+    ]
+  },
+  {
+    "name": "rsolve",
+    "description": "Solve univariate recurrence with rational coefficients",
+    "related_terms": [
+      "solve",
+      "univariate",
+      "recurrence"
+    ]
+  },
+  {
+    "name": "rsolve_hyper",
+    "description": "Given linear recurrence operator `\\operatorname{L}` of order `k`\nwith polynomial coefficients and inhomogeneous equation\n`\\operatorname{L} y = f` we seek for all hypergeometric solutions\nover field `K` of characteristic zero",
+    "related_terms": [
+      "l",
+      "k",
+      "given"
+    ]
+  },
+  {
+    "name": "rsolve_poly",
+    "description": "Given linear recurrence operator `\\operatorname{L}` of order\n`k` with polynomial coefficients and inhomogeneous equation\n`\\operatorname{L} y = f`, where `f` is a polynomial, we seek for\nall polynomial solutions over field `K` of characteristic zero",
+    "related_terms": [
+      "polynomial",
+      "l",
+      "k"
+    ]
+  },
+  {
+    "name": "rsolve_ratio",
+    "description": "Given linear recurrence operator `\\operatorname{L}` of order `k`\nwith polynomial coefficients and inhomogeneous equation\n`\\operatorname{L} y = f`, where `f` is a polynomial, we seek\nfor all rational solutions over field `K` of characteristic zero",
+    "related_terms": [
+      "l",
+      "k",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "rust_code",
+    "description": "Converts an expr to a string of Rust code\n\nParameters\n==========\n\nexpr : Expr\n    A SymPy expression to be converted",
+    "related_terms": [
+      "expr",
+      "converts",
+      "string"
+    ]
+  },
+  {
+    "name": "satisfiable",
+    "description": "Check satisfiability of a propositional sentence",
+    "related_terms": [
+      "check",
+      "satisfiability",
+      "propositional"
+    ]
+  },
+  {
+    "name": "separatevars",
+    "description": "Separates variables in an expression, if possible",
+    "related_terms": [
+      "separates",
+      "variables",
+      "expression"
+    ]
+  },
+  {
+    "name": "sequence",
+    "description": "Returns appropriate sequence object",
+    "related_terms": [
+      "returns",
+      "appropriate",
+      "sequence"
+    ]
+  },
+  {
+    "name": "series",
+    "description": "Series expansion of expr around point `x = x0`",
+    "related_terms": [
+      "series",
+      "expansion",
+      "expr"
+    ]
+  },
+  {
+    "name": "seterr",
+    "description": "Should SymPy raise an exception on 0/0 or return a nan",
+    "related_terms": [
+      "sympy",
+      "raise",
+      "exception"
+    ]
+  },
+  {
+    "name": "sfield",
+    "description": "Construct a field deriving generators and domain\nfrom options and input expressions",
+    "related_terms": [
+      "construct",
+      "field",
+      "deriving"
+    ]
+  },
+  {
+    "name": "shape",
+    "description": "Return the shape of the *expr* as a tuple",
+    "related_terms": [
+      "return",
+      "shape",
+      "expr"
+    ]
+  },
+  {
+    "name": "sift",
+    "description": "Sift the sequence, ``seq`` according to ``keyfunc``",
+    "related_terms": [
+      "sift",
+      "sequence",
+      "seq"
+    ]
+  },
+  {
+    "name": "signsimp",
+    "description": "Make all Add sub-expressions canonical wrt sign",
+    "related_terms": [
+      "make",
+      "add",
+      "canonical"
+    ]
+  },
+  {
+    "name": "simplify",
+    "description": "Simplifies the given expression",
+    "related_terms": [
+      "simplifies",
+      "given",
+      "expression"
+    ]
+  },
+  {
+    "name": "simplify_logic",
+    "description": "This function simplifies a boolean function to its simplified version\nin SOP or POS form",
+    "related_terms": [
+      "function",
+      "simplifies",
+      "boolean"
+    ]
+  },
+  {
+    "name": "sine_transform",
+    "description": "Compute the unitary, ordinary-frequency sine transform of `f`, defined\nas",
+    "related_terms": [
+      "compute",
+      "unitary",
+      "sine"
+    ]
+  },
+  {
+    "name": "singularities",
+    "description": "Find singularities of a given function",
+    "related_terms": [
+      "find",
+      "singularities",
+      "given"
+    ]
+  },
+  {
+    "name": "singularityintegrate",
+    "description": "This function handles the indefinite integrations of Singularity functions",
+    "related_terms": [
+      "function",
+      "handles",
+      "indefinite"
+    ]
+  },
+  {
+    "name": "smtlib_code",
+    "description": "Converts ``expr`` to a string of smtlib code",
+    "related_terms": [
+      "converts",
+      "expr",
+      "string"
+    ]
+  },
+  {
+    "name": "solve",
+    "description": "Algebraically solves equations and systems of equations",
+    "related_terms": [
+      "equations",
+      "algebraically",
+      "solves"
+    ]
+  },
+  {
+    "name": "solve_linear",
+    "description": "Return a tuple derived from ``f = lhs - rhs`` that is one of\nthe following: ``(0, 1)``, ``(0, 0)``, ``(symbol, solution)``, ``(n, d)``",
+    "related_terms": [
+      "0",
+      "return",
+      "tuple"
+    ]
+  },
+  {
+    "name": "solve_linear_system",
+    "description": "Solve system of $N$ linear equations with $M$ variables, which means\nboth under- and overdetermined systems are supported",
+    "related_terms": [
+      "solve",
+      "system",
+      "n"
+    ]
+  },
+  {
+    "name": "solve_linear_system_LU",
+    "description": "Solves the augmented matrix system using ``LUsolve`` and returns a\ndictionary in which solutions are keyed to the symbols of *syms* as ordered",
+    "related_terms": [
+      "solves",
+      "augmented",
+      "matrix"
+    ]
+  },
+  {
+    "name": "solve_poly_inequality",
+    "description": "Solve a polynomial inequality with rational coefficients",
+    "related_terms": [
+      "solve",
+      "polynomial",
+      "inequality"
+    ]
+  },
+  {
+    "name": "solve_poly_system",
+    "description": "Return a list of solutions for the system of polynomial equations\nor else None",
+    "related_terms": [
+      "return",
+      "list",
+      "solutions"
+    ]
+  },
+  {
+    "name": "solve_rational_inequalities",
+    "description": "Solve a system of rational inequalities with rational coefficients",
+    "related_terms": [
+      "rational",
+      "solve",
+      "system"
+    ]
+  },
+  {
+    "name": "solve_triangulated",
+    "description": "Solve a polynomial system using Gianni-Kalkbrenner algorithm",
+    "related_terms": [
+      "solve",
+      "polynomial",
+      "system"
+    ]
+  },
+  {
+    "name": "solve_undetermined_coeffs",
+    "description": "Solve a system of equations in $k$ parameters that is formed by\nmatching coefficients in variables ``coeffs`` that are on\nfactors dependent on the remaining variables (or those given\nexplicitly by ``syms``",
+    "related_terms": [
+      "variables",
+      "solve",
+      "system"
+    ]
+  },
+  {
+    "name": "solve_univariate_inequality",
+    "description": "Solves a real univariate inequality",
+    "related_terms": [
+      "solves",
+      "real",
+      "univariate"
+    ]
+  },
+  {
+    "name": "solveset",
+    "description": "Solves a given inequality or equation with set as output\n\nParameters\n==========\n\nf : Expr or a relational",
+    "related_terms": [
+      "solves",
+      "given",
+      "inequality"
+    ]
+  },
+  {
+    "name": "sqf",
+    "description": "Compute square-free factorization of ``f``",
+    "related_terms": [
+      "compute",
+      "factorization",
+      "f"
+    ]
+  },
+  {
+    "name": "sqf_list",
+    "description": "Compute a list of square-free factors of ``f``",
+    "related_terms": [
+      "compute",
+      "list",
+      "factors"
+    ]
+  },
+  {
+    "name": "sqf_norm",
+    "description": "Compute square-free norm of ``f``",
+    "related_terms": [
+      "compute",
+      "norm",
+      "f"
+    ]
+  },
+  {
+    "name": "sqf_part",
+    "description": "Compute square-free part of ``f``",
+    "related_terms": [
+      "compute",
+      "part",
+      "f"
+    ]
+  },
+  {
+    "name": "sqrt",
+    "description": "Returns the principal square root",
+    "related_terms": [
+      "returns",
+      "principal",
+      "square"
+    ]
+  },
+  {
+    "name": "sqrt_mod",
+    "description": "Find a root of ``x**2 = a mod p``",
+    "related_terms": [
+      "find",
+      "root",
+      "x"
+    ]
+  },
+  {
+    "name": "sqrt_mod_iter",
+    "description": "Iterate over solutions to ``x**2 = a mod p``",
+    "related_terms": [
+      "iterate",
+      "solutions",
+      "x"
+    ]
+  },
+  {
+    "name": "sqrtdenest",
+    "description": "Denests sqrts in an expression that contain other square roots\nif possible, otherwise returns the expr unchanged",
+    "related_terms": [
+      "denests",
+      "sqrts",
+      "expression"
+    ]
+  },
+  {
+    "name": "sring",
+    "description": "Construct a ring deriving generators and domain from options and input expressions",
+    "related_terms": [
+      "construct",
+      "ring",
+      "deriving"
+    ]
+  },
+  {
+    "name": "stationary_points",
+    "description": "Returns the stationary points of a function (where derivative of the\nfunction is 0) in the given domain",
+    "related_terms": [
+      "function",
+      "returns",
+      "stationary"
+    ]
+  },
+  {
+    "name": "sturm",
+    "description": "Compute Sturm sequence of ``f``",
+    "related_terms": [
+      "compute",
+      "sturm",
+      "sequence"
+    ]
+  },
+  {
+    "name": "subresultants",
+    "description": "Compute subresultant PRS of ``f`` and ``g``",
+    "related_terms": [
+      "compute",
+      "subresultant",
+      "prs"
+    ]
+  },
+  {
+    "name": "subsets",
+    "description": "Generates all `k`-subsets (combinations) from an `n`-element set, ``seq``",
+    "related_terms": [
+      "generates",
+      "k",
+      "combinations"
+    ]
+  },
+  {
+    "name": "substitution",
+    "description": "Solves the `system` using substitution method",
+    "related_terms": [
+      "solves",
+      "system",
+      "using"
+    ]
+  },
+  {
+    "name": "summation",
+    "description": "Compute the summation of f with respect to symbols",
+    "related_terms": [
+      "compute",
+      "summation",
+      "f"
+    ]
+  },
+  {
+    "name": "swinnerton_dyer_poly",
+    "description": "Generates n-th Swinnerton-Dyer polynomial in `x`",
+    "related_terms": [
+      "generates",
+      "polynomial",
+      "x"
+    ]
+  },
+  {
+    "name": "symarray",
+    "description": "Create a numpy ndarray of symbols (as an object array)",
+    "related_terms": [
+      "create",
+      "numpy",
+      "ndarray"
+    ]
+  },
+  {
+    "name": "symbols",
+    "description": "Transform strings into instances of :class:`Symbol` class",
+    "related_terms": [
+      "class",
+      "transform",
+      "strings"
+    ]
+  },
+  {
+    "name": "symmetric_poly",
+    "description": "Generates symmetric polynomial of order `n`",
+    "related_terms": [
+      "generates",
+      "symmetric",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "symmetrize",
+    "description": "Rewrite a polynomial in terms of elementary symmetric polynomials",
+    "related_terms": [
+      "rewrite",
+      "polynomial",
+      "terms"
+    ]
+  },
+  {
+    "name": "sympify",
+    "description": "Converts an arbitrary expression to a type that can be used inside SymPy",
+    "related_terms": [
+      "converts",
+      "arbitrary",
+      "expression"
+    ]
+  },
+  {
+    "name": "take",
+    "description": "Return ``n`` items from ``iter`` iterator",
+    "related_terms": [
+      "return",
+      "n",
+      "items"
+    ]
+  },
+  {
+    "name": "tensorcontraction",
+    "description": "Contraction of an array-like object on the specified axes",
+    "related_terms": [
+      "contraction",
+      "object",
+      "specified"
+    ]
+  },
+  {
+    "name": "tensordiagonal",
+    "description": "Diagonalization of an array-like object on the specified axes",
+    "related_terms": [
+      "diagonalization",
+      "object",
+      "specified"
+    ]
+  },
+  {
+    "name": "tensorproduct",
+    "description": "Tensor product among scalars or array-like objects",
+    "related_terms": [
+      "tensor",
+      "product",
+      "among"
+    ]
+  },
+  {
+    "name": "terms_gcd",
+    "description": "Remove GCD of terms from ``f``",
+    "related_terms": [
+      "remove",
+      "gcd",
+      "terms"
+    ]
+  },
+  {
+    "name": "textplot",
+    "description": "Print a crude ASCII art plot of the SymPy expression 'expr' (which\nshould contain a single symbol, e",
+    "related_terms": [
+      "print",
+      "crude",
+      "ascii"
+    ]
+  },
+  {
+    "name": "threaded",
+    "description": "Apply ``func`` to sub--elements of an object, including :class:`~",
+    "related_terms": [
+      "apply",
+      "func",
+      "sub"
+    ]
+  },
+  {
+    "name": "timed",
+    "description": "Adaptively measure execution time of a function",
+    "related_terms": [
+      "adaptively",
+      "measure",
+      "execution"
+    ]
+  },
+  {
+    "name": "to_cnf",
+    "description": "Convert a propositional logical sentence ``expr`` to conjunctive normal\nform: ``((A | ~B |",
+    "related_terms": [
+      "convert",
+      "propositional",
+      "logical"
+    ]
+  },
+  {
+    "name": "to_dnf",
+    "description": "Convert a propositional logical sentence ``expr`` to disjunctive normal\nform: ``((A & ~B &",
+    "related_terms": [
+      "convert",
+      "propositional",
+      "logical"
+    ]
+  },
+  {
+    "name": "to_nnf",
+    "description": "Converts ``expr`` to Negation Normal Form (NNF)",
+    "related_terms": [
+      "converts",
+      "expr",
+      "negation"
+    ]
+  },
+  {
+    "name": "to_number_field",
+    "description": "Express one algebraic number in the field generated by another",
+    "related_terms": [
+      "express",
+      "one",
+      "algebraic"
+    ]
+  },
+  {
+    "name": "together",
+    "description": "Denest and combine rational expressions using symbolic methods",
+    "related_terms": [
+      "denest",
+      "combine",
+      "rational"
+    ]
+  },
+  {
+    "name": "topological_sort",
+    "description": "Topological sort of graph's vertices",
+    "related_terms": [
+      "topological",
+      "sort",
+      "graph"
+    ]
+  },
+  {
+    "name": "total_degree",
+    "description": "Return the total_degree of ``f`` in the given variables",
+    "related_terms": [
+      "return",
+      "f",
+      "given"
+    ]
+  },
+  {
+    "name": "trace",
+    "description": "Trace of a Matrix",
+    "related_terms": [
+      "trace",
+      "matrix"
+    ]
+  },
+  {
+    "name": "trailing",
+    "description": "Count the number of trailing zero digits in the binary\nrepresentation of n, i",
+    "related_terms": [
+      "count",
+      "number",
+      "trailing"
+    ]
+  },
+  {
+    "name": "trigsimp",
+    "description": "Returns a reduced expression by using known trig identities",
+    "related_terms": [
+      "returns",
+      "reduced",
+      "expression"
+    ]
+  },
+  {
+    "name": "trunc",
+    "description": "Reduce ``f`` modulo a constant ``p``",
+    "related_terms": [
+      "reduce",
+      "f",
+      "modulo"
+    ]
+  },
+  {
+    "name": "unbranched_argument",
+    "description": "Returns periodic argument of arg with period as infinity",
+    "related_terms": [
+      "returns",
+      "periodic",
+      "argument"
+    ]
+  },
+  {
+    "name": "unflatten",
+    "description": "Group ``iter`` into tuples of length ``n``",
+    "related_terms": [
+      "group",
+      "iter",
+      "tuples"
+    ]
+  },
+  {
+    "name": "unpolarify",
+    "description": "If `p` denotes the projection from the Riemann surface of the logarithm to\nthe complex line, return a simplified version `eq'` of `eq` such that\n`p(eq') = p(eq)`",
+    "related_terms": [
+      "eq",
+      "p",
+      "denotes"
+    ]
+  },
+  {
+    "name": "use",
+    "description": "Use ``func`` to transform ``expr`` at the given level",
+    "related_terms": [
+      "use",
+      "func",
+      "transform"
+    ]
+  },
+  {
+    "name": "var",
+    "description": "Create symbols and inject them into the global namespace",
+    "related_terms": [
+      "create",
+      "symbols",
+      "inject"
+    ]
+  },
+  {
+    "name": "variations",
+    "description": "Returns an iterator over the n-sized variations of ``seq`` (size N)",
+    "related_terms": [
+      "returns",
+      "iterator",
+      "variations"
+    ]
+  },
+  {
+    "name": "vfield",
+    "description": "Construct new rational function field and inject generators into global namespace",
+    "related_terms": [
+      "construct",
+      "new",
+      "rational"
+    ]
+  },
+  {
+    "name": "viete",
+    "description": "Generate Viete's formulas for ``f``",
+    "related_terms": [
+      "generate",
+      "viete",
+      "formulas"
+    ]
+  },
+  {
+    "name": "vring",
+    "description": "Construct a polynomial ring and inject ``x_1,",
+    "related_terms": [
+      "construct",
+      "polynomial",
+      "ring"
+    ]
+  },
+  {
+    "name": "wronskian",
+    "description": "Compute Wronskian for [] of functions\n\n::\n\n                     | f1       f2",
+    "related_terms": [
+      "compute",
+      "wronskian",
+      "functions"
+    ]
+  },
+  {
+    "name": "xfield",
+    "description": "Construct new rational function field returning (field, (x1,",
+    "related_terms": [
+      "field",
+      "construct",
+      "new"
+    ]
+  },
+  {
+    "name": "xring",
+    "description": "Construct a polynomial ring returning ``(ring, (x_1,",
+    "related_terms": [
+      "ring",
+      "construct",
+      "polynomial"
+    ]
+  },
+  {
+    "name": "xthreaded",
+    "description": "Apply ``func`` to sub--elements of an object, excluding :class:`~",
+    "related_terms": [
+      "apply",
+      "func",
+      "sub"
+    ]
+  },
+  {
+    "name": "zeros",
+    "description": "Returns a matrix of zeros with ``rows`` rows and ``cols`` columns;\nif ``cols`` is omitted a square matrix will be returned",
+    "related_terms": [
+      "matrix",
+      "rows",
+      "cols"
+    ]
+  }
+]
