@@ -1,7 +1,5 @@
 window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']],packages: {'[+]': ['amsmath', 'physics']},},
   svg: {
     fontCache: 'global'
   },

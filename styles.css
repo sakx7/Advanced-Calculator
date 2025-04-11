@@ -264,10 +264,90 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
 
 
 
+/* Style the custom dropdown container */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
 
+/* Style the dropdown options container */
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #2a2a6e;
+    border: 2px solid #5555ff;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
 
+/* Style individual options */
+.dropdown-options div {
+    margin: 5px 0;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap; /* Allow wrapping for long text */
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
 
+/* Specific styles for types */
+.option-class {
+    background-color: #3b82f6; /* Box color */
+}
 
+.option-function {
+    background-color: #22c55e; /* Box color */
+}
+
+.option-property {
+    background-color: #f59e0b; /* Box color */
+}
+
+.option-method {
+    background-color: #ef4444; /* Box color */
+}
+
+/* Style for spans within options */
+.dropdown-options span {
+    display: inline-block; /* Make it a block element */
+    padding: 4px 8px; /* Add padding inside the box */
+    border-radius: 3px; /* Round corners */
+}
+
+/* Hover effect */
+.dropdown-options div:hover {
+    opacity: 0.9; /* Slightly transparent on hover */
+}
+
+/* Active state for keyboard navigation */
+.dropdown-options div.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background to indicate active state */
+}
+
+/* Unknown option styling */
+.option-unknown {
+    color: grey;
+}
+
+/* Class name styling */
+.class-name {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: 12px;
+    color: white; /* Small and white */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional, adds contrast */
+    padding: 2px;
+}
 
 
 
@@ -467,4 +547,12 @@ button:hover {
     fill: white;
     width: 30px;
     height: 35px;
+}
+
+#hiddenLatexDisplay {
+    display: none; /* Hide the mimicking container */
+}
+.marker {
+    color: red;
+    font-weight: bold;
 }

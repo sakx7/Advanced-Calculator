@@ -116,9 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         let asciiMathToLatex = AMTparseAMtoTeX(input);
         const processedLatex = processLatexString(asciiMathToLatex);
-        
         rawLatexExpression = processedLatex;  
-        
         const newContent = `<mjx-container>$$${processedLatex}$$</mjx-container>`;
         const contentWrapper = document.createElement('div');
         contentWrapper.classList.add('scrollable-content');
@@ -155,33 +153,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
                         const cursorPosition = keyinputs.selectionStart;
                         const isTypingAtEnd = cursorPosition === input.length;
-                        const simplebarContentWrapper = document.querySelector('.simplebar-content-wrapper');
+                        const simplebarContentWrapper = document.querySelector('.simplebar-content-wrapper'); // latex is stored in here
 
                         if (isTypingAtEnd) {
                             simplebarContentWrapper.scrollLeft = simplebarContentWrapper.scrollWidth;
                             showScrollbarTemporarily();
                         } else {
-                            const currentScrollPosition = simplebarContentWrapper.scrollLeft;
-                            const contentWidth = simplebarContentWrapper.scrollWidth;
-                            const displayWidth = simplebarContentWrapper.clientWidth;    
-                            if (contentWidth > displayWidth) {
-                                const threshold = displayWidth * 0.05;
-                                const estimatedCursorPosition = (cursorPosition / input.length) * contentWidth;
-                                const cursorViewPosition = estimatedCursorPosition - currentScrollPosition;
-                                if (cursorViewPosition < threshold) {
-                                    const targetScrollPosition = Math.max(0, estimatedCursorPosition - threshold);
-                                    simplebarContentWrapper.scrollTo({
-                                        left: targetScrollPosition,
-                                        behavior: 'auto'
-                                    });
-                                } else if (cursorViewPosition > displayWidth - threshold) {
-                                    const targetScrollPosition = Math.min(contentWidth - displayWidth, estimatedCursorPosition + threshold);
-                                    simplebarContentWrapper.scrollTo({
-                                        left: targetScrollPosition,
-                                        behavior: 'auto'
-                                    });
-                                }
-                            }
+                            
                         }     
                         lastSuccessfulRender = newContent;
                         logMessages.forEach(log => {
@@ -201,6 +179,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     
+    function trackCursorPosition(inputElement) {
+        let lastCursorPosition = null;
+        function logCursorPosition(event) {
+            const currentCursorPosition = inputElement.selectionStart;    
+            if (currentCursorPosition !== lastCursorPosition) {
+                console.log(`Cursor position changed: ${currentCursorPosition}`);
+                lastCursorPosition = currentCursorPosition;
+            }
+        }
+        inputElement.addEventListener('input', logCursorPosition);
+        inputElement.addEventListener('keydown', logCursorPosition);
+        inputElement.addEventListener('click', logCursorPosition);
+        return function cleanup() {
+            inputElement.removeEventListener('input', logCursorPosition);
+            inputElement.removeEventListener('keydown', logCursorPosition);
+            inputElement.removeEventListener('click', logCursorPosition);
+        };
+    }
+ 
     let scrollbarTimeoutId;
 
     function showScrollbarTemporarily() {
@@ -218,12 +215,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-    document.addEventListener('keydown', function(event) {
-        if (!isFocused) {
-            keyinputs.focus();
-            isFocused = true;
-        }        
-    });
+    // document.addEventListener('keydown', function(event) {
+    //     if (!isFocused) {
+    //         keyinputs.focus();
+    //         isFocused = true;
+    //     }        
+    //});
 
 
 
@@ -281,4 +278,134 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         enter(keyinputs.value, paramater.value, rawLatexExpression); // sends to mathinput.js
     });
+
+
+
+const dropdownOptions = document.querySelector('.dropdown-options');
+const parametersInput = document.getElementById('parameters');
+const txtFilePath = 'sympy_list.txt';
+
+let allOptions = []; // Store all options here
+let currentIndex = -1; // Track the currently highlighted option
+
+// Fetch options from the file
+fetch(txtFilePath)
+    .then(response => response.text())
+    .then(data => {
+        allOptions = data.split('\n').map(line => {
+            const [text, type] = line.split('~'); // Split into text and type
+            const trimmedText = text.trim();
+            let methodName, className;
+
+            // Check for '.' in the text to separate method and class names
+            if (trimmedText.includes('.')) {
+                const parts = trimmedText.split('.');
+                methodName = parts.pop().trim(); // Get the last part as method name
+                className = parts.join('.').trim(); // Join remaining parts as class name
+            } else {
+                methodName = trimmedText; // Use whole text as method name
+                className = null; // No class name available
+            }
+
+            return { text: methodName, className, type: type ? type.trim() : 'unknown' }; // Return method and class names
+        });
+        updateDropdownOptions(allOptions); // Initialize dropdown with all options
+    })
+    .catch(error => console.error('Error loading dropdown options:', error));
+
+function updateDropdownOptions(options) {
+    dropdownOptions.innerHTML = ''; // Clear existing options
+    options.forEach((option, index) => {
+        const optionElement = document.createElement('div');
+        
+        const textElement = document.createElement('span'); // Create a span for the method name
+        textElement.textContent = `${option.text}()`; // Append parentheses to method name
+        textElement.classList.add(`option-${option.type}`); // Add CSS class based on type
+
+        optionElement.appendChild(textElement); // Append the method name span to the div
+        
+        if (option.className) { // Only add class name if it exists
+            const classNameElement = document.createElement('span'); // Create a span for the class name
+            classNameElement.textContent = option.className; // Display the class name
+            classNameElement.classList.add('class-name'); // Add a class for styling
+            optionElement.appendChild(classNameElement); // Append the class name element
+        }
+
+        optionElement.setAttribute('data-index', index); // Add index for keyboard navigation
+
+        // Click event for selecting an option
+        optionElement.addEventListener('click', () => {
+            parametersInput.value = textElement.textContent; // Set input value to selected method with parentheses
+            dropdownOptions.style.display = 'none'; // Hide dropdown after selection
+        });
+
+        dropdownOptions.appendChild(optionElement); // Add the option to the dropdown
+    });
+
+    // Reset scroll position to the top
+    dropdownOptions.scrollTop = 0;
+}
+
+// Event listener for typing in the input field
+parametersInput.addEventListener('input', () => {
+    const inputValue = parametersInput.value.trim().toLowerCase();
+    currentIndex = -1; // Reset index on input change
+
+    if (!inputValue) {
+        dropdownOptions.style.display = 'none'; // Hide dropdown if input is empty
+        return updateDropdownOptions(allOptions); // Show all options
+    }
+
+    // Rank and filter options based on input
+    const rankedOptions = allOptions
+        .map(option => {
+            const remainingText = option.text.toLowerCase().replace(inputValue, ''); // Remove input value from method name
+            return {
+                ...option,
+                remainingLength: remainingText.length, // Length of remaining text
+            };
+        })
+        .filter(option => option.remainingLength < option.text.length) // Only include options that match
+        .sort((a, b) => a.remainingLength - b.remainingLength); // Sort by remaining length (best match first)
+
+    updateDropdownOptions(rankedOptions); // Update the dropdown
+    dropdownOptions.style.display = rankedOptions.length ? 'block' : 'none'; // Show/hide dropdown
+});
+
+// Handle keyboard navigation
+parametersInput.addEventListener('keydown', (event) => {
+    const visibleOptions = dropdownOptions.querySelectorAll('div'); // Get visible options
+    if (!visibleOptions.length) return; // Exit if no options are visible
+
+    if (event.key === 'ArrowDown') {
+        event.preventDefault(); // Prevent cursor from moving in input
+        currentIndex = (currentIndex + 1) % visibleOptions.length; // Move down
+        highlightOption(visibleOptions, currentIndex);
+    } else if (event.key === 'ArrowUp') {
+        event.preventDefault(); // Prevent cursor from moving in input
+        currentIndex = (currentIndex - 1 + visibleOptions.length) % visibleOptions.length; // Move up
+        highlightOption(visibleOptions, currentIndex);
+    } else if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent form submission or other actions
+        if (currentIndex >= 0 && visibleOptions[currentIndex]) {
+            visibleOptions[currentIndex].click(); // Select the highlighted option
+        }
+    }
+});
+
+// Highlight selected option
+function highlightOption(options, index) {
+    options.forEach(option => option.classList.remove('active')); // Remove 'active' from all
+    const selectedOption = options[index]; // Get the current option
+    selectedOption.classList.add('active'); // Add 'active' class
+    selectedOption.scrollIntoView({ block: 'nearest' }); // Ensure it's visible
+}
+
+// Hide dropdown when clicking outside
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.custom-dropdown')) {
+        dropdownOptions.style.display = 'none';
+    }
+});
+
 });

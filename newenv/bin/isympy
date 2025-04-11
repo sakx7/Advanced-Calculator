@@ -1,4 +1,4 @@
-#!/home/sak/Documents/Advanced-Calculator/newenv/bin/python3
+#!/home/sak/Documents/Advanced-Calculator/newenv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys

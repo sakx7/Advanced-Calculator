@@ -1,0 +1,4202 @@
+Predicate.eval~method
+Predicate.register~method
+Predicate.register_many~method
+Predicate.arg~property
+Predicate.arguments~property
+Predicate.function~property
+ask~function
+register_handler~function
+remove_handler~function
+Assume.arg~property
+Assume.arguments~property
+Assume.function~property
+Assume.add~method
+Assume.eval~method
+Assume.register~method
+Assume.register_many~method
+assuming~function
+refine~function
+refine_Pow~function
+refine_abs~function
+refine_arg~function
+refine_atan2~function
+refine_im~function
+refine_matrixelement~function
+refine_re~function
+refine_sign~function
+euler_equations~function
+is_decreasing~function
+is_increasing~function
+is_monotonic~function
+is_strictly_decreasing~function
+is_strictly_increasing~function
+monotonicity_helper~function
+singularities~function
+apply_finite_diff~function
+differentiate_finite~function
+finite_diff_weights~function
+continuous_domain~function
+function_range~function
+is_convex~function
+lcim~function
+maximum~function
+minimum~function
+not_empty_in~function
+periodicity~function
+stationary_points~function
+Partitions.RGS~property
+Partitions.from_rgs~method
+Partitions.partition~property
+Partitions.rank~property
+Partitions.sort_key~method
+Partitions.as_dict~method
+Partitions.as_ferrers~method
+Partitions.conjugate~property
+Partitions.next_lex~method
+Partitions.prev_lex~method
+random_integer_partition~function
+RGS_generalized~function
+RGS_enum~function
+RGS_unrank~function
+RGS_rank~function
+Permutations.apply~method
+Permutations.array_form~property
+Permutations.ascents~method
+Permutations.atoms~method
+Permutations.cardinality~property
+Permutations.commutator~method
+Permutations.commutes_with~method
+Permutations.cycle_structure~property
+Permutations.cycles~property
+Permutations.cyclic_form~property
+Permutations.descents~method
+Permutations.from_inversion_vector~method
+Permutations.from_sequence~method
+Permutations.full_cyclic_form~property
+Permutations.get_adjacency_distance~method
+Permutations.get_adjacency_matrix~method
+Permutations.get_positional_distance~method
+Permutations.get_precedence_distance~method
+Permutations.get_precedence_matrix~method
+Permutations.index~method
+Permutations.inversion_vector~method
+Permutations.inversions~method
+Permutations.is_Empty~property
+Permutations.is_Identity~property
+Permutations.is_Singleton~property
+Permutations.is_even~property
+Permutations.is_odd~property
+Permutations.josephus~method
+Permutations.length~method
+Permutations.list~method
+Permutations.max~method
+Permutations.min~method
+Permutations.mul_inv~method
+Permutations.next_lex~method
+Permutations.next_nonlex~method
+Permutations.next_trotterjohnson~method
+Permutations.order~method
+Permutations.parity~method
+Permutations.random~method
+Permutations.rank~method
+Permutations.rank_nonlex~method
+Permutations.rank_trotterjohnson~method
+Permutations.resize~method
+Permutations.rmul~method
+Permutations.rmul_with_af~method
+Permutations.runs~method
+Permutations.signature~method
+Permutations.size~property
+Permutations.support~method
+Permutations.transpositions~method
+Permutations.unrank_lex~method
+Permutations.unrank_nonlex~method
+Permutations.unrank_trotterjohnson~method
+_af_parity~function
+Generators.symmetric~method
+Generators.cyclic~method
+Generators.alternating~method
+Generators.dihedral~method
+Permutation Groups.__contains__~method
+Permutation Groups.__mul__~method
+Permutation Groups.__new__~method
+Permutation Groups._coset_representative~method
+Permutation Groups._distinct_primes_lemma~method
+Permutation Groups._eval_is_alt_sym_monte_carlo~method
+Permutation Groups._eval_is_alt_sym_naive~method
+Permutation Groups._p_elements_group~method
+Permutation Groups._random_pr_init~method
+Permutation Groups._sylow_alt_sym~method
+Permutation Groups._union_find_merge~method
+Permutation Groups._union_find_rep~method
+Permutation Groups._verify~method
+Permutation Groups.abelian_invariants~method
+Permutation Groups.base~property
+Permutation Groups.baseswap~method
+Permutation Groups.basic_orbits~property
+Permutation Groups.basic_stabilizers~property
+Permutation Groups.basic_transversals~property
+Permutation Groups.center~method
+Permutation Groups.centralizer~method
+Permutation Groups.commutator~method
+Permutation Groups.composition_series~method
+Permutation Groups.conjugacy_class~method
+Permutation Groups.conjugacy_classes~method
+Permutation Groups.contains~method
+Permutation Groups.coset_factor~method
+Permutation Groups.coset_rank~method
+Permutation Groups.coset_table~method
+Permutation Groups.coset_transversal~method
+Permutation Groups.coset_unrank~method
+Permutation Groups.degree~property
+Permutation Groups.derived_series~method
+Permutation Groups.derived_subgroup~method
+Permutation Groups.elements~property
+Permutation Groups.equals~method
+Permutation Groups.generate~method
+Permutation Groups.generate_dimino~method
+Permutation Groups.generate_schreier_sims~method
+Permutation Groups.generator_product~method
+Permutation Groups.generators~property
+Permutation Groups.identity~property
+Permutation Groups.index~method
+Permutation Groups.is_abelian~property
+Permutation Groups.is_alt_sym~method
+Permutation Groups.is_alternating~property
+Permutation Groups.is_cyclic~property
+Permutation Groups.is_dihedral~property
+Permutation Groups.is_elementary~method
+Permutation Groups.is_nilpotent~property
+Permutation Groups.is_normal~method
+Permutation Groups.is_perfect~property
+Permutation Groups.is_polycyclic~property
+Permutation Groups.is_primitive~method
+Permutation Groups.is_solvable~property
+Permutation Groups.is_subgroup~method
+Permutation Groups.is_symmetric~property
+Permutation Groups.is_transitive~method
+Permutation Groups.is_trivial~property
+Permutation Groups.lower_central_series~method
+Permutation Groups.make_perm~method
+Permutation Groups.max_div~property
+Permutation Groups.minimal_block~method
+Permutation Groups.minimal_blocks~method
+Permutation Groups.normal_closure~method
+Permutation Groups.orbit~method
+Permutation Groups.orbit_rep~method
+Permutation Groups.orbit_transversal~method
+Permutation Groups.orbits~method
+Permutation Groups.order~method
+Permutation Groups.pointwise_stabilizer~method
+Permutation Groups.polycyclic_group~method
+Permutation Groups.presentation~method
+Permutation Groups.random~method
+Permutation Groups.random_pr~method
+Permutation Groups.random_stab~method
+Permutation Groups.schreier_sims~method
+Permutation Groups.schreier_sims_incremental~method
+Permutation Groups.schreier_sims_random~method
+Permutation Groups.schreier_vector~method
+Permutation Groups.stabilizer~method
+Permutation Groups.strong_gens~property
+Permutation Groups.strong_presentation~method
+Permutation Groups.subgroup~method
+Permutation Groups.subgroup_search~method
+Permutation Groups.sylow_subgroup~method
+Permutation Groups.transitivity_degree~property
+Polyhedron.array_form~property
+Polyhedron.corners~property
+Polyhedron.cyclic_form~property
+Polyhedron.edges~property
+Polyhedron.faces~property
+Polyhedron.pgroup~property
+Polyhedron.reset~method
+Polyhedron.rotate~method
+Polyhedron.size~property
+Polyhedron.vertices~property
+Prufer Sequences.edges~method
+Prufer Sequences.next~method
+Prufer Sequences.nodes~property
+Prufer Sequences.prev~method
+Prufer Sequences.prufer_rank~method
+Prufer Sequences.prufer_repr~property
+Prufer Sequences.rank~property
+Prufer Sequences.size~property
+Prufer Sequences.to_prufer~method
+Prufer Sequences.to_tree~method
+Prufer Sequences.tree_repr~property
+Prufer Sequences.unrank~method
+Subsets.bitlist_from_subset~method
+Subsets.cardinality~property
+Subsets.iterate_binary~method
+Subsets.iterate_graycode~method
+Subsets.next_binary~method
+Subsets.next_gray~method
+Subsets.next_lexicographic~method
+Subsets.prev_binary~method
+Subsets.prev_gray~method
+Subsets.prev_lexicographic~method
+Subsets.rank_binary~property
+Subsets.rank_gray~property
+Subsets.rank_lexicographic~property
+Subsets.size~property
+Subsets.subset~property
+Subsets.subset_from_bitlist~method
+Subsets.subset_indices~method
+Subsets.superset~property
+Subsets.superset_size~property
+Subsets.unrank_binary~method
+Subsets.unrank_gray~method
+Subsets.ksubsets~method
+Gray Code.current~property
+Gray Code.generate_gray~method
+Gray Code.n~property
+Gray Code.next~method
+Gray Code.rank~property
+Gray Code.selections~property
+Gray Code.skip~method
+Gray Code.unrank~method
+Gray Code.random_bitstring~method
+Gray Code.gray_to_bin~method
+Gray Code.bin_to_gray~method
+Gray Code.get_subset_from_bitstring~method
+Gray Code.graycode_subsets~method
+SymmetricGroup~function
+CyclicGroup~function
+DihedralGroup~function
+AlternatingGroup~function
+AbelianGroup~function
+four_group~function
+M20~function
+S3_in_S6~function
+A4_in_S6~function
+S4m~function
+S4p~function
+A4xC2~function
+S4xC2~function
+G18~function
+G36m~function
+G36p~function
+G72~function
+PSL2F5~function
+PGL2F5~function
+find_transitive_subgroups_of_S6~function
+is_nilpotent_number~function
+is_abelian_number~function
+is_cyclic_number~function
+groups_count~function
+_base_ordering~function
+_check_cycles_alt_sym~function
+_distribute_gens_by_base~function
+_handle_precomputed_bsgs~function
+_orbits_transversals_from_bsgs~function
+_remove_gens~function
+_strip~function
+_strong_gens_from_distr~function
+DirectProduct~function
+_cmp_perm_lists~function
+_naive_list_centralizer~function
+_verify_bsgs~function
+_verify_centralizer~function
+_verify_normal_closure~function
+canonicalize~function
+double_coset_can_rep~function
+get_symmetric_group_sgs~function
+bsgs_direct_product~function
+Functions.as_base_exp~method
+Functions.fdiff~method
+Functions.is_singular~method
+Complex Functions.as_real_imag~method
+Complex Functions.fdiff~method
+Trigonometric Functions.inverse~method
+Trigonometric Inverses.inverse~method
+Hyperbolic Functions.as_real_imag~method
+Hyperbolic Functions.fdiff~method
+Hyperbolic Functions.inverse~method
+Hyperbolic Functions.taylor_term~method
+Hyperbolic Inverses.inverse~method
+Exponential.as_real_imag~method
+Exponential.base~property
+Exponential.fdiff~method
+Exponential.taylor_term~method
+Exponential.as_base_exp~method
+Exponential.inverse~method
+Piecewise.cond~property
+Piecewise.expr~property
+Piecewise._eval_integral~method
+Piecewise.as_expr_set_pairs~method
+Piecewise.doit~method
+Piecewise.eval~method
+Piecewise.piecewise_integrate~method
+piecewise_exclusive~function
+piecewise_fold~function
+root~function
+sqrt~function
+cbrt~function
+real_root~function
+stirling~function
+Dirac Delta and Related Discontinuous Functions.eval~method
+Dirac Delta and Related Discontinuous Functions.fdiff~method
+Dirac Delta and Related Discontinuous Functions.is_simple~method
+Dirac Delta and Related Discontinuous Functions.pargs~property
+Error Functions and Fresnel Integrals.inverse~method
+E1~function
+Bessel Type Functions.argument~property
+Bessel Type Functions.order~property
+jn_zeros~function
+bspline_basis~function
+bspline_basis_set~function
+interpolating_spline~function
+Hypergeometric Functions.ap~property
+Hypergeometric Functions.argument~property
+Hypergeometric Functions.bq~property
+Hypergeometric Functions.convergence_statement~property
+Hypergeometric Functions.eta~property
+Hypergeometric Functions.radius_of_convergence~property
+Hypergeometric Functions.an~property
+Hypergeometric Functions.aother~property
+Hypergeometric Functions.bm~property
+Hypergeometric Functions.bother~property
+Hypergeometric Functions.delta~property
+Hypergeometric Functions.get_period~method
+Hypergeometric Functions.integrand~method
+Hypergeometric Functions.is_number~property
+Hypergeometric Functions.nu~property
+jacobi_normalized~function
+Ynm_c~function
+Eijk~function
+eval_levicivita~function
+Tensor Functions.eval~method
+Tensor Functions.indices_contain_equal_information~property
+Tensor Functions.is_above_fermi~property
+Tensor Functions.is_below_fermi~property
+Tensor Functions.is_only_above_fermi~property
+Tensor Functions.is_only_below_fermi~property
+Tensor Functions.killable_index~property
+Tensor Functions.preferred_index~property
+_check_antecedents~function
+_check_antecedents_1~function
+_check_antecedents_inversion~function
+_condsimp~function
+_create_lookup_table~function
+_dummy~function
+_dummy_~function
+_eval_cond~function
+_exponents~function
+_find_splitting_points~function
+_flip_g~function
+_functions~function
+_get_coeff_exp~function
+_guess_expansion~function
+_inflate_fox_h~function
+_inflate_g~function
+_int0oo~function
+_int0oo_1~function
+_int_inversion~function
+_is_analytic~function
+_meijerint_definite_2~function
+_meijerint_definite_3~function
+_meijerint_definite_4~function
+_meijerint_indefinite_1~function
+_mul_args~function
+_mul_as_two_parts~function
+_my_principal_branch~function
+_mytype~function
+_rewrite1~function
+_rewrite2~function
+_rewrite_inversion~function
+_rewrite_saxena~function
+_rewrite_saxena_1~function
+_rewrite_single~function
+_split_mul~function
+meijerint_definite~function
+meijerint_indefinite~function
+meijerint_inversion~function
+mellin_transform~function
+inverse_mellin_transform~function
+laplace_transform~function
+laplace_correspondence~function
+laplace_initial_conds~function
+Integral Transforms.doit~method
+inverse_laplace_transform~function
+fourier_transform~function
+_fourier_transform~function
+inverse_fourier_transform~function
+sine_transform~function
+inverse_sine_transform~function
+cosine_transform~function
+inverse_cosine_transform~function
+hankel_transform~function
+inverse_hankel_transform~function
+Integral Transforms.function~property
+Integral Transforms.function_variable~property
+Integral Transforms.transform_variable~property
+ratint~function
+ratint_ratpart~function
+ratint_logpart~function
+trigintegrate~function
+deltaintegrate~function
+singularityintegrate~function
+risch_integrate~function
+manualintegrate~function
+integral_steps~function
+heurisch~function
+components~function
+integrate~function
+line_integrate~function
+API reference.as_sum~method
+API reference.doit~method
+API reference.free_symbols~property
+API reference.principal_value~method
+API reference.transform~method
+API reference.bound_symbols~property
+API reference.function~property
+API reference.has_finite_limits~property
+API reference.has_reversed_limits~property
+API reference.is_number~property
+API reference.limits~property
+API reference.variables~property
+gauss_legendre~function
+gauss_laguerre~function
+gauss_hermite~function
+gauss_gen_laguerre~function
+gauss_chebyshev_t~function
+gauss_chebyshev_u~function
+gauss_jacobi~function
+gauss_lobatto~function
+polytope_integrate~function
+limit~function
+Limits.doit~method
+gruntz~function
+compare~function
+rewrite~function
+build_expression_tree~function
+mrv_leadterm~function
+calculate_series~function
+limitinf~function
+sign~function
+mrv~function
+mrv_max1~function
+mrv_max3~function
+Reference.copy~method
+Reference.do_subs~method
+Reference.meets~method
+Reference.union~method
+series~function
+Reference.contains~method
+richardson~function
+shanks~function
+residue~function
+sequence~function
+Sequences Base.coeff~method
+Sequences Base.coeff_mul~method
+Sequences Base.find_linear_recurrence~method
+Sequences Base.free_symbols~property
+Sequences Base.gen~property
+Sequences Base.interval~property
+Sequences Base.length~property
+Sequences Base.start~property
+Sequences Base.stop~property
+Sequences Base.variables~property
+Elementary Sequences.coeff_mul~method
+Singleton Sequences.coeff_mul~method
+Compound Sequences.reduce~method
+Recursive Sequences.initial~property
+Recursive Sequences.interval~property
+Recursive Sequences.n~property
+Recursive Sequences.recurrence~property
+Recursive Sequences.start~property
+Recursive Sequences.stop~property
+Recursive Sequences.y~property
+Recursive Sequences.yn~property
+Fourier Series.scale~method
+Fourier Series.scalex~method
+Fourier Series.shift~method
+Fourier Series.shiftx~method
+Fourier Series.sigma_approximation~method
+Fourier Series.truncate~method
+fourier_series~function
+Formal Power Series.coeff_bell~method
+Formal Power Series.compose~method
+Formal Power Series.infinite~property
+Formal Power Series.integrate~method
+Formal Power Series.inverse~method
+Formal Power Series.polynomial~method
+Formal Power Series.product~method
+Formal Power Series.truncate~method
+fps~function
+compute_fps~function
+Formal Power Series.function~property
+rational_independent~function
+rational_algorithm~function
+simpleDE~function
+exp_re~function
+hyper_re~function
+rsolve_hypergeometric~function
+solve_de~function
+hyper_algorithm~function
+difference_delta~function
+dominant~function
+limit_seq~function
+simplify~function
+separatevars~function
+nthroot~function
+kroneckersimp~function
+besselsimp~function
+hypersimp~function
+hypersimilar~function
+nsimplify~function
+posify~function
+logcombine~function
+radsimp~function
+rad_rationalize~function
+collect~function
+rcollect~function
+collect_sqrt~function
+collect_const~function
+fraction~function
+ratsimp~function
+ratsimpmodprime~function
+trigsimp~function
+powsimp~function
+powdenest~function
+combsimp~function
+sqrtdenest~function
+cse~function
+opt_cse~function
+tree_cse~function
+hyperexpand~function
+Simplify.apply~method
+Simplify.select~method
+epath~function
+TR0~function
+TR1~function
+TR2~function
+TR2i~function
+TR3~function
+TR4~function
+TR5~function
+TR6~function
+TR7~function
+TR8~function
+TR9~function
+TR10~function
+TR10i~function
+TR11~function
+TR12~function
+TR12i~function
+TR13~function
+TRmorrie~function
+TR14~function
+TR15~function
+TR16~function
+TR111~function
+TR22~function
+TRpower~function
+fu~function
+diophantine~function
+classify_diop~function
+diop_solve~function
+diop_linear~function
+base_solution_linear~function
+diop_quadratic~function
+diop_DN~function
+cornacchia~function
+diop_bf_DN~function
+transformation_to_DN~function
+transformation_to_normal~function
+find_DN~function
+diop_ternary_quadratic~function
+square_factor~function
+descent~function
+diop_general_pythagorean~function
+diop_general_sum_of_squares~function
+diop_general_sum_of_even_powers~function
+power_representation~function
+partition~function
+sum_of_three_squares~function
+sum_of_four_squares~function
+sum_of_powers~function
+sum_of_squares~function
+merge_solution~function
+divisible~function
+PQa~function
+equivalent~function
+parametrize_ternary_quadratic~function
+diop_ternary_quadratic_normal~function
+ldescent~function
+gaussian_reduce~function
+holzer~function
+prime_as_sum_of_two_squares~function
+sqf_normal~function
+reconstruct~function
+Internal Classes.matches~method
+solve_rational_inequalities~function
+solve_poly_inequality~function
+solve_poly_inequalities~function
+reduce_rational_inequalities~function
+reduce_abs_inequality~function
+reduce_abs_inequalities~function
+reduce_inequalities~function
+solve_univariate_inequality~function
+dsolve~function
+dsolve_system~function
+classify_ode~function
+checkodesol~function
+homogeneous_order~function
+infinitesimals~function
+checkinfsol~function
+constantsimp~function
+odesimp~function
+constant_renumber~function
+ode_sol_simplicity~function
+ode_1st_power_series~function
+ode_2nd_power_series_ordinary~function
+ode_2nd_power_series_regular~function
+lie_heuristic_abaco1_simple~function
+lie_heuristic_abaco1_product~function
+lie_heuristic_bivariate~function
+lie_heuristic_chi~function
+lie_heuristic_abaco2_similar~function
+lie_heuristic_function_sum~function
+lie_heuristic_abaco2_unique_unknown~function
+lie_heuristic_abaco2_unique_general~function
+lie_heuristic_linear~function
+riccati_normal~function
+riccati_inverse_normal~function
+riccati_reduced~function
+construct_c~function
+construct_d~function
+rational_laurent_series~function
+compute_m_ybar~function
+solve_aux_eq~function
+remove_redundant_sols~function
+get_gen_sol_from_part_sol~function
+solve_riccati~function
+_linear_2eq_order1_type6~function
+_linear_2eq_order1_type7~function
+linear_ode_to_matrix~function
+canonical_odes~function
+linodesolve_type~function
+matrix_exp_jordan_form~function
+matrix_exp~function
+linodesolve~function
+_nonlinear_2eq_order1_type1~function
+_nonlinear_2eq_order1_type2~function
+_nonlinear_2eq_order1_type3~function
+_nonlinear_2eq_order1_type4~function
+_nonlinear_2eq_order1_type5~function
+_nonlinear_3eq_order1_type1~function
+_nonlinear_3eq_order1_type2~function
+_nonlinear_3eq_order1_type3~function
+_nonlinear_3eq_order1_type4~function
+_nonlinear_3eq_order1_type5~function
+_handle_Integral~function
+pde_separate~function
+pde_separate_add~function
+pde_separate_mul~function
+pdsolve~function
+classify_pde~function
+checkpdesol~function
+pde_1st_linear_constant_coeff_homogeneous~function
+pde_1st_linear_constant_coeff~function
+pde_1st_linear_variable_coeff~function
+solve~function
+solve_linear~function
+solve_linear_system~function
+solve_linear_system_LU~function
+solve_undetermined_coeffs~function
+nsolve~function
+checksol~function
+unrad~function
+ode_order~function
+rsolve~function
+rsolve_poly~function
+rsolve_ratio~function
+rsolve_hyper~function
+solve_poly_system~function
+solve_triangulated~function
+lpmax~function
+lpmin~function
+linprog~function
+solveset~function
+solveset_real~function
+solveset_complex~function
+invert_real~function
+invert_complex~function
+domain_check~function
+solvify~function
+linear_eq_to_matrix~function
+linsolve~function
+nonlinsolve~function
+_transolve~function
+_is_exponential~function
+_solve_exponential~function
+_solve_logarithm~function
+_is_logarithmic~function
+Quaternion Reference.add~method
+Quaternion Reference.angle~method
+Quaternion Reference.arc_coplanar~method
+Quaternion Reference.axis~method
+Quaternion Reference.exp~method
+Quaternion Reference.from_Matrix~method
+Quaternion Reference.from_axis_angle~method
+Quaternion Reference.from_euler~method
+Quaternion Reference.from_rotation_matrix~method
+Quaternion Reference.index_vector~method
+Quaternion Reference.integrate~method
+Quaternion Reference.inverse~method
+Quaternion Reference.is_pure~method
+Quaternion Reference.is_zero_quaternion~method
+Quaternion Reference.log~method
+Quaternion Reference.mensor~method
+Quaternion Reference.mul~method
+Quaternion Reference.norm~method
+Quaternion Reference.normalize~method
+Quaternion Reference.orthogonal~method
+Quaternion Reference.parallel~method
+Quaternion Reference.pow~method
+Quaternion Reference.pow_cos_sin~method
+Quaternion Reference.product_matrix_left~property
+Quaternion Reference.product_matrix_right~property
+Quaternion Reference.rotate_point~method
+Quaternion Reference.scalar_part~method
+Quaternion Reference.set_norm~method
+Quaternion Reference.to_Matrix~method
+Quaternion Reference.to_axis_angle~method
+Quaternion Reference.to_euler~method
+Quaternion Reference.to_rotation_matrix~method
+Quaternion Reference.vector_coplanar~method
+Quaternion Reference.vector_part~method
+Concrete Class Reference.euler_maclaurin~method
+Concrete Class Reference.eval_zeta_function~method
+Concrete Class Reference.is_absolutely_convergent~method
+Concrete Class Reference.is_convergent~method
+Concrete Class Reference.reverse_order~method
+Concrete Class Reference.change_index~method
+Concrete Class Reference.has_empty_sequence~property
+Concrete Class Reference.index~method
+Concrete Class Reference.reorder~method
+Concrete Class Reference.reorder_limit~method
+summation~function
+product~function
+gosper_normal~function
+gosper_term~function
+gosper_sum~function
+sympify~function
+__cacheit~function
+basic.args~property
+basic.as_content_primitive~method
+basic.as_dummy~method
+basic.assumptions0~property
+basic.atoms~method
+basic.canonical_variables~property
+basic.class_key~method
+basic.compare~method
+basic.count~method
+basic.count_ops~method
+basic.doit~method
+basic.dummy_eq~method
+basic.find~method
+basic.free_symbols~property
+basic.fromiter~method
+basic.func~property
+basic.has~method
+basic.has_free~method
+basic.has_xfree~method
+basic.is_comparable~property
+basic.is_same~method
+basic.match~method
+basic.matches~method
+basic.rcall~method
+basic.refine~method
+basic.replace~method
+basic.rewrite~method
+basic.simplify~method
+basic.sort_key~method
+basic.subs~method
+basic.xreplace~method
+expr.apart~method
+expr.args_cnc~method
+expr.as_coeff_Add~method
+expr.as_coeff_Mul~method
+expr.as_coeff_add~method
+expr.as_coeff_exponent~method
+expr.as_coeff_mul~method
+expr.as_coefficient~method
+expr.as_coefficients_dict~method
+expr.as_content_primitive~method
+expr.as_expr~method
+expr.as_independent~method
+expr.as_leading_term~method
+expr.as_numer_denom~method
+expr.as_ordered_factors~method
+expr.as_ordered_terms~method
+expr.as_poly~method
+expr.as_powers_dict~method
+expr.as_real_imag~method
+expr.as_terms~method
+expr.aseries~method
+expr.cancel~method
+expr.coeff~method
+expr.collect~method
+expr.combsimp~method
+expr.compute_leading_term~method
+expr.conjugate~method
+expr.could_extract_minus_sign~method
+expr.equals~method
+expr.expand~method
+expr.expr_free_symbols~property
+expr.extract_additively~method
+expr.extract_branch_factor~method
+expr.extract_multiplicatively~method
+expr.factor~method
+expr.fourier_series~method
+expr.fps~method
+expr.gammasimp~method
+expr.getO~method
+expr.getn~method
+expr.integrate~method
+expr.invert~method
+expr.is_algebraic_expr~method
+expr.is_constant~method
+expr.is_meromorphic~method
+expr.is_number~property
+expr.is_polynomial~method
+expr.is_rational_function~method
+expr.leadterm~method
+expr.limit~method
+expr.lseries~method
+expr.normal~method
+expr.nseries~method
+expr.nsimplify~method
+expr.powsimp~method
+expr.primitive~method
+expr.radsimp~method
+expr.ratsimp~method
+expr.removeO~method
+expr.round~method
+expr.separate~method
+expr.series~method
+expr.taylor_term~method
+expr.together~method
+expr.trigsimp~method
+symbols~function
+var~function
+num_digits~function
+trailing~function
+ilcm~function
+igcd~function
+igcd_lehmer~function
+igcdex~function
+isqrt~function
+integer_nthroot~function
+integer_log~function
+mod_inverse~function
+numbers.as_coeff_Add~method
+numbers.as_coeff_Mul~method
+numbers.cofactors~method
+numbers.gcd~method
+numbers.lcm~method
+numbers.as_content_primitive~method
+numbers.factors~method
+numbers.limit_denominator~method
+numbers.__new__~method
+numbers.as_expr~method
+numbers.as_poly~method
+numbers.coeffs~method
+numbers.field_element~method
+numbers.is_aliased~property
+numbers.is_primitive_element~property
+numbers.minpoly_of_element~method
+numbers.native_coeffs~method
+numbers.primitive_element~method
+numbers.to_algebraic_integer~method
+numbers.to_primitive_element~method
+numbers.to_root~method
+numbers.approximation~method
+seterr~function
+equal_valued~function
+power.as_base_exp~method
+power.as_content_primitive~method
+mul.as_coeff_Mul~method
+mul.as_content_primitive~method
+mul.as_ordered_factors~method
+mul.as_two_terms~method
+mul.flatten~method
+prod~function
+add.as_coeff_Add~method
+add.as_coeff_add~method
+add.as_content_primitive~method
+add.as_numer_denom~method
+add.as_real_imag~method
+add.as_two_terms~method
+add.extract_leading_order~method
+add.flatten~method
+add.primitive~method
+relational.canonical~property
+relational.equals~method
+relational.lhs~property
+relational.negated~property
+relational.reversed~property
+relational.reversedsign~property
+relational.rhs~property
+relational.strict~property
+relational.weak~property
+relational.as_poly~method
+relational.integrate~method
+function.bound_symbols~property
+function.expr~property
+function.is_identity~property
+function.signature~property
+function.variables~property
+function._diff_wrt~property
+function._sort_variable_count~method
+function.as_finite_difference~method
+function.doit_numerically~method
+diff~function
+function.nargs~property
+function.as_base_exp~method
+function.fdiff~method
+function.is_singular~method
+function.point~property
+expand~function
+count_ops~function
+expand_mul~function
+expand_log~function
+expand_func~function
+expand_trig~function
+expand_complex~function
+expand_multinomial~function
+expand_power_exp~function
+expand_power_base~function
+nfloat~function
+evalf.evalf~method
+evalf.n~method
+N~function
+containers.index~method
+containers.kind~property
+containers.tuple_count~method
+containers.get~method
+containers.items~method
+containers.keys~method
+containers.values~method
+gcd_terms~function
+factor_terms~function
+default_sort_key~function
+ordered~function
+random_complex_number~function
+verify_numerically~function
+test_derivative_numerically~function
+_randrange~function
+_randint~function
+bottom_up~function
+postorder_traversal~function
+preorder_traversal~function
+use~function
+walk~function
+fft~function
+ifft~function
+ntt~function
+intt~function
+fwht~function
+ifwht~function
+mobius_transform~function
+inverse_mobius_transform~function
+convolution~function
+convolution_fft~function
+convolution_ntt~function
+convolution_fwht~function
+convolution_subset~function
+covering_product~function
+intersecting_product~function
+Classes and functions for rewriting expressions (sympy.codegen.rewriting).replace_in_Add~method
+create_expand_pow_optimization~function
+optimize~function
+Using the nodes.cse~method
+Using the nodes.topological_sort~method
+Using the nodes.cast_nocheck~method
+Using the nodes.decimal_dig~property
+Using the nodes.dig~property
+Using the nodes.eps~property
+Using the nodes.max~property
+Using the nodes.max_exponent~property
+Using the nodes.min_exponent~property
+Using the nodes.tiny~property
+Using the nodes.attr_params~method
+Using the nodes.kwargs~method
+Using the nodes.cast_check~method
+Using the nodes.from_expr~method
+Using the nodes.as_Declaration~method
+Using the nodes.deduced~method
+aug_assign~function
+Special C math functions (sympy.codegen.cfunctions).fdiff~method
+alignof~function
+sizeof~function
+allocated~function
+array~function
+bind_C~function
+dimension~function
+lbound~function
+reshape~function
+shape~function
+size~function
+newtons_method~function
+newtons_method_function~function
+render_as_module~function
+render_as_source_file~function
+SOPform~function
+POSform~function
+ANFform~function
+Boolean functions.as_set~method
+Boolean functions.equals~method
+to_anf~function
+to_cnf~function
+to_dnf~function
+to_nnf~function
+is_anf~function
+is_cnf~function
+is_dnf~function
+is_nnf~function
+gateinputcount~function
+simplify_logic~function
+bool_map~function
+distribute_and_over_or~function
+distribute_or_over_and~function
+distribute_xor_over_and~function
+eliminate_implications~function
+truth_table~function
+integer_to_term~function
+term_to_integer~function
+bool_maxterm~function
+bool_minterm~function
+bool_monomial~function
+anf_coeffs~function
+to_int_repr~function
+satisfiable~function
+Basic Sets.boundary~property
+Basic Sets.closure~property
+Basic Sets.complement~method
+Basic Sets.contains~method
+Basic Sets.inf~property
+Basic Sets.interior~property
+Basic Sets.intersect~method
+Basic Sets.intersection~method
+Basic Sets.is_closed~property
+Basic Sets.is_disjoint~method
+Basic Sets.is_open~property
+Basic Sets.is_proper_subset~method
+Basic Sets.is_proper_superset~method
+Basic Sets.is_subset~method
+Basic Sets.is_superset~method
+Basic Sets.isdisjoint~method
+Basic Sets.issubset~method
+Basic Sets.issuperset~method
+Basic Sets.kind~property
+Basic Sets.measure~property
+Basic Sets.powerset~method
+Basic Sets.sup~property
+Basic Sets.symmetric_difference~method
+Basic Sets.union~method
+imageset~function
+Elementary Sets.Lopen~method
+Elementary Sets.Ropen~method
+Elementary Sets.as_relational~method
+Elementary Sets.end~property
+Elementary Sets.is_left_unbounded~property
+Elementary Sets.is_right_unbounded~property
+Elementary Sets.left_open~property
+Elementary Sets.open~method
+Elementary Sets.right_open~property
+Elementary Sets.start~property
+Compound Sets.as_relational~method
+Compound Sets.is_iterable~property
+Compound Sets.reduce~method
+Special Sets.as_relational~method
+Special Sets.reversed~property
+Special Sets.a_interval~property
+Special Sets.b_interval~property
+Special Sets.from_real~method
+Special Sets.psets~property
+Special Sets.sets~property
+normalize_theta_set~function
+Matrix Base Classes.C~property
+Matrix Base Classes.D~property
+Matrix Base Classes.H~property
+Matrix Base Classes.LDLdecomposition~method
+Matrix Base Classes.LDLsolve~method
+Matrix Base Classes.LUdecomposition~method
+Matrix Base Classes.LUdecompositionFF~method
+Matrix Base Classes.LUdecomposition_Simple~method
+Matrix Base Classes.LUsolve~method
+Matrix Base Classes.QRdecomposition~method
+Matrix Base Classes.QRsolve~method
+Matrix Base Classes.T~property
+Matrix Base Classes.__abs__~method
+Matrix Base Classes.__add__~method
+Matrix Base Classes.__getitem__~method
+Matrix Base Classes.__len__~method
+Matrix Base Classes.__mul__~method
+Matrix Base Classes.__pow__~method
+Matrix Base Classes.add~method
+Matrix Base Classes.adjoint~method
+Matrix Base Classes.adjugate~method
+Matrix Base Classes.analytic_func~method
+Matrix Base Classes.applyfunc~method
+Matrix Base Classes.as_real_imag~method
+Matrix Base Classes.atoms~method
+Matrix Base Classes.berkowitz_det~method
+Matrix Base Classes.berkowitz_eigenvals~method
+Matrix Base Classes.berkowitz_minors~method
+Matrix Base Classes.bidiagonal_decomposition~method
+Matrix Base Classes.bidiagonalize~method
+Matrix Base Classes.charpoly~method
+Matrix Base Classes.cholesky~method
+Matrix Base Classes.cholesky_solve~method
+Matrix Base Classes.cofactor~method
+Matrix Base Classes.cofactor_matrix~method
+Matrix Base Classes.col~method
+Matrix Base Classes.col_del~method
+Matrix Base Classes.col_insert~method
+Matrix Base Classes.col_join~method
+Matrix Base Classes.columnspace~method
+Matrix Base Classes.companion~method
+Matrix Base Classes.condition_number~method
+Matrix Base Classes.conjugate~method
+Matrix Base Classes.connected_components~method
+Matrix Base Classes.connected_components_decomposition~method
+Matrix Base Classes.copy~method
+Matrix Base Classes.cramer_solve~method
+Matrix Base Classes.cross~method
+Matrix Base Classes.det~method
+Matrix Base Classes.det_LU_decomposition~method
+Matrix Base Classes.diag~method
+Matrix Base Classes.diagonal~method
+Matrix Base Classes.diagonal_solve~method
+Matrix Base Classes.diagonalize~method
+Matrix Base Classes.diff~method
+Matrix Base Classes.dot~method
+Matrix Base Classes.dual~method
+Matrix Base Classes.echelon_form~method
+Matrix Base Classes.eigenvals~method
+Matrix Base Classes.eigenvects~method
+Matrix Base Classes.elementary_col_op~method
+Matrix Base Classes.elementary_row_op~method
+Matrix Base Classes.evalf~method
+Matrix Base Classes.exp~method
+Matrix Base Classes.expand~method
+Matrix Base Classes.extract~method
+Matrix Base Classes.eye~method
+Matrix Base Classes.flat~method
+Matrix Base Classes.free_symbols~property
+Matrix Base Classes.from_dok~method
+Matrix Base Classes.gauss_jordan_solve~method
+Matrix Base Classes.get_diag_blocks~method
+Matrix Base Classes.has~method
+Matrix Base Classes.hat~method
+Matrix Base Classes.hstack~method
+Matrix Base Classes.integrate~method
+Matrix Base Classes.inv~method
+Matrix Base Classes.inverse_ADJ~method
+Matrix Base Classes.inverse_BLOCK~method
+Matrix Base Classes.inverse_CH~method
+Matrix Base Classes.inverse_GE~method
+Matrix Base Classes.inverse_LDL~method
+Matrix Base Classes.inverse_LU~method
+Matrix Base Classes.inverse_QR~method
+Matrix Base Classes.irregular~method
+Matrix Base Classes.is_anti_symmetric~method
+Matrix Base Classes.is_diagonal~method
+Matrix Base Classes.is_diagonalizable~method
+Matrix Base Classes.is_echelon~property
+Matrix Base Classes.is_hermitian~property
+Matrix Base Classes.is_indefinite~property
+Matrix Base Classes.is_lower~property
+Matrix Base Classes.is_lower_hessenberg~property
+Matrix Base Classes.is_negative_definite~property
+Matrix Base Classes.is_negative_semidefinite~property
+Matrix Base Classes.is_nilpotent~method
+Matrix Base Classes.is_positive_definite~property
+Matrix Base Classes.is_positive_semidefinite~property
+Matrix Base Classes.is_square~property
+Matrix Base Classes.is_strongly_diagonally_dominant~property
+Matrix Base Classes.is_symbolic~method
+Matrix Base Classes.is_symmetric~method
+Matrix Base Classes.is_upper~property
+Matrix Base Classes.is_upper_hessenberg~property
+Matrix Base Classes.is_weakly_diagonally_dominant~property
+Matrix Base Classes.is_zero_matrix~property
+Matrix Base Classes.iter_items~method
+Matrix Base Classes.iter_values~method
+Matrix Base Classes.jacobian~method
+Matrix Base Classes.jordan_block~method
+Matrix Base Classes.jordan_form~method
+Matrix Base Classes.key2bounds~method
+Matrix Base Classes.key2ij~method
+Matrix Base Classes.left_eigenvects~method
+Matrix Base Classes.limit~method
+Matrix Base Classes.log~method
+Matrix Base Classes.lower_triangular~method
+Matrix Base Classes.lower_triangular_solve~method
+Matrix Base Classes.minor~method
+Matrix Base Classes.minor_submatrix~method
+Matrix Base Classes.multiply~method
+Matrix Base Classes.multiply_elementwise~method
+Matrix Base Classes.n~method
+Matrix Base Classes.norm~method
+Matrix Base Classes.normalized~method
+Matrix Base Classes.nullspace~method
+Matrix Base Classes.ones~method
+Matrix Base Classes.orthogonalize~method
+Matrix Base Classes.per~method
+Matrix Base Classes.permute~method
+Matrix Base Classes.permuteBkwd~method
+Matrix Base Classes.permuteFwd~method
+Matrix Base Classes.permute_cols~method
+Matrix Base Classes.permute_rows~method
+Matrix Base Classes.pinv~method
+Matrix Base Classes.pinv_solve~method
+Matrix Base Classes.pow~method
+Matrix Base Classes.print_nonzero~method
+Matrix Base Classes.project~method
+Matrix Base Classes.rank~method
+Matrix Base Classes.rank_decomposition~method
+Matrix Base Classes.refine~method
+Matrix Base Classes.replace~method
+Matrix Base Classes.reshape~method
+Matrix Base Classes.rmultiply~method
+Matrix Base Classes.rot90~method
+Matrix Base Classes.row~method
+Matrix Base Classes.row_del~method
+Matrix Base Classes.row_insert~method
+Matrix Base Classes.row_join~method
+Matrix Base Classes.rowspace~method
+Matrix Base Classes.rref~method
+Matrix Base Classes.rref_rhs~method
+Matrix Base Classes.shape~property
+Matrix Base Classes.simplify~method
+Matrix Base Classes.singular_value_decomposition~method
+Matrix Base Classes.singular_values~method
+Matrix Base Classes.solve~method
+Matrix Base Classes.solve_least_squares~method
+Matrix Base Classes.strongly_connected_components~method
+Matrix Base Classes.strongly_connected_components_decomposition~method
+Matrix Base Classes.subs~method
+Matrix Base Classes.table~method
+Matrix Base Classes.todod~method
+Matrix Base Classes.todok~method
+Matrix Base Classes.tolist~method
+Matrix Base Classes.trace~method
+Matrix Base Classes.transpose~method
+Matrix Base Classes.upper_hessenberg_decomposition~method
+Matrix Base Classes.upper_triangular~method
+Matrix Base Classes.upper_triangular_solve~method
+Matrix Base Classes.values~method
+Matrix Base Classes.vec~method
+Matrix Base Classes.vech~method
+Matrix Base Classes.vee~method
+Matrix Base Classes.vstack~method
+Matrix Base Classes.wilkinson~method
+Matrix Base Classes.xreplace~method
+Matrix Base Classes.zeros~method
+matrix_multiply_elementwise~function
+zeros~function
+ones~function
+eye~function
+diag~function
+jordan_cell~function
+hessian~function
+GramSchmidt~function
+wronskian~function
+casoratian~function
+randMatrix~function
+rot_givens~function
+rot_axis1~function
+rot_axis2~function
+rot_axis3~function
+rot_ccw_axis1~function
+rot_ccw_axis2~function
+rot_ccw_axis3~function
+list2numpy~function
+matrix2numpy~function
+symarray~function
+a2idx~function
+Dense Matrices.LDLdecomposition~method
+Dense Matrices.as_immutable~method
+Dense Matrices.as_mutable~method
+Dense Matrices.cholesky~method
+Dense Matrices.lower_triangular_solve~method
+Dense Matrices.upper_triangular_solve~method
+Dense Matrices.simplify~method
+Sparse Tools._doktocsr~method
+Sparse Tools._csrtodok~method
+Sparse Tools.banded~method
+Matrix Expressions Core Reference.T~property
+Matrix Expressions Core Reference.as_coeff_Mul~method
+Matrix Expressions Core Reference.as_explicit~method
+Matrix Expressions Core Reference.as_mutable~method
+Matrix Expressions Core Reference.equals~method
+Matrix Expressions Core Reference.from_index_summation~method
+hadamard_product~function
+Block Matrices.LDUdecomposition~method
+Block Matrices.LUdecomposition~method
+Block Matrices.UDLdecomposition~method
+Block Matrices.schur~method
+Block Matrices.transpose~method
+Block Matrices.get_diag_blocks~method
+block_collapse~function
+smith_normal_form~function
+hermite_normal_form~function
+derive_by_array~function
+permutedims~function
+tensorcontraction~function
+tensorproduct~function
+tensordiagonal~function
+Examples.label~property
+Examples.lower~property
+Examples.upper~property
+Examples.base~property
+Examples.indices~property
+Examples.ranges~property
+Examples.rank~property
+Examples.shape~property
+Examples.offset~property
+Examples.strides~property
+get_contraction_structure~function
+get_indices~function
+Tensor.commutes_with~method
+tensor_heads~function
+Tensor.get_matrix~method
+Tensor.replace_with_arrays~method
+Tensor.canon_bp~method
+Tensor.contract_metric~method
+Tensor.get_free_indices~method
+Tensor.get_indices~method
+Tensor.perm2tensor~method
+Tensor.sorted_components~method
+Tensor.split~method
+canon_bp~function
+riemann_cyclic_replace~function
+riemann_cyclic~function
+Tensor.direct_product~method
+Tensor.fully_symmetric~method
+Tensor.no_symmetry~method
+Tensor.riemann~method
+tensorsymmetry~function
+Tensor.clear~method
+Tensor.comm_i2symbol~method
+Tensor.comm_symbols2i~method
+Tensor.get_comm~method
+Tensor.set_comm~method
+Tensor.set_comms~method
+Essential Classes in sympy.vector (docstrings).__init__~method
+Essential Classes in sympy.vector (docstrings).create_new~method
+Essential Classes in sympy.vector (docstrings).locate_new~method
+Essential Classes in sympy.vector (docstrings).orient_new~method
+Essential Classes in sympy.vector (docstrings).orient_new_axis~method
+Essential Classes in sympy.vector (docstrings).orient_new_body~method
+Essential Classes in sympy.vector (docstrings).orient_new_quaternion~method
+Essential Classes in sympy.vector (docstrings).orient_new_space~method
+Essential Classes in sympy.vector (docstrings).position_wrt~method
+Essential Classes in sympy.vector (docstrings).rotation_matrix~method
+Essential Classes in sympy.vector (docstrings).scalar_map~method
+Essential Classes in sympy.vector (docstrings).components~property
+Essential Classes in sympy.vector (docstrings).cross~method
+Essential Classes in sympy.vector (docstrings).dot~method
+Essential Classes in sympy.vector (docstrings).magnitude~method
+Essential Classes in sympy.vector (docstrings).normalize~method
+Essential Classes in sympy.vector (docstrings).outer~method
+Essential Classes in sympy.vector (docstrings).projection~method
+Essential Classes in sympy.vector (docstrings).separate~method
+Essential Classes in sympy.vector (docstrings).to_matrix~method
+Essential Classes in sympy.vector (docstrings).gradient~method
+Essential Classes in sympy.vector (docstrings).multiplicity~method
+Essential Classes in sympy.vector (docstrings).rational_parametrization~method
+Essential Classes in sympy.vector (docstrings).regular_point~method
+Essential Classes in sympy.vector (docstrings).singular_points~method
+Orienter classes (docstrings).rotation_matrix~method
+Orienter classes (docstrings).__init__~method
+matrix_to_vector~function
+express~function
+curl~function
+divergence~function
+gradient~function
+is_conservative~function
+is_solenoidal~function
+scalar_potential~function
+scalar_potential_difference~function
+vector_integrate~function
+Ntheory Class Reference.extend~method
+Ntheory Class Reference.extend_to_no~method
+Ntheory Class Reference.mobiusrange~method
+Ntheory Class Reference.primerange~method
+Ntheory Class Reference.search~method
+Ntheory Class Reference.totientrange~method
+prime~function
+primepi~function
+nextprime~function
+prevprime~function
+primerange~function
+randprime~function
+primorial~function
+cycle_length~function
+composite~function
+compositepi~function
+smoothness~function
+smoothness_p~function
+multiplicity~function
+perfect_power~function
+pollard_rho~function
+pollard_pm1~function
+factorint~function
+factorrat~function
+primefactors~function
+divisors~function
+proper_divisors~function
+divisor_count~function
+proper_divisor_count~function
+udivisors~function
+udivisor_count~function
+antidivisors~function
+antidivisor_count~function
+totient~function
+reduced_totient~function
+divisor_sigma~function
+udivisor_sigma~function
+core~function
+digits~function
+primenu~function
+primeomega~function
+mersenne_prime_exponent~function
+is_perfect~function
+abundance~function
+is_abundant~function
+is_deficient~function
+is_amicable~function
+is_carmichael~function
+find_carmichael_numbers_in_range~function
+find_first_n_carmichaels~function
+symmetric_residue~function
+crt~function
+crt1~function
+crt2~function
+solve_congruence~function
+binomial_coefficients~function
+binomial_coefficients_list~function
+multinomial_coefficients~function
+multinomial_coefficients_iterator~function
+npartitions~function
+is_fermat_pseudoprime~function
+is_euler_pseudoprime~function
+is_euler_jacobi_pseudoprime~function
+is_square~function
+mr~function
+is_lucas_prp~function
+is_strong_lucas_prp~function
+is_extra_strong_lucas_prp~function
+proth_test~function
+is_mersenne_prime~function
+isprime~function
+is_gaussian_prime~function
+n_order~function
+is_primitive_root~function
+primitive_root~function
+sqrt_mod~function
+sqrt_mod_iter~function
+quadratic_residues~function
+nthroot_mod~function
+is_nthpow_residue~function
+is_quad_residue~function
+legendre_symbol~function
+jacobi_symbol~function
+mobius~function
+discrete_log~function
+quadratic_congruence~function
+polynomial_congruence~function
+binomial_mod~function
+continued_fraction~function
+continued_fraction_convergents~function
+continued_fraction_iterator~function
+continued_fraction_periodic~function
+continued_fraction_reduce~function
+count_digits~function
+is_palindromic~function
+egyptian_fraction~function
+pi_hex_digits~function
+ecm~function
+qs~function
+E_nl~function
+E_nl_dirac~function
+Psi_nlm~function
+R_nl~function
+mdft~function
+mgamma~function
+msigma~function
+pat_matrix~function
+evaluate_pauli_product~function
+E_n~function
+coherent_state~function
+psi_n~function
+Second Quantization.apply_operator~method
+Second Quantization.is_only_q_annihilator~property
+Second Quantization.is_only_q_creator~property
+Second Quantization.is_q_annihilator~property
+Second Quantization.is_q_creator~property
+Second Quantization.lower~property
+Second Quantization.symbol~property
+Second Quantization.upper~property
+Second Quantization.doit~method
+Second Quantization.eval~method
+Second Quantization.index~method
+Second Quantization.state~method
+Second Quantization.bra~property
+Second Quantization.ket~property
+Second Quantization.indices_contain_equal_information~property
+Second Quantization.is_above_fermi~property
+Second Quantization.is_below_fermi~property
+Second Quantization.is_only_above_fermi~property
+Second Quantization.is_only_below_fermi~property
+Second Quantization.killable_index~property
+Second Quantization.preferred_index~property
+Second Quantization.get_subNO~method
+Second Quantization.has_q_annihilators~property
+Second Quantization.has_q_creators~property
+Second Quantization.iter_q_annihilators~method
+Second Quantization.iter_q_creators~method
+Second Quantization.get_permuted~method
+apply_operators~function
+contraction~function
+evaluate_deltas~function
+matrix_rep~function
+simplify_index_permutations~function
+substitute_dummies~function
+wicks~function
+clebsch_gordan~function
+dot_rot_grad_Ynm~function
+gaunt~function
+racah~function
+real_gaunt~function
+wigner_3j~function
+wigner_6j~function
+wigner_9j~function
+wigner_d~function
+wigner_d_small~function
+Dimensions and dimension systems.has_integer_powers~method
+Dimensions and dimension systems.can_transf_matrix~property
+Dimensions and dimension systems.dim~property
+Dimensions and dimension systems.dim_can_vector~method
+Dimensions and dimension systems.dim_vector~method
+Dimensions and dimension systems.inv_can_transf_matrix~property
+Dimensions and dimension systems.is_consistent~property
+Dimensions and dimension systems.is_dimensionless~method
+Dimensions and dimension systems.list_can_dims~property
+Dimensions and dimension systems.print_dim_base~method
+Units and unit systems.dim~property
+Units and unit systems.extend~method
+Units and unit systems.get_units_non_prefixed~method
+Units and unit systems.is_consistent~property
+Physical quantities.abbrev~property
+Physical quantities.convert_to~method
+Physical quantities.free_symbols~property
+Physical quantities.is_prefixed~property
+Physical quantities.scale_factor~property
+Physical quantities.set_global_relative_scale_factor~method
+convert_to~function
+extract_type_tens~function
+gamma_trace~function
+kahane_simplify~function
+simplify_gpgp~function
+Essential Classes.ang_acc_in~method
+Essential Classes.ang_vel_in~method
+Essential Classes.dcm~method
+Essential Classes.orient~method
+Essential Classes.orient_axis~method
+Essential Classes.orient_body_fixed~method
+Essential Classes.orient_dcm~method
+Essential Classes.orient_quaternion~method
+Essential Classes.orient_space_fixed~method
+Essential Classes.orientnew~method
+Essential Classes.partial_velocity~method
+Essential Classes.set_ang_acc~method
+Essential Classes.set_ang_vel~method
+Essential Classes.u~property
+Essential Classes.variable_map~method
+Essential Classes.x~property
+Essential Classes.xx~property
+Essential Classes.xy~property
+Essential Classes.xz~property
+Essential Classes.y~property
+Essential Classes.yx~property
+Essential Classes.yy~property
+Essential Classes.yz~property
+Essential Classes.z~property
+Essential Classes.zx~property
+Essential Classes.zy~property
+Essential Classes.zz~property
+Essential Classes.angle_between~method
+Essential Classes.applyfunc~method
+Essential Classes.cross~method
+Essential Classes.diff~method
+Essential Classes.doit~method
+Essential Classes.dot~method
+Essential Classes.dt~method
+Essential Classes.express~method
+Essential Classes.free_dynamicsymbols~method
+Essential Classes.free_symbols~method
+Essential Classes.func~property
+Essential Classes.magnitude~method
+Essential Classes.normalize~method
+Essential Classes.outer~method
+Essential Classes.separate~method
+Essential Classes.simplify~method
+Essential Classes.subs~method
+Essential Classes.to_matrix~method
+Essential Classes.xreplace~method
+Kinematics (Docstrings).a1pt_theory~method
+Kinematics (Docstrings).a2pt_theory~method
+Kinematics (Docstrings).acc~method
+Kinematics (Docstrings).locatenew~method
+Kinematics (Docstrings).partial_velocity~method
+Kinematics (Docstrings).pos_from~method
+Kinematics (Docstrings).set_acc~method
+Kinematics (Docstrings).set_pos~method
+Kinematics (Docstrings).set_vel~method
+Kinematics (Docstrings).v1pt_theory~method
+Kinematics (Docstrings).v2pt_theory~method
+Kinematics (Docstrings).vel~method
+get_motion_params~function
+kinematic_equations~function
+partial_velocity~function
+init_vprinting~function
+vprint~function
+vpprint~function
+vlatex~function
+dynamicsymbols~function
+dot~function
+cross~function
+outer~function
+time_derivative~function
+Bodies.angular_momentum~method
+Bodies.kinetic_energy~method
+Bodies.linear_momentum~method
+Bodies.mass~property
+Bodies.masscenter~property
+Bodies.name~property
+Bodies.parallel_axis~method
+Bodies.point~property
+Bodies.potential_energy~property
+Bodies.central_inertia~property
+Bodies.frame~property
+Bodies.inertia~property
+Bodies.x~property
+Bodies.y~property
+Bodies.z~property
+Inertias.from_inertia_scalars~method
+inertia~function
+inertia_of_point_mass~function
+center_of_mass~function
+linear_momentum~function
+angular_momentum~function
+kinetic_energy~function
+potential_energy~function
+Lagrangian~function
+find_dynamicsymbols~function
+Kane’s Method & Lagrange’s Method (Docstrings).auxiliary_eqs~property
+Kane’s Method & Lagrange’s Method (Docstrings).forcing~property
+Kane’s Method & Lagrange’s Method (Docstrings).forcing_full~property
+Kane’s Method & Lagrange’s Method (Docstrings).forcing_kin~property
+Kane’s Method & Lagrange’s Method (Docstrings).kanes_equations~method
+Kane’s Method & Lagrange’s Method (Docstrings).kindiffdict~method
+Kane’s Method & Lagrange’s Method (Docstrings).linearize~method
+Kane’s Method & Lagrange’s Method (Docstrings).mass_matrix~property
+Kane’s Method & Lagrange’s Method (Docstrings).mass_matrix_full~property
+Kane’s Method & Lagrange’s Method (Docstrings).mass_matrix_kin~property
+Kane’s Method & Lagrange’s Method (Docstrings).rhs~method
+Kane’s Method & Lagrange’s Method (Docstrings).to_linearizer~method
+Kane’s Method & Lagrange’s Method (Docstrings).form_lagranges_equations~method
+Kane’s Method & Lagrange’s Method (Docstrings).solve_multipliers~method
+Joint (Docstrings).child~property
+Joint (Docstrings).child_axis~property
+Joint (Docstrings).child_point~property
+Joint (Docstrings).coordinates~property
+Joint (Docstrings).kdes~property
+Joint (Docstrings).name~property
+Joint (Docstrings).parent~property
+Joint (Docstrings).parent_axis~property
+Joint (Docstrings).parent_point~property
+Joint (Docstrings).speeds~property
+Joint (Docstrings).joint_axis~property
+Joint (Docstrings).rotation_coordinate~property
+Joint (Docstrings).rotation_speed~property
+Joint (Docstrings).translation_coordinate~property
+Joint (Docstrings).translation_speed~property
+Joint (Docstrings).planar_coordinates~property
+Joint (Docstrings).planar_speeds~property
+Joint (Docstrings).planar_vectors~property
+Joint (Docstrings).rotation_axis~property
+System (Docstrings).alg_con~property
+System (Docstrings).bodies~property
+System (Docstrings).comb_explicit_rhs~property
+System (Docstrings).comb_implicit_mat~property
+System (Docstrings).comb_implicit_rhs~property
+System (Docstrings).compute_explicit_form~method
+System (Docstrings).constant_symbols~method
+System (Docstrings).coordinates~property
+System (Docstrings).dyn_implicit_mat~property
+System (Docstrings).dyn_implicit_rhs~property
+System (Docstrings).dynamic_symbols~method
+System (Docstrings).kin_explicit_rhs~property
+System (Docstrings).loads~property
+System (Docstrings).speeds~property
+System (Docstrings).states~property
+System (Docstrings).actuators~property
+System (Docstrings).add_actuators~method
+System (Docstrings).add_auxiliary_speeds~method
+System (Docstrings).add_bodies~method
+System (Docstrings).add_coordinates~method
+System (Docstrings).add_holonomic_constraints~method
+System (Docstrings).add_joints~method
+System (Docstrings).add_kdes~method
+System (Docstrings).add_loads~method
+System (Docstrings).add_nonholonomic_constraints~method
+System (Docstrings).add_speeds~method
+System (Docstrings).apply_uniform_gravity~method
+System (Docstrings).eom_method~property
+System (Docstrings).fixed_point~property
+System (Docstrings).forcing~property
+System (Docstrings).forcing_full~property
+System (Docstrings).form_eoms~method
+System (Docstrings).frame~property
+System (Docstrings).from_newtonian~method
+System (Docstrings).get_body~method
+System (Docstrings).get_joint~method
+System (Docstrings).holonomic_constraints~property
+System (Docstrings).joints~property
+System (Docstrings).kdes~property
+System (Docstrings).mass_matrix~property
+System (Docstrings).mass_matrix_full~property
+System (Docstrings).nonholonomic_constraints~property
+System (Docstrings).q~property
+System (Docstrings).q_dep~property
+System (Docstrings).q_ind~property
+System (Docstrings).rhs~method
+System (Docstrings).u~property
+System (Docstrings).u_aux~property
+System (Docstrings).u_dep~property
+System (Docstrings).u_ind~property
+System (Docstrings).validate_system~method
+System (Docstrings).velocity_constraints~property
+System (Docstrings).x~property
+System (Docstrings).y~property
+System (Docstrings).z~property
+Linearization (Docstrings).__init__~method
+Linearization (Docstrings).linearize~method
+msubs~function
+Pathway (Docstrings).extension_velocity~property
+Pathway (Docstrings).length~property
+Pathway (Docstrings).to_loads~method
+Pathway (Docstrings).attachments~property
+Pathway (Docstrings).geometry~property
+Actuator (Docstrings).to_loads~method
+Actuator (Docstrings).force~property
+Actuator (Docstrings).pathway~property
+Actuator (Docstrings).damping~property
+Actuator (Docstrings).equilibrium_length~property
+Actuator (Docstrings).stiffness~property
+Actuator (Docstrings).at_pin_joint~method
+Actuator (Docstrings).axis~property
+Actuator (Docstrings).reaction_frame~property
+Actuator (Docstrings).target_frame~property
+Actuator (Docstrings).torque~property
+Wrapping Geometry (Docstrings).axis~property
+Wrapping Geometry (Docstrings).geodesic_end_vectors~method
+Wrapping Geometry (Docstrings).geodesic_length~method
+Wrapping Geometry (Docstrings).point~property
+Wrapping Geometry (Docstrings).point_on_surface~method
+Wrapping Geometry (Docstrings).radius~property
+Deprecated Classes (Docstrings).ang_vel_in~method
+Deprecated Classes (Docstrings).angular_momentum~method
+Deprecated Classes (Docstrings).apply_force~method
+Deprecated Classes (Docstrings).apply_torque~method
+Deprecated Classes (Docstrings).central_inertia~property
+Deprecated Classes (Docstrings).clear_loads~method
+Deprecated Classes (Docstrings).dcm~method
+Deprecated Classes (Docstrings).frame~property
+Deprecated Classes (Docstrings).inertia~property
+Deprecated Classes (Docstrings).kinetic_energy~method
+Deprecated Classes (Docstrings).linear_momentum~method
+Deprecated Classes (Docstrings).mass~property
+Deprecated Classes (Docstrings).masscenter~property
+Deprecated Classes (Docstrings).masscenter_vel~method
+Deprecated Classes (Docstrings).name~property
+Deprecated Classes (Docstrings).parallel_axis~method
+Deprecated Classes (Docstrings).point~property
+Deprecated Classes (Docstrings).potential_energy~property
+Deprecated Classes (Docstrings).remove_load~method
+Deprecated Classes (Docstrings).x~property
+Deprecated Classes (Docstrings).y~property
+Deprecated Classes (Docstrings).z~property
+Deprecated Classes (Docstrings).bodies~property
+Deprecated Classes (Docstrings).forcing~property
+Deprecated Classes (Docstrings).forcing_full~property
+Deprecated Classes (Docstrings).form_eoms~method
+Deprecated Classes (Docstrings).kdes~property
+Deprecated Classes (Docstrings).loads~property
+Deprecated Classes (Docstrings).mass_matrix~property
+Deprecated Classes (Docstrings).mass_matrix_full~property
+Deprecated Classes (Docstrings).method~property
+Deprecated Classes (Docstrings).q~property
+Deprecated Classes (Docstrings).rhs~method
+Deprecated Classes (Docstrings).u~property
+Musculotendon (Docstrings).F~property
+Musculotendon (Docstrings).F_M_max~property
+Musculotendon (Docstrings).M~property
+Musculotendon (Docstrings).a~property
+Musculotendon (Docstrings).activation~property
+Musculotendon (Docstrings).activation_dynamics~property
+Musculotendon (Docstrings).alpha_opt~property
+Musculotendon (Docstrings).beta~property
+Musculotendon (Docstrings).constants~property
+Musculotendon (Docstrings).curves~method
+Musculotendon (Docstrings).e~property
+Musculotendon (Docstrings).excitation~property
+Musculotendon (Docstrings).fiber_damping_coefficient~property
+Musculotendon (Docstrings).input_vars~property
+Musculotendon (Docstrings).l_M_opt~property
+Musculotendon (Docstrings).l_T_slack~property
+Musculotendon (Docstrings).maximal_fiber_velocity~property
+Musculotendon (Docstrings).musculotendon_dynamics~property
+Musculotendon (Docstrings).optimal_fiber_length~property
+Musculotendon (Docstrings).optimal_pennation_angle~property
+Musculotendon (Docstrings).p~property
+Musculotendon (Docstrings).peak_isometric_force~property
+Musculotendon (Docstrings).r~property
+Musculotendon (Docstrings).rhs~method
+Musculotendon (Docstrings).state_vars~property
+Musculotendon (Docstrings).tendon_slack_length~property
+Musculotendon (Docstrings).v_M_max~property
+Musculotendon (Docstrings).with_defaults~method
+Musculotendon (Docstrings).x~property
+Activation (Docstrings).F~property
+Activation (Docstrings).M~property
+Activation (Docstrings).a~property
+Activation (Docstrings).activation~property
+Activation (Docstrings).constants~property
+Activation (Docstrings).e~property
+Activation (Docstrings).excitation~property
+Activation (Docstrings).input_vars~property
+Activation (Docstrings).order~property
+Activation (Docstrings).p~property
+Activation (Docstrings).r~property
+Activation (Docstrings).rhs~method
+Activation (Docstrings).state_vars~property
+Activation (Docstrings).with_defaults~method
+Activation (Docstrings).x~property
+Activation (Docstrings).activation_time_constant~property
+Activation (Docstrings).b~property
+Activation (Docstrings).deactivation_time_constant~property
+Activation (Docstrings).smoothing_rate~property
+Activation (Docstrings).tau_a~property
+Activation (Docstrings).tau_d~property
+Curve (Docstrings).doit~method
+Curve (Docstrings).eval~method
+Curve (Docstrings).fdiff~method
+Curve (Docstrings).with_defaults~method
+Curve (Docstrings).inverse~method
+Anticommutator.doit~method
+cg_simp~function
+Commutator.doit~method
+tensor_product_simp~function
+Cartesian Operators and States.position_x~property
+Cartesian Operators and States.position_y~property
+Cartesian Operators and States.position_z~property
+Cartesian Operators and States.momentum~property
+Cartesian Operators and States.position~property
+Hilbert Space.eval~method
+Hilbert Space.spaces~property
+Hilbert Space.dimension~property
+Operator.expr~property
+Operator.free_symbols~property
+Operator.function~property
+Operator.variables~property
+Operator.bra~property
+Operator.ket~property
+operators_to_state~function
+state_to_operators~function
+qapply~function
+enumerate_states~function
+get_basis~function
+integrate_result~function
+rep_expectation~function
+rep_innerproduct~function
+represent~function
+Spin.D~method
+Spin.d~method
+couple~function
+uncouple~function
+State.dual~property
+State.dual_class~method
+State.operators~property
+State.label~property
+State.time~property
+State.expr~property
+State.is_commutative~property
+State.is_normalized~property
+State.limits~property
+State.norm~property
+State.normalize~method
+State.prob~method
+State.variables~property
+Circuit Plot.control_line~method
+Circuit Plot.control_point~method
+Circuit Plot.not_point~method
+Circuit Plot.one_qubit_box~method
+Circuit Plot.swap_point~method
+Circuit Plot.two_qubit_box~method
+Circuit Plot.update~method
+CreateCGate~function
+circuit_plot~function
+labeller~function
+Gates.controls~property
+Gates.decompose~method
+Gates.eval_controls~method
+Gates.gate~property
+Gates.min_qubits~property
+Gates.nqubits~property
+Gates.plot_gate~method
+Gates.targets~property
+Gates.get_target_matrix~method
+gate_simp~function
+gate_sort~function
+normalized~function
+random_circuit~function
+Grover’s Algorithm.search_function~property
+Grover’s Algorithm.targets~property
+apply_grover~function
+grover_iteration~function
+superposition_basis~function
+QFT.decompose~method
+matrix_to_density~function
+matrix_to_qubit~function
+measure_all~function
+measure_all_oneshot~function
+measure_partial~function
+measure_partial_oneshot~function
+qubit_to_matrix~function
+Shor’s Algorithm.N~property
+Shor’s Algorithm.a~property
+Shor’s Algorithm.t~property
+period_find~function
+shor~function
+Gaussian Optics.divergence~property
+Gaussian Optics.gouy~property
+Gaussian Optics.q~property
+Gaussian Optics.radius~property
+Gaussian Optics.w~property
+Gaussian Optics.w_0~property
+Gaussian Optics.waist_approximation_limit~property
+Gaussian Optics.angle~property
+Gaussian Optics.height~property
+Gaussian Optics.A~property
+Gaussian Optics.B~property
+Gaussian Optics.C~property
+Gaussian Optics.D~property
+conjugate_gauss_beams~function
+gaussian_conj~function
+geometric_conj_ab~function
+geometric_conj_af~function
+geometric_conj_bf~function
+rayleigh2waist~function
+waist2rayleigh~function
+Medium.refractive_index~property
+Medium.speed~property
+half_wave_retarder~function
+jones_2_stokes~function
+jones_vector~function
+linear_polarizer~function
+mueller_matrix~function
+phase_retarder~function
+polarizing_beam_splitter~function
+quarter_wave_retarder~function
+reflective_filter~function
+stokes_vector~function
+transmissive_filter~function
+brewster_angle~function
+critical_angle~function
+deviation~function
+fresnel_coefficients~function
+hyperfocal_distance~function
+lens_formula~function
+lens_makers_formula~function
+mirror_formula~function
+refraction_angle~function
+transverse_magnification~function
+Waves.amplitude~property
+Waves.angular_velocity~property
+Waves.frequency~property
+Waves.n~property
+Waves.phase~property
+Waves.speed~property
+Waves.time_period~property
+Waves.wavelength~property
+Waves.wavenumber~property
+lti.dc_gain~method
+lti.den~property
+lti.eval_frequency~method
+lti.expand~method
+lti.from_coeff_lists~method
+lti.from_rational_expression~method
+lti.from_zpk~method
+lti.is_biproper~property
+lti.is_proper~property
+lti.is_stable~method
+lti.is_strictly_proper~property
+lti.num~property
+lti.poles~method
+lti.to_expr~method
+lti.var~property
+lti.zeros~method
+lti.doit~method
+lti.sensitivity~property
+lti.sign~property
+lti.sys1~property
+lti.sys2~property
+lti.elem_poles~method
+lti.elem_zeros~method
+lti.from_Matrix~method
+lti.num_inputs~property
+lti.num_outputs~property
+lti.shape~property
+lti.transpose~method
+gbt~function
+bilinear~function
+forward_diff~function
+backward_diff~function
+Pole-Zero Plot.pole_zero_plot~method
+Pole-Zero Plot.pole_zero_numerical_data~method
+Bode Plot.bode_plot~method
+Bode Plot.bode_magnitude_plot~method
+Bode Plot.bode_phase_plot~method
+Bode Plot.bode_magnitude_numerical_data~method
+Bode Plot.bode_phase_numerical_data~method
+Impulse-Response Plot.impulse_response_plot~method
+Impulse-Response Plot.impulse_response_numerical_data~method
+Step-Response Plot.step_response_plot~method
+Step-Response Plot.step_response_numerical_data~method
+Ramp-Response Plot.ramp_response_plot~method
+Ramp-Response Plot.ramp_response_numerical_data~method
+Beam (Docstrings).applied_loads~property
+Beam (Docstrings).apply_load~method
+Beam (Docstrings).apply_support~method
+Beam (Docstrings).area~property
+Beam (Docstrings).bending_moment~method
+Beam (Docstrings).boundary_conditions~property
+Beam (Docstrings).cross_section~property
+Beam (Docstrings).deflection~method
+Beam (Docstrings).draw~method
+Beam (Docstrings).elastic_modulus~property
+Beam (Docstrings).ild_moment~property
+Beam (Docstrings).ild_reactions~property
+Beam (Docstrings).ild_shear~property
+Beam (Docstrings).join~method
+Beam (Docstrings).length~property
+Beam (Docstrings).load~property
+Beam (Docstrings).max_bmoment~method
+Beam (Docstrings).max_deflection~method
+Beam (Docstrings).max_shear_force~method
+Beam (Docstrings).plot_bending_moment~method
+Beam (Docstrings).plot_deflection~method
+Beam (Docstrings).plot_ild_moment~method
+Beam (Docstrings).plot_ild_reactions~method
+Beam (Docstrings).plot_ild_shear~method
+Beam (Docstrings).plot_loading_results~method
+Beam (Docstrings).plot_shear_force~method
+Beam (Docstrings).plot_shear_stress~method
+Beam (Docstrings).plot_slope~method
+Beam (Docstrings).point_cflexure~method
+Beam (Docstrings).reaction_loads~property
+Beam (Docstrings).remove_load~method
+Beam (Docstrings).second_moment~property
+Beam (Docstrings).shear_force~method
+Beam (Docstrings).shear_stress~method
+Beam (Docstrings).slope~method
+Beam (Docstrings).solve_for_ild_moment~method
+Beam (Docstrings).solve_for_ild_reactions~method
+Beam (Docstrings).solve_for_ild_shear~method
+Beam (Docstrings).solve_for_reaction_loads~method
+Beam (Docstrings).variable~property
+Beam (Docstrings).angular_deflection~method
+Beam (Docstrings).apply_moment_load~method
+Beam (Docstrings).axial_force~method
+Beam (Docstrings).axial_stress~method
+Beam (Docstrings).load_vector~property
+Beam (Docstrings).max_bending_moment~method
+Beam (Docstrings).moment_load_vector~property
+Beam (Docstrings).polar_moment~method
+Beam (Docstrings).shear_modulus~property
+Beam (Docstrings).solve_for_torsion~method
+Beam (Docstrings).torsional_moment~method
+Truss (Docstrings).add_member~method
+Truss (Docstrings).add_node~method
+Truss (Docstrings).apply_load~method
+Truss (Docstrings).apply_support~method
+Truss (Docstrings).change_member_label~method
+Truss (Docstrings).change_node_label~method
+Truss (Docstrings).draw~method
+Truss (Docstrings).internal_forces~property
+Truss (Docstrings).loads~property
+Truss (Docstrings).member_lengths~property
+Truss (Docstrings).members~property
+Truss (Docstrings).node_labels~property
+Truss (Docstrings).node_positions~property
+Truss (Docstrings).nodes~property
+Truss (Docstrings).reaction_loads~property
+Truss (Docstrings).remove_load~method
+Truss (Docstrings).remove_member~method
+Truss (Docstrings).remove_node~method
+Truss (Docstrings).remove_support~method
+Truss (Docstrings).solve~method
+Truss (Docstrings).supports~property
+Cable.apply_length~method
+Cable.apply_load~method
+Cable.change_support~method
+Cable.left_support~property
+Cable.length~property
+Cable.loads~property
+Cable.loads_position~property
+Cable.reaction_loads~property
+Cable.remove_loads~method
+Cable.right_support~property
+Cable.solve~method
+Cable.supports~property
+Cable.tension~property
+Cable.tension_at~method
+SKIP~function
+nocache_fail~function
+raises~function
+skip_under_pyodide~function
+warns~function
+warns_deprecated_sympy~function
+Run Tests.write~method
+Run Tests.run~method
+Run Tests.check_output~method
+convert_to_native_paths~function
+doctest~function
+get_sympy_dir~function
+raise_on_deprecated~function
+run_all_tests~function
+run_in_subprocess_with_hash_randomization~function
+split_list~function
+sympytestfile~function
+test~function
+API Reference.dump_pyx~method
+API Reference.dump_c~method
+autowrap~function
+binary_function~function
+ufuncify~function
+API Reference.dump_h~method
+API Reference.get_prototype~method
+API Reference.dump_code~method
+API Reference.routine~method
+API Reference.write~method
+API Reference.dump_f95~method
+API Reference.get_interface~method
+API Reference.dump_jl~method
+API Reference.dump_m~method
+API Reference.result_variables~property
+API Reference.variables~property
+API Reference.dump_rs~method
+codegen~function
+get_default_datatype~function
+make_routine~function
+deprecated~function
+conserve_mpmath_dps~function
+doctest_depends_on~function
+memoize_property~function
+public~function
+threaded~function
+threaded_factory~function
+xthreaded~function
+multiset_partitions_taocp~function
+factoring_visitor~function
+list_visitor~function
+Enumerative.count_partitions~method
+Enumerative.enum_all~method
+Enumerative.enum_large~method
+Enumerative.enum_range~method
+Enumerative.enum_small~method
+ignore_warnings~function
+sympy_deprecation_warning~function
+binary_partitions~function
+bracelets~function
+capture~function
+common_prefix~function
+common_suffix~function
+connected_components~function
+dict_merge~function
+filter_symbols~function
+flatten~function
+generate_bell~function
+generate_derangements~function
+generate_involutions~function
+generate_oriented_forest~function
+group~function
+has_dups~function
+has_variety~function
+ibin~function
+iproduct~function
+is_sequence~function
+iterable~function
+kbins~function
+least_rotation~function
+minlex~function
+multiset~function
+multiset_combinations~function
+multiset_derangements~function
+multiset_partitions~function
+multiset_permutations~function
+necklaces~function
+numbered_symbols~function
+ordered_partitions~function
+partitions~function
+permute_signs~function
+postfixes~function
+prefixes~function
+random_derangement~function
+rotate_left~function
+rotate_right~function
+rotations~function
+roundrobin~function
+runs~function
+sequence_partitions~function
+sequence_partitions_empty~function
+sift~function
+signed_permutations~function
+strongly_connected_components~function
+subsets~function
+take~function
+topological_sort~function
+unflatten~function
+uniq~function
+variations~function
+implemented_function~function
+lambdastr~function
+lambdify~function
+assoc_recurrence_memo~function
+recurrence_memo~function
+as_int~function
+debug~function
+debug_decorator~function
+debugf~function
+filldedent~function
+find_executable~function
+func_name~function
+ordinal~function
+rawlines~function
+replace~function
+strlines~function
+translate~function
+get_class~function
+get_mod_func~function
+timed~function
+enable_automatic_int_sympification~function
+enable_automatic_symbols~function
+init_ipython_session~function
+init_python_session~function
+init_session~function
+int_to_Integer~function
+init_printing~function
+parse_expr~function
+stringify_expr~function
+eval_expr~function
+parse_maxima~function
+parse_mathematica~function
+split_symbols~function
+split_symbols_custom~function
+implicit_multiplication~function
+implicit_application~function
+function_exponentiation~function
+implicit_multiplication_application~function
+rationalize~function
+convert_xor~function
+lambda_notation~function
+auto_symbol~function
+repeated_decimals~function
+auto_number~function
+factorial_notation~function
+parse_latex~function
+parse_latex_lark~function
+SymPy Expression Reference.convert_to_c~method
+SymPy Expression Reference.convert_to_expr~method
+SymPy Expression Reference.convert_to_fortran~method
+SymPy Expression Reference.convert_to_python~method
+SymPy Expression Reference.return_expr~method
+Common mistakes._print~method
+Common mistakes.doprint~method
+Common mistakes.set_global_settings~method
+pretty~function
+pretty_print~function
+C code printers.indent_code~method
+ccode~function
+print_ccode~function
+cxxcode~function
+RCodePrinter.indent_code~method
+rcode~function
+print_rcode~function
+fcode~function
+print_fcode~function
+Fortran Printing.indent_code~method
+smtlib_code~function
+mathematica_code~function
+maple_code~function
+print_maple_code~function
+Javascript Code printing.indent_code~method
+jscode~function
+Julia code printing.indent_code~method
+julia_code~function
+Octave (and Matlab) Code printing.indent_code~method
+octave_code~function
+Rust code printing.indent_code~method
+rust_code~function
+Aesara Code printing.doprint~method
+aesara_code~function
+aesara_function~function
+dim_handling~function
+print_gtk~function
+lambdarepr~function
+LatexPrinter.parenthesize_super~method
+latex~function
+print_latex~function
+MathMLPrinter.doprint~method
+MathMLPrinter.mathml_tag~method
+mathml~function
+print_mathml~function
+pycode~function
+srepr.emptyPrinter~method
+srepr.reprify~method
+srepr~function
+sstr~function
+sstrrepr~function
+pprint_nodes~function
+print_node~function
+tree~function
+print_tree~function
+preview~function
+split_super_sub~function
+CodePrinter.doprint~method
+precedence~function
+U~function
+pretty_use_unicode~function
+pretty_try_use_unicode~function
+xstr~function
+g~function
+G~function
+xobj~function
+vobj~function
+hobj~function
+VF~function
+xsym~function
+pretty_atom~function
+pretty_symbol~function
+annotated~function
+Pretty-Printing Implementation Helpers.above~method
+Pretty-Printing Implementation Helpers.below~method
+Pretty-Printing Implementation Helpers.height~method
+Pretty-Printing Implementation Helpers.left~method
+Pretty-Printing Implementation Helpers.leftslash~method
+Pretty-Printing Implementation Helpers.next~method
+Pretty-Printing Implementation Helpers.parens~method
+Pretty-Printing Implementation Helpers.render~method
+Pretty-Printing Implementation Helpers.right~method
+Pretty-Printing Implementation Helpers.root~method
+Pretty-Printing Implementation Helpers.stack~method
+Pretty-Printing Implementation Helpers.terminal_width~method
+Pretty-Printing Implementation Helpers.width~method
+Pretty-Printing Implementation Helpers.apply~method
+dotprint~function
+Entities.ambient_dimension~property
+Entities.bounds~property
+Entities.encloses~method
+Entities.intersection~method
+Entities.is_similar~method
+Entities.parameter_value~method
+Entities.reflect~method
+Entities.rotate~method
+Entities.scale~method
+Entities.translate~method
+intersection~function
+convex_hull~function
+are_similar~function
+centroid~function
+idiff~function
+Points.affine_rank~method
+Points.ambient_dimension~property
+Points.are_coplanar~method
+Points.canberra_distance~method
+Points.distance~method
+Points.dot~method
+Points.equals~method
+Points.intersection~method
+Points.is_collinear~method
+Points.is_concyclic~method
+Points.is_nonzero~property
+Points.is_scalar_multiple~method
+Points.is_zero~property
+Points.length~property
+Points.midpoint~method
+Points.origin~property
+Points.orthogonal_direction~property
+Points.project~method
+Points.taxicab_distance~method
+Points.unit~property
+Points.bounds~property
+Points.coordinates~property
+Points.rotate~method
+Points.scale~method
+Points.transform~method
+Points.translate~method
+Points.x~property
+Points.y~property
+Points.are_collinear~method
+Points.direction_cosine~method
+Points.direction_ratio~method
+Points.z~property
+Lines.ambient_dimension~property
+Lines.angle_between~method
+Lines.arbitrary_point~method
+Lines.are_concurrent~method
+Lines.bisectors~method
+Lines.contains~method
+Lines.direction~property
+Lines.intersection~method
+Lines.is_parallel~method
+Lines.is_perpendicular~method
+Lines.is_similar~method
+Lines.length~property
+Lines.p1~property
+Lines.p2~property
+Lines.parallel_line~method
+Lines.perpendicular_line~method
+Lines.perpendicular_segment~method
+Lines.points~property
+Lines.projection~method
+Lines.random_point~method
+Lines.smallest_angle_between~method
+Lines.distance~method
+Lines.equals~method
+Lines.plot_interval~method
+Lines.source~property
+Lines.midpoint~property
+Lines.perpendicular_bisector~method
+Lines.bounds~property
+Lines.slope~property
+Lines.coefficients~property
+Lines.equation~method
+Lines.closing_angle~method
+Lines.xdirection~property
+Lines.ydirection~property
+Lines.direction_cosine~property
+Lines.direction_ratio~property
+Lines.zdirection~property
+Curves.ambient_dimension~property
+Curves.arbitrary_point~method
+Curves.free_symbols~property
+Curves.functions~property
+Curves.length~property
+Curves.limits~property
+Curves.parameter~property
+Curves.plot_interval~method
+Curves.rotate~method
+Curves.scale~method
+Curves.translate~method
+Ellipses.apoapsis~property
+Ellipses.arbitrary_point~method
+Ellipses.area~property
+Ellipses.auxiliary_circle~method
+Ellipses.bounds~property
+Ellipses.center~property
+Ellipses.circumference~property
+Ellipses.director_circle~method
+Ellipses.eccentricity~property
+Ellipses.encloses_point~method
+Ellipses.equation~method
+Ellipses.evolute~method
+Ellipses.foci~property
+Ellipses.focus_distance~property
+Ellipses.hradius~property
+Ellipses.intersection~method
+Ellipses.is_tangent~method
+Ellipses.major~property
+Ellipses.minor~property
+Ellipses.normal_lines~method
+Ellipses.periapsis~property
+Ellipses.plot_interval~method
+Ellipses.polar_second_moment_of_area~method
+Ellipses.random_point~method
+Ellipses.reflect~method
+Ellipses.rotate~method
+Ellipses.scale~method
+Ellipses.second_moment_of_area~method
+Ellipses.section_modulus~method
+Ellipses.semilatus_rectum~property
+Ellipses.tangent_lines~method
+Ellipses.vradius~property
+Ellipses.radius~property
+Polygons.angles~property
+Polygons.arbitrary_point~method
+Polygons.area~property
+Polygons.bisectors~method
+Polygons.bounds~property
+Polygons.centroid~property
+Polygons.cut_section~method
+Polygons.distance~method
+Polygons.encloses_point~method
+Polygons.first_moment_of_area~method
+Polygons.intersection~method
+Polygons.is_convex~method
+Polygons.perimeter~property
+Polygons.plot_interval~method
+Polygons.polar_second_moment_of_area~method
+Polygons.second_moment_of_area~method
+Polygons.section_modulus~method
+Polygons.sides~property
+Polygons.vertices~property
+Polygons.apothem~property
+Polygons.args~property
+Polygons.center~property
+Polygons.circumcenter~property
+Polygons.circumcircle~property
+Polygons.circumradius~property
+Polygons.exterior_angle~property
+Polygons.incircle~property
+Polygons.inradius~property
+Polygons.interior_angle~property
+Polygons.length~property
+Polygons.radius~property
+Polygons.reflect~method
+Polygons.rotate~method
+Polygons.rotation~property
+Polygons.scale~method
+Polygons.spin~method
+Polygons.altitudes~property
+Polygons.eulerline~property
+Polygons.excenters~property
+Polygons.exradii~property
+Polygons.incenter~property
+Polygons.is_equilateral~method
+Polygons.is_isosceles~method
+Polygons.is_right~method
+Polygons.is_scalene~method
+Polygons.is_similar~method
+Polygons.medial~property
+Polygons.medians~property
+Polygons.nine_point_circle~property
+Polygons.orthocenter~property
+Plane.angle_between~method
+Plane.arbitrary_point~method
+Plane.are_concurrent~method
+Plane.distance~method
+Plane.equals~method
+Plane.equation~method
+Plane.intersection~method
+Plane.is_coplanar~method
+Plane.is_parallel~method
+Plane.is_perpendicular~method
+Plane.normal_vector~property
+Plane.p1~property
+Plane.parallel_plane~method
+Plane.parameter_value~method
+Plane.perpendicular_line~method
+Plane.perpendicular_plane~method
+Plane.projection~method
+Plane.projection_line~method
+Plane.random_point~method
+Representation of holonomic functions in SymPy.is_singular~method
+DifferentialOperators~function
+Integration and Differentiation.integrate~method
+Integration and Differentiation.diff~method
+Composition with polynomials.composition~method
+Convert to holonomic sequence.to_sequence~method
+Series expansion.series~method
+Numerical evaluation.evalf~method
+Convert to a linear combination of hypergeometric functions.to_hyper~method
+Convert to a linear combination of Meijer G-functions.to_meijerg~method
+Convert to expressions.to_expr~method
+from_hyper~function
+from_meijerg~function
+expr_to_holonomic~function
+_create_table~function
+_convert_poly_rat_alg~function
+Lie Algebra.add_as_roots~method
+Lie Algebra.add_simple_roots~method
+Lie Algebra.all_roots~method
+Lie Algebra.cartan_matrix~method
+Lie Algebra.dynkin_diagram~method
+Lie Algebra.root_space~method
+Lie Algebra.simple_roots~method
+Lie Algebra.basic_root~method
+Lie Algebra.basis~method
+Lie Algebra.dimension~method
+Lie Algebra.highest_root~method
+Lie Algebra.lie_algebra~method
+Lie Algebra.positive_roots~method
+Lie Algebra.roots~method
+Lie Algebra.simple_root~method
+Lie Algebra.coxeter_diagram~method
+Lie Algebra.delete_doubles~method
+Lie Algebra.element_order~method
+Lie Algebra.generators~method
+Lie Algebra.group_name~method
+Lie Algebra.group_order~method
+Lie Algebra.matrix_form~method
+Lie Algebra.rank~method
+Lie Algebra.series~method
+DynkinDiagram~function
+CartanMatrix~function
+poly~function
+poly_from_expr~function
+parallel_poly_from_expr~function
+degree~function
+degree_list~function
+LC~function
+LM~function
+LT~function
+pdiv~function
+prem~function
+pquo~function
+pexquo~function
+div~function
+rem~function
+quo~function
+exquo~function
+half_gcdex~function
+gcdex~function
+invert~function
+subresultants~function
+resultant~function
+discriminant~function
+terms_gcd~function
+cofactors~function
+gcd~function
+gcd_list~function
+lcm~function
+lcm_list~function
+trunc~function
+monic~function
+content~function
+primitive~function
+compose~function
+decompose~function
+sturm~function
+gff_list~function
+gff~function
+sqf_norm~function
+sqf_part~function
+sqf_list~function
+sqf~function
+factor_list~function
+factor~function
+intervals~function
+refine_root~function
+count_roots~function
+all_roots~function
+real_roots~function
+nroots~function
+ground_roots~function
+nth_power_roots_poly~function
+cancel~function
+reduced~function
+groebner~function
+is_zero_dimensional~function
+Basic polynomial manipulation functions.EC~method
+Basic polynomial manipulation functions.EM~method
+Basic polynomial manipulation functions.ET~method
+Basic polynomial manipulation functions.LC~method
+Basic polynomial manipulation functions.LM~method
+Basic polynomial manipulation functions.LT~method
+Basic polynomial manipulation functions.TC~method
+Basic polynomial manipulation functions.abs~method
+Basic polynomial manipulation functions.add~method
+Basic polynomial manipulation functions.add_ground~method
+Basic polynomial manipulation functions.all_coeffs~method
+Basic polynomial manipulation functions.all_monoms~method
+Basic polynomial manipulation functions.all_roots~method
+Basic polynomial manipulation functions.all_terms~method
+Basic polynomial manipulation functions.as_dict~method
+Basic polynomial manipulation functions.as_expr~method
+Basic polynomial manipulation functions.as_list~method
+Basic polynomial manipulation functions.as_poly~method
+Basic polynomial manipulation functions.cancel~method
+Basic polynomial manipulation functions.clear_denoms~method
+Basic polynomial manipulation functions.coeff_monomial~method
+Basic polynomial manipulation functions.coeffs~method
+Basic polynomial manipulation functions.cofactors~method
+Basic polynomial manipulation functions.compose~method
+Basic polynomial manipulation functions.content~method
+Basic polynomial manipulation functions.count_roots~method
+Basic polynomial manipulation functions.decompose~method
+Basic polynomial manipulation functions.deflate~method
+Basic polynomial manipulation functions.degree~method
+Basic polynomial manipulation functions.degree_list~method
+Basic polynomial manipulation functions.diff~method
+Basic polynomial manipulation functions.discriminant~method
+Basic polynomial manipulation functions.dispersion~method
+Basic polynomial manipulation functions.dispersionset~method
+Basic polynomial manipulation functions.div~method
+Basic polynomial manipulation functions.domain~property
+Basic polynomial manipulation functions.eject~method
+Basic polynomial manipulation functions.eval~method
+Basic polynomial manipulation functions.exclude~method
+Basic polynomial manipulation functions.exquo~method
+Basic polynomial manipulation functions.exquo_ground~method
+Basic polynomial manipulation functions.factor_list~method
+Basic polynomial manipulation functions.factor_list_include~method
+Basic polynomial manipulation functions.free_symbols~property
+Basic polynomial manipulation functions.free_symbols_in_domain~property
+Basic polynomial manipulation functions.from_dict~method
+Basic polynomial manipulation functions.from_expr~method
+Basic polynomial manipulation functions.from_list~method
+Basic polynomial manipulation functions.from_poly~method
+Basic polynomial manipulation functions.galois_group~method
+Basic polynomial manipulation functions.gcd~method
+Basic polynomial manipulation functions.gcdex~method
+Basic polynomial manipulation functions.gen~property
+Basic polynomial manipulation functions.get_domain~method
+Basic polynomial manipulation functions.get_modulus~method
+Basic polynomial manipulation functions.gff_list~method
+Basic polynomial manipulation functions.ground_roots~method
+Basic polynomial manipulation functions.half_gcdex~method
+Basic polynomial manipulation functions.has_only_gens~method
+Basic polynomial manipulation functions.homogeneous_order~method
+Basic polynomial manipulation functions.homogenize~method
+Basic polynomial manipulation functions.inject~method
+Basic polynomial manipulation functions.integrate~method
+Basic polynomial manipulation functions.intervals~method
+Basic polynomial manipulation functions.invert~method
+Basic polynomial manipulation functions.is_cyclotomic~property
+Basic polynomial manipulation functions.is_ground~property
+Basic polynomial manipulation functions.is_homogeneous~property
+Basic polynomial manipulation functions.is_irreducible~property
+Basic polynomial manipulation functions.is_linear~property
+Basic polynomial manipulation functions.is_monic~property
+Basic polynomial manipulation functions.is_monomial~property
+Basic polynomial manipulation functions.is_multivariate~property
+Basic polynomial manipulation functions.is_one~property
+Basic polynomial manipulation functions.is_primitive~property
+Basic polynomial manipulation functions.is_quadratic~property
+Basic polynomial manipulation functions.is_sqf~property
+Basic polynomial manipulation functions.is_univariate~property
+Basic polynomial manipulation functions.is_zero~property
+Basic polynomial manipulation functions.l1_norm~method
+Basic polynomial manipulation functions.lcm~method
+Basic polynomial manipulation functions.length~method
+Basic polynomial manipulation functions.lift~method
+Basic polynomial manipulation functions.ltrim~method
+Basic polynomial manipulation functions.make_monic_over_integers_by_scaling_roots~method
+Basic polynomial manipulation functions.match~method
+Basic polynomial manipulation functions.max_norm~method
+Basic polynomial manipulation functions.monic~method
+Basic polynomial manipulation functions.monoms~method
+Basic polynomial manipulation functions.mul~method
+Basic polynomial manipulation functions.mul_ground~method
+Basic polynomial manipulation functions.neg~method
+Basic polynomial manipulation functions.new~method
+Basic polynomial manipulation functions.norm~method
+Basic polynomial manipulation functions.nroots~method
+Basic polynomial manipulation functions.nth~method
+Basic polynomial manipulation functions.nth_power_roots_poly~method
+Basic polynomial manipulation functions.one~property
+Basic polynomial manipulation functions.pdiv~method
+Basic polynomial manipulation functions.per~method
+Basic polynomial manipulation functions.pexquo~method
+Basic polynomial manipulation functions.pow~method
+Basic polynomial manipulation functions.pquo~method
+Basic polynomial manipulation functions.prem~method
+Basic polynomial manipulation functions.primitive~method
+Basic polynomial manipulation functions.quo~method
+Basic polynomial manipulation functions.quo_ground~method
+Basic polynomial manipulation functions.rat_clear_denoms~method
+Basic polynomial manipulation functions.real_roots~method
+Basic polynomial manipulation functions.refine_root~method
+Basic polynomial manipulation functions.rem~method
+Basic polynomial manipulation functions.reorder~method
+Basic polynomial manipulation functions.replace~method
+Basic polynomial manipulation functions.resultant~method
+Basic polynomial manipulation functions.retract~method
+Basic polynomial manipulation functions.revert~method
+Basic polynomial manipulation functions.root~method
+Basic polynomial manipulation functions.same_root~method
+Basic polynomial manipulation functions.set_domain~method
+Basic polynomial manipulation functions.set_modulus~method
+Basic polynomial manipulation functions.shift~method
+Basic polynomial manipulation functions.shift_list~method
+Basic polynomial manipulation functions.slice~method
+Basic polynomial manipulation functions.sqf_list~method
+Basic polynomial manipulation functions.sqf_list_include~method
+Basic polynomial manipulation functions.sqf_norm~method
+Basic polynomial manipulation functions.sqf_part~method
+Basic polynomial manipulation functions.sqr~method
+Basic polynomial manipulation functions.sturm~method
+Basic polynomial manipulation functions.sub~method
+Basic polynomial manipulation functions.sub_ground~method
+Basic polynomial manipulation functions.subresultants~method
+Basic polynomial manipulation functions.terms~method
+Basic polynomial manipulation functions.terms_gcd~method
+Basic polynomial manipulation functions.termwise~method
+Basic polynomial manipulation functions.to_exact~method
+Basic polynomial manipulation functions.to_field~method
+Basic polynomial manipulation functions.to_ring~method
+Basic polynomial manipulation functions.total_degree~method
+Basic polynomial manipulation functions.transform~method
+Basic polynomial manipulation functions.trunc~method
+Basic polynomial manipulation functions.unify~method
+Basic polynomial manipulation functions.unit~property
+Basic polynomial manipulation functions.zero~property
+Basic polynomial manipulation functions.contains~method
+Basic polynomial manipulation functions.fglm~method
+Basic polynomial manipulation functions.is_zero_dimensional~property
+Basic polynomial manipulation functions.reduce~method
+symmetrize~function
+horner~function
+interpolate~function
+viete~function
+construct_domain~function
+Monomials encoded as tuples.as_expr~method
+Monomials encoded as tuples.gcd~method
+Monomials encoded as tuples.lcm~method
+itermonomials~function
+monomial_count~function
+rootof~function
+Formal manipulation of roots of polynomials._all_roots~method
+Formal manipulation of roots of polynomials._complexes_index~method
+Formal manipulation of roots of polynomials._complexes_sorted~method
+Formal manipulation of roots of polynomials._count_roots~method
+Formal manipulation of roots of polynomials._ensure_complexes_init~method
+Formal manipulation of roots of polynomials._ensure_reals_init~method
+Formal manipulation of roots of polynomials._eval_evalf~method
+Formal manipulation of roots of polynomials._eval_is_imaginary~method
+Formal manipulation of roots of polynomials._eval_is_real~method
+Formal manipulation of roots of polynomials._get_complexes~method
+Formal manipulation of roots of polynomials._get_complexes_sqf~method
+Formal manipulation of roots of polynomials._get_interval~method
+Formal manipulation of roots of polynomials._get_reals~method
+Formal manipulation of roots of polynomials._get_reals_sqf~method
+Formal manipulation of roots of polynomials._get_roots~method
+Formal manipulation of roots of polynomials._indexed_root~method
+Formal manipulation of roots of polynomials._new~method
+Formal manipulation of roots of polynomials._postprocess_root~method
+Formal manipulation of roots of polynomials._preprocess_roots~method
+Formal manipulation of roots of polynomials._real_roots~method
+Formal manipulation of roots of polynomials._reals_index~method
+Formal manipulation of roots of polynomials._reals_sorted~method
+Formal manipulation of roots of polynomials._refine_complexes~method
+Formal manipulation of roots of polynomials._reset~method
+Formal manipulation of roots of polynomials._roots_trivial~method
+Formal manipulation of roots of polynomials._set_interval~method
+Formal manipulation of roots of polynomials.all_roots~method
+Formal manipulation of roots of polynomials.clear_cache~method
+Formal manipulation of roots of polynomials.eval_approx~method
+Formal manipulation of roots of polynomials.eval_rational~method
+Formal manipulation of roots of polynomials.real_roots~method
+Formal manipulation of roots of polynomials.new~method
+roots~function
+swinnerton_dyer_poly~function
+interpolating_poly~function
+cyclotomic_poly~function
+symmetric_poly~function
+random_poly~function
+chebyshevt_poly~function
+chebyshevu_poly~function
+gegenbauer_poly~function
+hermite_poly~function
+hermite_prob_poly~function
+jacobi_poly~function
+legendre_poly~function
+laguerre_poly~function
+spherical_bessel_fn~function
+bernoulli_poly~function
+bernoulli_c_poly~function
+genocchi_poly~function
+euler_poly~function
+andre_poly~function
+together~function
+apart~function
+apart_list~function
+assemble_partfrac_list~function
+dispersionset~function
+dispersion~function
+Base Rings.free_module~method
+Base Rings.ideal~method
+Base Rings.quotient_ring~method
+PolynomialRing~function
+Modules, Ideals and their Elementary Properties.contains~method
+Modules, Ideals and their Elementary Properties.convert~method
+Modules, Ideals and their Elementary Properties.identity_hom~method
+Modules, Ideals and their Elementary Properties.is_submodule~method
+Modules, Ideals and their Elementary Properties.is_zero~method
+Modules, Ideals and their Elementary Properties.multiply_ideal~method
+Modules, Ideals and their Elementary Properties.quotient_module~method
+Modules, Ideals and their Elementary Properties.submodule~method
+Modules, Ideals and their Elementary Properties.subset~method
+Modules, Ideals and their Elementary Properties.basis~method
+Modules, Ideals and their Elementary Properties.in_terms_of_generators~method
+Modules, Ideals and their Elementary Properties.inclusion_hom~method
+Modules, Ideals and their Elementary Properties.intersect~method
+Modules, Ideals and their Elementary Properties.is_full_module~method
+Modules, Ideals and their Elementary Properties.module_quotient~method
+Modules, Ideals and their Elementary Properties.reduce_element~method
+Modules, Ideals and their Elementary Properties.syzygy_module~method
+Modules, Ideals and their Elementary Properties.union~method
+Modules, Ideals and their Elementary Properties.depth~method
+Modules, Ideals and their Elementary Properties.height~method
+Modules, Ideals and their Elementary Properties.is_maximal~method
+Modules, Ideals and their Elementary Properties.is_primary~method
+Modules, Ideals and their Elementary Properties.is_prime~method
+Modules, Ideals and their Elementary Properties.is_principal~method
+Modules, Ideals and their Elementary Properties.is_radical~method
+Modules, Ideals and their Elementary Properties.is_whole_ring~method
+Modules, Ideals and their Elementary Properties.product~method
+Modules, Ideals and their Elementary Properties.quotient~method
+Modules, Ideals and their Elementary Properties.radical~method
+Modules, Ideals and their Elementary Properties.saturate~method
+Modules, Ideals and their Elementary Properties.quotient_hom~method
+Modules, Ideals and their Elementary Properties.eq~method
+homomorphism~function
+Module Homomorphisms and Syzygies.image~method
+Module Homomorphisms and Syzygies.is_injective~method
+Module Homomorphisms and Syzygies.is_isomorphism~method
+Module Homomorphisms and Syzygies.is_surjective~method
+Module Homomorphisms and Syzygies.is_zero~method
+Module Homomorphisms and Syzygies.kernel~method
+Module Homomorphisms and Syzygies.quotient_codomain~method
+Module Homomorphisms and Syzygies.quotient_domain~method
+Module Homomorphisms and Syzygies.restrict_codomain~method
+Module Homomorphisms and Syzygies.restrict_domain~method
+Finite Extensions.inverse~method
+Abstract Domains.abs~method
+Abstract Domains.add~method
+Abstract Domains.alg_field_from_poly~method
+Abstract Domains.algebraic_field~method
+Abstract Domains.almosteq~method
+Abstract Domains.characteristic~method
+Abstract Domains.cofactors~method
+Abstract Domains.convert~method
+Abstract Domains.convert_from~method
+Abstract Domains.cyclotomic_field~method
+Abstract Domains.denom~method
+Abstract Domains.div~method
+Abstract Domains.drop~method
+Abstract Domains.evalf~method
+Abstract Domains.exquo~method
+Abstract Domains.exsqrt~method
+Abstract Domains.frac_field~method
+Abstract Domains.from_AlgebraicField~method
+Abstract Domains.from_ComplexField~method
+Abstract Domains.from_ExpressionDomain~method
+Abstract Domains.from_ExpressionRawDomain~method
+Abstract Domains.from_FF~method
+Abstract Domains.from_FF_gmpy~method
+Abstract Domains.from_FF_python~method
+Abstract Domains.from_FractionField~method
+Abstract Domains.from_GlobalPolynomialRing~method
+Abstract Domains.from_MonogenicFiniteExtension~method
+Abstract Domains.from_PolynomialRing~method
+Abstract Domains.from_QQ_gmpy~method
+Abstract Domains.from_QQ_python~method
+Abstract Domains.from_RealField~method
+Abstract Domains.from_ZZ_gmpy~method
+Abstract Domains.from_ZZ_python~method
+Abstract Domains.from_sympy~method
+Abstract Domains.gcd~method
+Abstract Domains.gcdex~method
+Abstract Domains.get_exact~method
+Abstract Domains.get_field~method
+Abstract Domains.get_ring~method
+Abstract Domains.half_gcdex~method
+Abstract Domains.inject~method
+Abstract Domains.invert~method
+Abstract Domains.is_negative~method
+Abstract Domains.is_nonnegative~method
+Abstract Domains.is_nonpositive~method
+Abstract Domains.is_one~method
+Abstract Domains.is_positive~method
+Abstract Domains.is_square~method
+Abstract Domains.is_zero~method
+Abstract Domains.lcm~method
+Abstract Domains.log~method
+Abstract Domains.map~method
+Abstract Domains.mul~method
+Abstract Domains.n~method
+Abstract Domains.neg~method
+Abstract Domains.numer~method
+Abstract Domains.of_type~method
+Abstract Domains.old_frac_field~method
+Abstract Domains.old_poly_ring~method
+Abstract Domains.poly_ring~method
+Abstract Domains.pos~method
+Abstract Domains.pow~method
+Abstract Domains.quo~method
+Abstract Domains.rem~method
+Abstract Domains.revert~method
+Abstract Domains.sqrt~method
+Abstract Domains.sub~method
+Abstract Domains.to_sympy~method
+Abstract Domains.tp~property
+Abstract Domains.unify~method
+Abstract Domains.unify_composite~method
+Abstract Domains.parent~method
+Abstract Domains.is_unit~method
+Abstract Domains.free_module~method
+Abstract Domains.ideal~method
+Abstract Domains.quotient_ring~method
+Abstract Domains.is_Exact~property
+Abstract Domains.set_domain~method
+GF(p).characteristic~method
+GF(p).exsqrt~method
+GF(p).from_FF~method
+GF(p).from_FF_gmpy~method
+GF(p).from_FF_python~method
+GF(p).from_QQ~method
+GF(p).from_QQ_gmpy~method
+GF(p).from_QQ_python~method
+GF(p).from_RealField~method
+GF(p).from_ZZ~method
+GF(p).from_ZZ_gmpy~method
+GF(p).from_ZZ_python~method
+GF(p).from_sympy~method
+GF(p).get_field~method
+GF(p).is_negative~method
+GF(p).is_nonnegative~method
+GF(p).is_nonpositive~method
+GF(p).is_positive~method
+GF(p).is_square~method
+GF(p).to_int~method
+GF(p).to_sympy~method
+ZZ.algebraic_field~method
+ZZ.exsqrt~method
+ZZ.factorial~method
+ZZ.from_AlgebraicField~method
+ZZ.from_EX~method
+ZZ.from_FF~method
+ZZ.from_FF_gmpy~method
+ZZ.from_FF_python~method
+ZZ.from_QQ~method
+ZZ.from_QQ_gmpy~method
+ZZ.from_QQ_python~method
+ZZ.from_RealField~method
+ZZ.from_ZZ~method
+ZZ.from_ZZ_gmpy~method
+ZZ.from_ZZ_python~method
+ZZ.from_sympy~method
+ZZ.gcd~method
+ZZ.gcdex~method
+ZZ.get_field~method
+ZZ.is_square~method
+ZZ.lcm~method
+ZZ.log~method
+ZZ.sqrt~method
+ZZ.to_sympy~method
+QQ.algebraic_field~method
+QQ.denom~method
+QQ.div~method
+QQ.exquo~method
+QQ.exsqrt~method
+QQ.from_AlgebraicField~method
+QQ.from_GaussianRationalField~method
+QQ.from_QQ~method
+QQ.from_QQ_gmpy~method
+QQ.from_QQ_python~method
+QQ.from_RealField~method
+QQ.from_ZZ~method
+QQ.from_ZZ_gmpy~method
+QQ.from_ZZ_python~method
+QQ.from_sympy~method
+QQ.get_ring~method
+QQ.is_square~method
+QQ.numer~method
+QQ.quo~method
+QQ.rem~method
+QQ.to_sympy~method
+QQ.factorial~method
+Gaussian domains.from_AlgebraicField~method
+Gaussian domains.from_QQ~method
+Gaussian domains.from_QQ_gmpy~method
+Gaussian domains.from_QQ_python~method
+Gaussian domains.from_ZZ~method
+Gaussian domains.from_ZZ_gmpy~method
+Gaussian domains.from_ZZ_python~method
+Gaussian domains.from_sympy~method
+Gaussian domains.inject~method
+Gaussian domains.is_negative~method
+Gaussian domains.is_nonnegative~method
+Gaussian domains.is_nonpositive~method
+Gaussian domains.is_positive~method
+Gaussian domains.to_sympy~method
+Gaussian domains.new~method
+Gaussian domains.parent~method
+Gaussian domains.quadrant~method
+ZZ_I.from_GaussianIntegerRing~method
+ZZ_I.from_GaussianRationalField~method
+ZZ_I.gcd~method
+ZZ_I.get_field~method
+ZZ_I.get_ring~method
+ZZ_I.lcm~method
+ZZ_I.normalize~method
+QQ_I.as_AlgebraicField~method
+QQ_I.denom~method
+QQ_I.from_ComplexField~method
+QQ_I.from_GaussianIntegerRing~method
+QQ_I.from_GaussianRationalField~method
+QQ_I.get_field~method
+QQ_I.get_ring~method
+QQ_I.numer~method
+QQ<a>.algebraic_field~method
+QQ<a>.denom~method
+QQ<a>.discriminant~method
+QQ<a>.from_AlgebraicField~method
+QQ<a>.from_GaussianIntegerRing~method
+QQ<a>.from_GaussianRationalField~method
+QQ<a>.from_QQ~method
+QQ<a>.from_QQ_gmpy~method
+QQ<a>.from_QQ_python~method
+QQ<a>.from_RealField~method
+QQ<a>.from_ZZ~method
+QQ<a>.from_ZZ_gmpy~method
+QQ<a>.from_ZZ_python~method
+QQ<a>.from_sympy~method
+QQ<a>.galois_group~method
+QQ<a>.get_ring~method
+QQ<a>.integral_basis~method
+QQ<a>.is_negative~method
+QQ<a>.is_nonnegative~method
+QQ<a>.is_nonpositive~method
+QQ<a>.is_positive~method
+QQ<a>.maximal_order~method
+QQ<a>.numer~method
+QQ<a>.primes_above~method
+QQ<a>.to_alg_num~method
+QQ<a>.to_sympy~method
+RR.almosteq~method
+RR.exsqrt~method
+RR.from_sympy~method
+RR.gcd~method
+RR.get_exact~method
+RR.get_ring~method
+RR.is_square~method
+RR.lcm~method
+RR.to_rational~method
+RR.to_sympy~method
+CC.almosteq~method
+CC.exsqrt~method
+CC.from_sympy~method
+CC.gcd~method
+CC.get_exact~method
+CC.get_ring~method
+CC.is_negative~method
+CC.is_nonnegative~method
+CC.is_nonpositive~method
+CC.is_positive~method
+CC.is_square~method
+CC.lcm~method
+CC.to_sympy~method
+K[x].factorial~method
+K[x].from_AlgebraicField~method
+K[x].from_ComplexField~method
+K[x].from_FractionField~method
+K[x].from_GaussianIntegerRing~method
+K[x].from_GaussianRationalField~method
+K[x].from_GlobalPolynomialRing~method
+K[x].from_PolynomialRing~method
+K[x].from_QQ~method
+K[x].from_QQ_gmpy~method
+K[x].from_QQ_python~method
+K[x].from_RealField~method
+K[x].from_ZZ~method
+K[x].from_ZZ_gmpy~method
+K[x].from_ZZ_python~method
+K[x].from_sympy~method
+K[x].gcd~method
+K[x].gcdex~method
+K[x].get_field~method
+K[x].is_negative~method
+K[x].is_nonnegative~method
+K[x].is_nonpositive~method
+K[x].is_positive~method
+K[x].is_unit~method
+K[x].lcm~method
+K[x].to_sympy~method
+K(x).denom~method
+K(x).factorial~method
+K(x).from_AlgebraicField~method
+K(x).from_ComplexField~method
+K(x).from_FractionField~method
+K(x).from_GaussianIntegerRing~method
+K(x).from_GaussianRationalField~method
+K(x).from_PolynomialRing~method
+K(x).from_QQ~method
+K(x).from_QQ_gmpy~method
+K(x).from_QQ_python~method
+K(x).from_RealField~method
+K(x).from_ZZ~method
+K(x).from_ZZ_gmpy~method
+K(x).from_ZZ_python~method
+K(x).from_sympy~method
+K(x).get_ring~method
+K(x).is_negative~method
+K(x).is_nonnegative~method
+K(x).is_nonpositive~method
+K(x).is_positive~method
+K(x).numer~method
+K(x).to_sympy~method
+EX.denom~method
+EX.from_AlgebraicField~method
+EX.from_ComplexField~method
+EX.from_ExpressionDomain~method
+EX.from_FractionField~method
+EX.from_GaussianIntegerRing~method
+EX.from_GaussianRationalField~method
+EX.from_PolynomialRing~method
+EX.from_QQ~method
+EX.from_QQ_gmpy~method
+EX.from_QQ_python~method
+EX.from_RealField~method
+EX.from_ZZ~method
+EX.from_ZZ_gmpy~method
+EX.from_ZZ_python~method
+EX.from_sympy~method
+EX.get_field~method
+EX.get_ring~method
+EX.is_negative~method
+EX.is_nonnegative~method
+EX.is_nonpositive~method
+EX.is_positive~method
+EX.numer~method
+EX.to_sympy~method
+ring~function
+xring~function
+vring~function
+sring~function
+Sparse polynomials.add~method
+Sparse polynomials.add_gens~method
+Sparse polynomials.compose~method
+Sparse polynomials.drop~method
+Sparse polynomials.drop_to_ground~method
+Sparse polynomials.index~method
+Sparse polynomials.monomial_basis~method
+Sparse polynomials.mul~method
+Sparse polynomials.symmetric_poly~method
+Sparse polynomials.almosteq~method
+Sparse polynomials.cancel~method
+Sparse polynomials.coeff~method
+Sparse polynomials.coeff_wrt~method
+Sparse polynomials.coeffs~method
+Sparse polynomials.const~method
+Sparse polynomials.content~method
+Sparse polynomials.copy~method
+Sparse polynomials.degree~method
+Sparse polynomials.degrees~method
+Sparse polynomials.diff~method
+Sparse polynomials.div~method
+Sparse polynomials.imul_num~method
+Sparse polynomials.itercoeffs~method
+Sparse polynomials.itermonoms~method
+Sparse polynomials.iterterms~method
+Sparse polynomials.leading_expv~method
+Sparse polynomials.leading_monom~method
+Sparse polynomials.leading_term~method
+Sparse polynomials.listcoeffs~method
+Sparse polynomials.listmonoms~method
+Sparse polynomials.listterms~method
+Sparse polynomials.monic~method
+Sparse polynomials.monoms~method
+Sparse polynomials.pdiv~method
+Sparse polynomials.pexquo~method
+Sparse polynomials.pquo~method
+Sparse polynomials.prem~method
+Sparse polynomials.primitive~method
+Sparse polynomials.square~method
+Sparse polynomials.strip_zero~method
+Sparse polynomials.subresultants~method
+Sparse polynomials.symmetrize~method
+Sparse polynomials.tail_degree~method
+Sparse polynomials.tail_degrees~method
+Sparse polynomials.terms~method
+field~function
+xfield~function
+vfield~function
+sfield~function
+Sparse rational functions.diff~method
+Dense polynomials.LC~method
+Dense polynomials.TC~method
+Dense polynomials.abs~method
+Dense polynomials.add~method
+Dense polynomials.add_ground~method
+Dense polynomials.all_coeffs~method
+Dense polynomials.all_monoms~method
+Dense polynomials.all_terms~method
+Dense polynomials.cancel~method
+Dense polynomials.cauchy_lower_bound~method
+Dense polynomials.cauchy_upper_bound~method
+Dense polynomials.clear_denoms~method
+Dense polynomials.coeffs~method
+Dense polynomials.cofactors~method
+Dense polynomials.compose~method
+Dense polynomials.content~method
+Dense polynomials.convert~method
+Dense polynomials.count_complex_roots~method
+Dense polynomials.count_real_roots~method
+Dense polynomials.decompose~method
+Dense polynomials.deflate~method
+Dense polynomials.degree~method
+Dense polynomials.degree_list~method
+Dense polynomials.diff~method
+Dense polynomials.discriminant~method
+Dense polynomials.div~method
+Dense polynomials.eject~method
+Dense polynomials.eval~method
+Dense polynomials.exclude~method
+Dense polynomials.exquo~method
+Dense polynomials.exquo_ground~method
+Dense polynomials.factor_list~method
+Dense polynomials.factor_list_include~method
+Dense polynomials.from_list~method
+Dense polynomials.from_sympy_list~method
+Dense polynomials.gcd~method
+Dense polynomials.gcdex~method
+Dense polynomials.gff_list~method
+Dense polynomials.ground_new~method
+Dense polynomials.half_gcdex~method
+Dense polynomials.homogeneous_order~method
+Dense polynomials.homogenize~method
+Dense polynomials.inject~method
+Dense polynomials.integrate~method
+Dense polynomials.intervals~method
+Dense polynomials.invert~method
+Dense polynomials.is_cyclotomic~property
+Dense polynomials.is_ground~property
+Dense polynomials.is_homogeneous~property
+Dense polynomials.is_irreducible~property
+Dense polynomials.is_linear~property
+Dense polynomials.is_monic~property
+Dense polynomials.is_monomial~property
+Dense polynomials.is_one~property
+Dense polynomials.is_primitive~property
+Dense polynomials.is_quadratic~property
+Dense polynomials.is_sqf~property
+Dense polynomials.is_zero~property
+Dense polynomials.l1_norm~method
+Dense polynomials.l2_norm_squared~method
+Dense polynomials.lcm~method
+Dense polynomials.lift~method
+Dense polynomials.max_norm~method
+Dense polynomials.mignotte_sep_bound_squared~method
+Dense polynomials.monic~method
+Dense polynomials.monoms~method
+Dense polynomials.mul~method
+Dense polynomials.mul_ground~method
+Dense polynomials.neg~method
+Dense polynomials.norm~method
+Dense polynomials.nth~method
+Dense polynomials.pdiv~method
+Dense polynomials.permute~method
+Dense polynomials.pexquo~method
+Dense polynomials.pow~method
+Dense polynomials.pquo~method
+Dense polynomials.prem~method
+Dense polynomials.primitive~method
+Dense polynomials.quo~method
+Dense polynomials.quo_ground~method
+Dense polynomials.refine_root~method
+Dense polynomials.rem~method
+Dense polynomials.rep~property
+Dense polynomials.resultant~method
+Dense polynomials.revert~method
+Dense polynomials.shift~method
+Dense polynomials.shift_list~method
+Dense polynomials.slice~method
+Dense polynomials.sqf_list~method
+Dense polynomials.sqf_list_include~method
+Dense polynomials.sqf_norm~method
+Dense polynomials.sqf_part~method
+Dense polynomials.sqr~method
+Dense polynomials.sturm~method
+Dense polynomials.sub~method
+Dense polynomials.sub_ground~method
+Dense polynomials.subresultants~method
+Dense polynomials.terms~method
+Dense polynomials.terms_gcd~method
+Dense polynomials.to_best~method
+Dense polynomials.to_dict~method
+Dense polynomials.to_exact~method
+Dense polynomials.to_field~method
+Dense polynomials.to_list~method
+Dense polynomials.to_ring~method
+Dense polynomials.to_sympy_dict~method
+Dense polynomials.to_sympy_list~method
+Dense polynomials.to_tuple~method
+Dense polynomials.total_degree~method
+Dense polynomials.transform~method
+Dense polynomials.trunc~method
+Dense polynomials.unify_DMP~method
+Dense polynomials.denom~method
+Dense polynomials.frac_unify~method
+Dense polynomials.half_per~method
+Dense polynomials.numer~method
+Dense polynomials.per~method
+Dense polynomials.poly_unify~method
+Dense polynomials.mod_to_list~method
+Dense polynomials.unify~method
+Dense polynomials.unify_ANP~method
+dmp_LC~function
+dmp_TC~function
+dmp_ground_LC~function
+dmp_ground_TC~function
+dmp_true_LT~function
+dmp_degree~function
+dmp_degree_in~function
+dmp_degree_list~function
+dmp_strip~function
+dmp_validate~function
+dup_reverse~function
+dmp_copy~function
+dmp_to_tuple~function
+dmp_normal~function
+dmp_convert~function
+dmp_from_sympy~function
+dmp_nth~function
+dmp_ground_nth~function
+dmp_zero_p~function
+dmp_zero~function
+dmp_one_p~function
+dmp_one~function
+dmp_ground_p~function
+dmp_ground~function
+dmp_zeros~function
+dmp_grounds~function
+dmp_negative_p~function
+dmp_positive_p~function
+dmp_from_dict~function
+dmp_to_dict~function
+dmp_swap~function
+dmp_permute~function
+dmp_nest~function
+dmp_raise~function
+dmp_deflate~function
+dmp_multi_deflate~function
+dmp_inflate~function
+dmp_exclude~function
+dmp_include~function
+dmp_inject~function
+dmp_eject~function
+dmp_terms_gcd~function
+dmp_list_terms~function
+dmp_apply_pairs~function
+dmp_slice~function
+dup_random~function
+dmp_add_term~function
+dmp_sub_term~function
+dmp_mul_term~function
+dmp_add_ground~function
+dmp_sub_ground~function
+dmp_mul_ground~function
+dmp_quo_ground~function
+dmp_exquo_ground~function
+dup_lshift~function
+dup_rshift~function
+dmp_abs~function
+dmp_neg~function
+dmp_add~function
+dmp_sub~function
+dmp_add_mul~function
+dmp_sub_mul~function
+dmp_mul~function
+dmp_sqr~function
+dmp_pow~function
+dmp_pdiv~function
+dmp_prem~function
+dmp_pquo~function
+dmp_pexquo~function
+dmp_rr_div~function
+dmp_ff_div~function
+dmp_div~function
+dmp_rem~function
+dmp_quo~function
+dmp_exquo~function
+dmp_max_norm~function
+dmp_l1_norm~function
+dmp_expand~function
+dmp_integrate~function
+dmp_integrate_in~function
+dmp_diff~function
+dmp_diff_in~function
+dmp_eval~function
+dmp_eval_in~function
+dmp_eval_tail~function
+dmp_diff_eval_in~function
+dmp_trunc~function
+dmp_ground_trunc~function
+dup_monic~function
+dmp_ground_monic~function
+dup_content~function
+dmp_ground_content~function
+dup_primitive~function
+dmp_ground_primitive~function
+dup_extract~function
+dmp_ground_extract~function
+dup_real_imag~function
+dup_mirror~function
+dup_scale~function
+dup_shift~function
+dup_transform~function
+dmp_compose~function
+dup_decompose~function
+dmp_lift~function
+dup_sign_variations~function
+dmp_clear_denoms~function
+dmp_revert~function
+gf_crt~function
+gf_crt1~function
+gf_crt2~function
+gf_int~function
+gf_degree~function
+gf_LC~function
+gf_TC~function
+gf_strip~function
+gf_trunc~function
+gf_normal~function
+gf_from_dict~function
+gf_to_dict~function
+gf_from_int_poly~function
+gf_to_int_poly~function
+gf_neg~function
+gf_add_ground~function
+gf_sub_ground~function
+gf_mul_ground~function
+gf_quo_ground~function
+gf_add~function
+gf_sub~function
+gf_mul~function
+gf_sqr~function
+gf_add_mul~function
+gf_sub_mul~function
+gf_expand~function
+gf_div~function
+gf_rem~function
+gf_quo~function
+gf_exquo~function
+gf_lshift~function
+gf_rshift~function
+gf_pow~function
+gf_pow_mod~function
+gf_gcd~function
+gf_lcm~function
+gf_cofactors~function
+gf_gcdex~function
+gf_monic~function
+gf_diff~function
+gf_eval~function
+gf_multi_eval~function
+gf_compose~function
+gf_compose_mod~function
+gf_trace_map~function
+gf_random~function
+gf_irreducible~function
+gf_irreducible_p~function
+gf_sqf_p~function
+gf_sqf_part~function
+gf_sqf_list~function
+gf_Qmatrix~function
+gf_Qbasis~function
+gf_berlekamp~function
+gf_zassenhaus~function
+gf_shoup~function
+gf_factor_sqf~function
+gf_factor~function
+gf_value~function
+gf_csolve~function
+sdm_monomial_mul~function
+sdm_monomial_deg~function
+sdm_monomial_divides~function
+sdm_LC~function
+sdm_to_dict~function
+sdm_from_dict~function
+sdm_add~function
+sdm_LM~function
+sdm_LT~function
+sdm_mul_term~function
+sdm_zero~function
+sdm_deg~function
+sdm_from_vector~function
+sdm_to_vector~function
+dmp_half_gcdex~function
+dmp_gcdex~function
+dmp_invert~function
+dmp_euclidean_prs~function
+dmp_primitive_prs~function
+dmp_inner_subresultants~function
+dmp_subresultants~function
+dmp_prs_resultant~function
+dmp_zz_modular_resultant~function
+dmp_zz_collins_resultant~function
+dmp_qq_collins_resultant~function
+dmp_resultant~function
+dmp_discriminant~function
+dmp_rr_prs_gcd~function
+dmp_ff_prs_gcd~function
+dmp_zz_heu_gcd~function
+dmp_qq_heu_gcd~function
+dmp_inner_gcd~function
+dmp_gcd~function
+dmp_lcm~function
+dmp_content~function
+dmp_primitive~function
+dmp_cancel~function
+dup_trial_division~function
+dmp_trial_division~function
+dup_zz_mignotte_bound~function
+dmp_zz_mignotte_bound~function
+dup_zz_hensel_step~function
+dup_zz_hensel_lift~function
+dup_zz_zassenhaus~function
+dup_zz_irreducible_p~function
+dup_cyclotomic_p~function
+dup_zz_cyclotomic_poly~function
+dup_zz_cyclotomic_factor~function
+dup_zz_factor_sqf~function
+dup_zz_factor~function
+dmp_zz_wang_non_divisors~function
+dmp_zz_wang_test_points~function
+dmp_zz_wang_lead_coeffs~function
+dup_zz_diophantine~function
+dmp_zz_diophantine~function
+dmp_zz_wang_hensel_lifting~function
+dmp_zz_wang~function
+dmp_zz_factor~function
+dup_qq_i_factor~function
+dup_zz_i_factor~function
+dmp_qq_i_factor~function
+dmp_zz_i_factor~function
+dup_ext_factor~function
+dmp_ext_factor~function
+dup_gf_factor~function
+dmp_gf_factor~function
+dup_factor_list~function
+dup_factor_list_include~function
+dmp_factor_list~function
+dmp_factor_list_include~function
+dup_irreducible_p~function
+dmp_irreducible_p~function
+dup_sqf_p~function
+dmp_sqf_p~function
+dup_sqf_norm~function
+dmp_sqf_norm~function
+dmp_norm~function
+dup_gf_sqf_part~function
+dmp_gf_sqf_part~function
+dup_sqf_part~function
+dmp_sqf_part~function
+dup_gf_sqf_list~function
+dmp_gf_sqf_list~function
+dup_sqf_list~function
+dup_sqf_list_include~function
+dmp_sqf_list~function
+dmp_sqf_list_include~function
+dup_gff_list~function
+dmp_gff_list~function
+spoly~function
+red_groebner~function
+is_groebner~function
+is_minimal~function
+is_reduced~function
+matrix_fglm~function
+sdm_spoly~function
+sdm_ecart~function
+sdm_nf_mora~function
+sdm_groebner~function
+Options.clone~method
+build_options~function
+setup~function
+modgcd_univariate~function
+modgcd_bivariate~function
+modgcd_multivariate~function
+_modgcd_multivariate_p~function
+func_field_modgcd~function
+rs_log~function
+rs_LambertW~function
+rs_exp~function
+rs_atan~function
+rs_asin~function
+rs_tan~function
+_tan1~function
+rs_cot~function
+rs_sin~function
+rs_cos~function
+rs_cos_sin~function
+rs_atanh~function
+rs_sinh~function
+rs_cosh~function
+rs_tanh~function
+rs_hadamard_exp~function
+rs_mul~function
+rs_square~function
+rs_pow~function
+rs_series_inversion~function
+rs_series_reversion~function
+rs_nth_root~function
+rs_trunc~function
+rs_subs~function
+rs_diff~function
+rs_integrate~function
+rs_newton~function
+rs_compose_add~function
+rs_is_puiseux~function
+rs_puiseux~function
+rs_puiseux2~function
+rs_series_from_list~function
+rs_fun~function
+mul_xin~function
+pow_xin~function
+solve_lin_sys~function
+eqs_to_matrix~function
+sympy_eqs_to_ring~function
+_solve_lin_sys~function
+_solve_lin_sys_component~function
+DM~function
+What is domainmatrix?.add~method
+What is domainmatrix?.adj_det~method
+What is domainmatrix?.adj_poly_det~method
+What is domainmatrix?.adjugate~method
+What is domainmatrix?.cancel_denom~method
+What is domainmatrix?.cancel_denom_elementwise~method
+What is domainmatrix?.charpoly~method
+What is domainmatrix?.charpoly_base~method
+What is domainmatrix?.charpoly_berk~method
+What is domainmatrix?.charpoly_factor_blocks~method
+What is domainmatrix?.charpoly_factor_list~method
+What is domainmatrix?.choose_domain~method
+What is domainmatrix?.clear_denoms~method
+What is domainmatrix?.clear_denoms_rowwise~method
+What is domainmatrix?.columnspace~method
+What is domainmatrix?.content~method
+What is domainmatrix?.convert_to~method
+What is domainmatrix?.det~method
+What is domainmatrix?.diag~method
+What is domainmatrix?.diagonal~method
+What is domainmatrix?.eval_poly~method
+What is domainmatrix?.eval_poly_mul~method
+What is domainmatrix?.eye~method
+What is domainmatrix?.from_Matrix~method
+What is domainmatrix?.from_dict_sympy~method
+What is domainmatrix?.from_dod~method
+What is domainmatrix?.from_dod_like~method
+What is domainmatrix?.from_dok~method
+What is domainmatrix?.from_flat_nz~method
+What is domainmatrix?.from_list~method
+What is domainmatrix?.from_list_flat~method
+What is domainmatrix?.from_list_sympy~method
+What is domainmatrix?.from_rep~method
+What is domainmatrix?.hstack~method
+What is domainmatrix?.inv~method
+What is domainmatrix?.inv_den~method
+What is domainmatrix?.is_diagonal~property
+What is domainmatrix?.is_lower~property
+What is domainmatrix?.is_square~property
+What is domainmatrix?.is_upper~property
+What is domainmatrix?.iter_items~method
+What is domainmatrix?.iter_values~method
+What is domainmatrix?.lll~method
+What is domainmatrix?.lll_transform~method
+What is domainmatrix?.lu~method
+What is domainmatrix?.lu_solve~method
+What is domainmatrix?.matmul~method
+What is domainmatrix?.mul~method
+What is domainmatrix?.neg~method
+What is domainmatrix?.nnz~method
+What is domainmatrix?.nullspace~method
+What is domainmatrix?.nullspace_from_rref~method
+What is domainmatrix?.ones~method
+What is domainmatrix?.pow~method
+What is domainmatrix?.primitive~method
+What is domainmatrix?.rowspace~method
+What is domainmatrix?.rref~method
+What is domainmatrix?.rref_den~method
+What is domainmatrix?.scc~method
+What is domainmatrix?.solve_den~method
+What is domainmatrix?.solve_den_charpoly~method
+What is domainmatrix?.solve_den_rref~method
+What is domainmatrix?.sub~method
+What is domainmatrix?.to_Matrix~method
+What is domainmatrix?.to_ddm~method
+What is domainmatrix?.to_dense~method
+What is domainmatrix?.to_dfm~method
+What is domainmatrix?.to_dfm_or_ddm~method
+What is domainmatrix?.to_dod~method
+What is domainmatrix?.to_dok~method
+What is domainmatrix?.to_field~method
+What is domainmatrix?.to_flat_nz~method
+What is domainmatrix?.to_list~method
+What is domainmatrix?.to_list_flat~method
+What is domainmatrix?.to_sdm~method
+What is domainmatrix?.to_sparse~method
+What is domainmatrix?.transpose~method
+What is domainmatrix?.unify~method
+What is domainmatrix?.vstack~method
+What is domainmatrix?.zeros~method
+What is domainmatrix?.is_diagonal~method
+What is domainmatrix?.is_lower~method
+What is domainmatrix?.is_upper~method
+What is domainmatrix?.is_zero_matrix~method
+ddm_berk~function
+ddm_iadd~function
+ddm_idet~function
+ddm_iinv~function
+ddm_ilu~function
+ddm_ilu_solve~function
+ddm_ilu_split~function
+ddm_imatmul~function
+ddm_imul~function
+ddm_ineg~function
+ddm_irmul~function
+ddm_irref~function
+ddm_irref_den~function
+ddm_isub~function
+ddm_transpose~function
+What is domainmatrix?.copy~method
+What is domainmatrix?.from_ddm~method
+What is domainmatrix?.new~method
+sdm_berk~function
+sdm_irref~function
+sdm_nullspace_from_rref~function
+sdm_particular_from_rref~function
+sdm_rref_den~function
+What is domainmatrix?.applyfunc~method
+What is domainmatrix?.extract~method
+What is domainmatrix?.extract_slice~method
+What is domainmatrix?.getitem~method
+What is domainmatrix?.mul_elementwise~method
+What is domainmatrix?.particular~method
+What is domainmatrix?.rmul~method
+What is domainmatrix?.setitem~method
+round_two~function
+prime_decomp~function
+Prime Decomposition.__init__~method
+Prime Decomposition.__add__~method
+Prime Decomposition.__mul__~method
+Prime Decomposition.as_submodule~method
+Prime Decomposition.is_inert~property
+Prime Decomposition.reduce_ANP~method
+Prime Decomposition.reduce_alg_num~method
+Prime Decomposition.reduce_element~method
+Prime Decomposition.repr~method
+Prime Decomposition.test_factor~method
+Prime Decomposition.valuation~method
+prime_valuation~function
+galois_group~function
+minimal_polynomial~function
+minpoly~function
+field_isomorphism~function
+primitive_element~function
+to_number_field~function
+Class Reference.__call__~method
+Class Reference.ancestors~method
+Class Reference.basis_elements~method
+Class Reference.element_from_rational~method
+Class Reference.endomorphism_ring~method
+Class Reference.is_compat_col~method
+Class Reference.mult_tab~method
+Class Reference.n~property
+Class Reference.nearest_common_ancestor~method
+Class Reference.number_field~property
+Class Reference.one~method
+Class Reference.parent~property
+Class Reference.power_basis_ancestor~method
+Class Reference.represent~method
+Class Reference.starts_with_unity~method
+Class Reference.submodule_from_gens~method
+Class Reference.submodule_from_matrix~method
+Class Reference.whole_submodule~method
+Class Reference.zero~method
+Class Reference.__init__~method
+Class Reference.element_from_ANP~method
+Class Reference.element_from_alg_num~method
+Class Reference.element_from_poly~method
+Class Reference.QQ_matrix~property
+Class Reference.add~method
+Class Reference.basis_element_pullbacks~method
+Class Reference.discard_before~method
+Class Reference.mul~method
+Class Reference.reduce_element~method
+Class Reference.reduced~method
+Class Reference.__add__~method
+Class Reference.__mul__~method
+Class Reference.__mod__~method
+Class Reference.QQ_col~property
+Class Reference.column~method
+Class Reference.equiv~method
+Class Reference.from_int_list~method
+Class Reference.is_compat~method
+Class Reference.over_power_basis~method
+Class Reference.reduced_mod_p~method
+Class Reference.to_ancestor~method
+Class Reference.to_parent~method
+Class Reference.unify~method
+Class Reference.T~property
+Class Reference.as_expr~method
+Class Reference.generator~property
+Class Reference.is_rational~property
+Class Reference.norm~method
+Class Reference.numerator~method
+Class Reference.poly~method
+Class Reference.to_ANP~method
+Class Reference.to_alg_num~method
+make_mod_elt~function
+Class Reference.kernel~method
+Class Reference.matrix~method
+Class Reference.inner_endomorphism~method
+find_min_poly~function
+is_rat~function
+is_int~function
+get_num_denom~function
+extract_fundamental_discriminant~function
+Utilities.__init__~method
+coeff_search~function
+supplement_a_subspace~function
+isolate~function
+Base Class Reference.codomain~property
+Base Class Reference.compose~method
+Base Class Reference.domain~property
+Base Class Reference.name~property
+Base Class Reference.components~property
+Base Class Reference.flatten~method
+Base Class Reference.commutative_diagrams~property
+Base Class Reference.objects~property
+Base Class Reference.conclusions~property
+Base Class Reference.hom~method
+Base Class Reference.is_subdiagram~method
+Base Class Reference.premises~property
+Base Class Reference.subdiagram_from_objects~method
+Diagram Drawing.height~property
+Diagram Drawing.morphisms~property
+Diagram Drawing.width~property
+Diagram Drawing.draw~method
+xypic_draw_diagram~function
+preview_diagram~function
+AZ~function
+padded_key~function
+check_and_join~function
+cycle_list~function
+encipher_shift~function
+decipher_shift~function
+encipher_rot13~function
+decipher_rot13~function
+encipher_affine~function
+decipher_affine~function
+encipher_atbash~function
+decipher_atbash~function
+encipher_substitution~function
+encipher_vigenere~function
+decipher_vigenere~function
+encipher_hill~function
+decipher_hill~function
+encipher_bifid~function
+decipher_bifid~function
+bifid5_square~function
+encipher_bifid5~function
+decipher_bifid5~function
+encipher_bifid6~function
+decipher_bifid6~function
+bifid6_square~function
+rsa_public_key~function
+rsa_private_key~function
+encipher_rsa~function
+decipher_rsa~function
+kid_rsa_public_key~function
+kid_rsa_private_key~function
+encipher_kid_rsa~function
+decipher_kid_rsa~function
+encode_morse~function
+decode_morse~function
+lfsr_sequence~function
+lfsr_autocorrelation~function
+lfsr_connection_polynomial~function
+elgamal_public_key~function
+elgamal_private_key~function
+encipher_elgamal~function
+decipher_elgamal~function
+dh_public_key~function
+dh_private_key~function
+dh_shared_key~function
+gm_public_key~function
+gm_private_key~function
+encipher_gm~function
+decipher_gm~function
+encipher_railfence~function
+decipher_railfence~function
+Base Class Reference.base_oneform~method
+Base Class Reference.base_oneforms~method
+Base Class Reference.base_scalar~method
+Base Class Reference.base_scalars~method
+Base Class Reference.base_vector~method
+Base Class Reference.base_vectors~method
+Base Class Reference.coord_function~method
+Base Class Reference.coord_functions~method
+Base Class Reference.coord_tuple_transform_to~method
+Base Class Reference.jacobian~method
+Base Class Reference.jacobian_determinant~method
+Base Class Reference.jacobian_matrix~method
+Base Class Reference.point~method
+Base Class Reference.point_to_coords~method
+Base Class Reference.transform~method
+Base Class Reference.transformation~method
+Base Class Reference.coords~method
+intcurve_series~function
+intcurve_diffequ~function
+vectors_in_basis~function
+twoform_to_matrix~function
+metric_to_Christoffel_1st~function
+metric_to_Christoffel_2nd~function
+metric_to_Riemann_components~function
+metric_to_Ricci_components~function
+Plot Class.annotations~property
+Plot Class.append~method
+Plot Class.extend~method
+Plot Class.fill~property
+Plot Class.markers~property
+Plot Class.rectangles~property
+plot~function
+plot_parametric~function
+plot3d~function
+plot3d_parametric_line~function
+plot3d_parametric_surface~function
+plot_implicit~function
+Series Classes.eval_color_func~method
+Series Classes.expr~property
+Series Classes.get_data~method
+Series Classes.get_label~method
+Series Classes.n~property
+Series Classes.params~property
+Series Classes.get_points~method
+Series Classes.get_meshes~method
+Backends.get_segments~method
+Backends.process_series~method
+textplot~function
+DiscreteUniform~function
+Die~function
+Bernoulli~function
+Coin~function
+Binomial~function
+BetaBinomial~function
+Hypergeometric~function
+FiniteRV~function
+Rademacher~function
+Geometric~function
+Hermite~function
+Poisson~function
+Logarithmic~function
+NegativeBinomial~function
+Skellam~function
+YuleSimon~function
+Zeta~function
+Arcsin~function
+Benini~function
+Beta~function
+BetaNoncentral~function
+BetaPrime~function
+BoundedPareto~function
+Cauchy~function
+Chi~function
+ChiNoncentral~function
+ChiSquared~function
+Dagum~function
+Davis~function
+Erlang~function
+ExGaussian~function
+Exponential~function
+FDistribution~function
+FisherZ~function
+Frechet~function
+Gamma~function
+GammaInverse~function
+Gompertz~function
+Gumbel~function
+Kumaraswamy~function
+Laplace~function
+Levy~function
+Logistic~function
+LogLogistic~function
+LogNormal~function
+Lomax~function
+Maxwell~function
+Moyal~function
+Nakagami~function
+Normal~function
+Pareto~function
+PowerFunction~function
+QuadraticU~function
+RaisedCosine~function
+Rayleigh~function
+Reciprocal~function
+StudentT~function
+ShiftedGompertz~function
+Trapezoidal~function
+Triangular~function
+Uniform~function
+UniformSum~function
+VonMises~function
+Wald~function
+Weibull~function
+WignerSemicircle~function
+ContinuousRV~function
+JointRV~function
+marginal_distribution~function
+MultivariateNormal~function
+MultivariateLaplace~function
+GeneralizedMultivariateLogGamma~function
+GeneralizedMultivariateLogGammaOmega~function
+Multinomial~function
+MultivariateBeta~function
+MultivariateEwens~function
+MultivariateT~function
+NegativeMultinomial~function
+NormalGamma~function
+Stochastic Processes.absorbing_probabilities~method
+Stochastic Processes.canonical_form~method
+Stochastic Processes.communication_classes~method
+Stochastic Processes.decompose~method
+Stochastic Processes.fixed_row_vector~method
+Stochastic Processes.fundamental_matrix~method
+Stochastic Processes.limiting_distribution~property
+Stochastic Processes.sample~method
+Stochastic Processes.stationary_distribution~method
+Stochastic Processes.transition_probabilities~property
+Stochastic Processes.expectation~method
+Stochastic Processes.probability~method
+MatrixGamma~function
+Wishart~function
+MatrixNormal~function
+P~function
+E~function
+density~function
+entropy~function
+given~function
+where~function
+variance~function
+covariance~function
+coskewness~function
+median~function
+std~function
+quantile~function
+sample~function
+sample_iter~function
+factorial_moment~function
+kurtosis~function
+skewness~function
+correlation~function
+sampling_density~function
+sampling_P~function
+sampling_E~function
+moment~function
+cmoment~function
+random_symbols~function
+pspace~function
+rs_swap~function
