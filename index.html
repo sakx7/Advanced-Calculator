@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="\simplebar\dist\simplebar.css">
     <script src="simplebar/dist/simplebar.min.js"></script>
-    
+
     <script src="setting.js"></script> <!--mathjax settings-->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -15,97 +16,98 @@
     <script src="asciimathml/LaTeXMathML.js"></script>
     <script src="asciimathml/asciimath-based/ASCIIMathTeXImg.js"></script>
 
-    <body>
-        <div id="calc">
-            <div id="main">
-            
-                <div id="output">
-                    <div id="latexdisplay" data-simplebar>
-                        <div class="scrollable-content"></div>
-                    </div>
-                </div>
-                        
-                
-		<div id="export">
-		    <div id="main-inputs">
-			<input id="keyinputs" placeholder="parse" />
-			<div class="custom-dropdown">
-			    <input id="parameters" placeholder="parameter" />
-			    <div class="dropdown-options">
-				<!-- Options will be dynamically added here -->
-			    </div>
-			</div>
-		    </div>
-		    <button class="enter">enter</button>
-		</div>
-				
-                <div id="keys">
-                    <div id="set-keys3" data-simplebar>
-                        <button class="sin">`$$\sin$$`</button>            
-                        <button class="cos">`$$\cos$$`</button>            
-                        <button class="tan">`$$\tan$$`</button>
-                        <button class="sqrt">`$$\sqrt{}$$`</button>            
-                        <button class="root">`$$\sqrt[a]{x}$$`</button>            
-                        <button class="pi">`$$\pi$$`</button>            
-                        <button class="open-bracket">`$$($$`</button>
-                        <button class="close-bracket">`$$)$$`</button>
-                        <button class="equal">`$$=$$`</button>
-                        <button class="log">`$$\log$$`</button>
-                        <button class="ln">`$$\ln$$`</button>
-                        <button class="exp">`$$e^{x}$$`</button>
-                        <button class="limit">`$$\lim_{x \to \infty}$$`</button>
-                        <button class="sum">`$$\sum$$`</button>
-                        <button class="prod">`$$\prod$$`</button>
-                        <button class="int">`$$\int$$`</button>
-                        <button class="partial">`$$\frac{\partial}{\partial x}$$`</button>
-                        <button class="theta">`$$\theta$$`</button>
-                    </div>
-                    <div id="set-keys1">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button class="operator-btn">+</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button class="operator-btn">-</button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button class="operator-btn">*</button>
-                        <button>0</button>
-                        <button>.</button>
-                        <button class="operator-btn">/</button>
-                        <button class="operator-btn">^</button>
-                    </div>
-                    <div id="set-keys2">
-                        <button class="backspace">
-                            <img src="8685357_ic_fluent_backspace_filled_icon.svg">
-                        </button>
-                        <button class="back">
-                            <img src="4829870_arrow_back_left_icon.svg">
-                        </button>
-                        <button class="forward">
-                            <img src="4829869_arrow_next_right_icon.svg">
-                        </button>
-                        <button class="space">
-                            <img src="9104254_space_spacebar_spacing_text_alignment_icon.svg">
-                        </button>
-                        <button class="clear">CLR</button>         
-                    </div>
+<body>
+    <div id="calc">
+        <div id="main">
+
+            <div id="output">
+                <div id="latexdisplay" data-simplebar>
+                    <div class="scrollable-content"></div>
                 </div>
             </div>
 
-            <div id="ans">
-                <div id="ansoutput">
-                    <div id="ans1"></div> 
+
+            <div id="export">
+                <div id="main-inputs">
+                    <input id="keyinputs" placeholder="parse" />
+                    <div class="custom-dropdown">
+                        <input id="parameters" placeholder="parameter" />
+                        <div class="dropdown-options">
+                            <!-- Options will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+                <button class="enter">enter</button>
+            </div>
+
+            <div id="keys">
+                <div id="set-keys3" data-simplebar>
+                    <button class="sin">`$$\sin$$`</button>
+                    <button class="cos">`$$\cos$$`</button>
+                    <button class="tan">`$$\tan$$`</button>
+                    <button class="sqrt">`$$\sqrt{}$$`</button>
+                    <button class="root">`$$\sqrt[a]{x}$$`</button>
+                    <button class="pi">`$$\pi$$`</button>
+                    <button class="open-bracket">`$$($$`</button>
+                    <button class="close-bracket">`$$)$$`</button>
+                    <button class="equal">`$$=$$`</button>
+                    <button class="log">`$$\log$$`</button>
+                    <button class="ln">`$$\ln$$`</button>
+                    <button class="exp">`$$e^{x}$$`</button>
+                    <button class="limit">`$$\lim_{x \to \infty}$$`</button>
+                    <button class="sum">`$$\sum$$`</button>
+                    <button class="prod">`$$\prod$$`</button>
+                    <button class="int">`$$\int$$`</button>
+                    <button class="partial">`$$\frac{\partial}{\partial x}$$`</button>
+                    <button class="theta">`$$\theta$$`</button>
+                </div>
+                <div id="set-keys1">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="operator-btn">+</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button class="operator-btn">-</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="operator-btn">*</button>
+                    <button>0</button>
+                    <button>.</button>
+                    <button class="operator-btn">/</button>
+                    <button class="operator-btn">^</button>
+                </div>
+                <div id="set-keys2">
+                    <button class="backspace">
+                        <img src="vectors/8685357_ic_fluent_backspace_filled_icon.svg">
+                    </button>
+                    <button class="back">
+                        <img src="vectors/4829870_arrow_back_left_icon.svg">
+                    </button>
+                    <button class="forward">
+                        <img src="vectors/4829869_arrow_next_right_icon.svg">
+                    </button>
+                    <button class="space">
+                        <img src="vectors/9104254_space_spacebar_spacing_text_alignment_icon.svg">
+                    </button>
+                    <button class="clear">CLR</button>
                 </div>
             </div>
-    
         </div>
-        
-        <script type="module" src="mathinput.js"></script><!--sendtoAPI(execute)-->
-        <script type="module" src="simple.js"></script> <!--custom scrollbar-->
-        <script type="module" src="index.js"></script><!--main functions-->
-    </body>
+
+        <div id="ans">
+            <div id="ansoutput">
+                <div id="ans1"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="mathinput.js"></script><!--sendtoAPI(execute)-->
+    <script type="module" src="simple.js"></script> <!--custom scrollbar-->
+    <script type="module" src="index.js"></script><!--main functions-->
+</body>
+
 </html>

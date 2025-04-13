@@ -5,10 +5,7 @@ from tqdm import tqdm
 import time
 from urllib.parse import urljoin
 
-
-
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 def get_function_name(element):
     while element.find("span", recursive=False):
@@ -17,39 +14,30 @@ def get_function_name(element):
     return function_name if function_name else "Unnamed Function/Method"
 
 def clean_text(element):
-    """Removes unnecessary symbols (e.g., ¶) and extracts clean text."""
     for unwanted in element.find_all("span", {"aria-hidden": "true"}):
-        unwanted.extract()  # Remove ¶ or similar elements
+        unwanted.extract()
     return element.get_text(strip=True)
 
 def scrape_functions_from_page(url, file):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        
-        soup = BeautifulSoup(response.text, "html.parser")
-        
+        soup = BeautifulSoup(response.text, "html.parser")        
         main_content = soup.select_one(
             "html body div.page div.main div.content div.article-container article#furo-main-content > section"
         )
         if not main_content:
             logging.warning(f"No main content section found on the page: {url}")
             return
-        
         elements = main_content.find_all("dl", class_=["py function", "py method", "py property", "py class"])
-        
         current_section = None  # To track the current section
         current_class = None  # To track the current class name
-
         for idx, element in enumerate(elements, start=1):
             element_classes = element.get("class", [])
-            
-            # Extract the function or method name
             name_span = element.find("dt", class_="sig sig-object py").find("span", class_="sig-name descname")
             if not name_span:
                 logging.warning(f"Name span not found for element {idx}. Skipping this element.")
-                continue
-            
+                continue            
             name = name_span.get_text(strip=True)
             section = element.find_previous(["h1", "h2", "h3", "h4", "h5", "h6"])
             if section:
@@ -61,23 +49,19 @@ def scrape_functions_from_page(url, file):
             #if "class" in element_classes:
             #    current_class = name  # Update the current class name
             #    file.write(f"{name}~class\n")
-            # Check for methods or properties within a class
-           
+            # Check for methods or properties within a class           
             if "method" in element_classes or "property" in element_classes:
                 if current_class:
                     file.write(f"{current_class}.{name}~{element_classes[1]}\n")
                 else:
-                    # If no current class, use section as a fallback
                     file.write(f"{current_section}.{name}~{element_classes[1]}\n")
-            # Handle standalone functions
             elif "function" in element_classes:
                     file.write(f"{name}~function\n")  # Write without parentheses
-        
     except requests.exceptions.RequestException as e:
         logging.error(f"HTTP request error while fetching URL {url}: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
-
+    
 def process_toctree_item(item, base_url, file,visited_urls=None):
     if visited_urls is None:
         visited_urls = set() 
