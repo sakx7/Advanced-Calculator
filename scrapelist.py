@@ -4,8 +4,17 @@ import logging
 from tqdm import tqdm
 import time
 from urllib.parse import urljoin
+import sys
+import io
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def get_help_string(function_name):
+    buffer = io.StringIO()
+    sys.stdout = buffer
+    help(function_name)
+    sys.stdout = sys.__stdout__    
+    return buffer.getvalue()
 
 def get_function_name(element):
     while element.find("span", recursive=False):
@@ -14,8 +23,9 @@ def get_function_name(element):
     return function_name if function_name else "Unnamed Function/Method"
 
 def clean_text(element):
+    """Removes unnecessary symbols and extracts clean text."""
     for unwanted in element.find_all("span", {"aria-hidden": "true"}):
-        unwanted.extract()
+        unwanted.extract()  # Remove ¶ or similar elements
     return element.get_text(strip=True)
 
 def scrape_functions_from_page(url, file):
@@ -39,29 +49,35 @@ def scrape_functions_from_page(url, file):
                 logging.warning(f"Name span not found for element {idx}. Skipping this element.")
                 continue            
             name = name_span.get_text(strip=True)
+
+            fullname = (element.find("dt", class_="sig sig-object py").get('id'))            
+            print(fullname)
+            if fullname:
+                description_html = get_help_string(fullname)
+            else:
+                description_html = "No description available"  # If no description, add a default HTML block
+            
             section = element.find_previous(["h1", "h2", "h3", "h4", "h5", "h6"])
             if section:
                 section_text = next(section.stripped_strings)
                 if section_text != current_section:
                     current_section = section_text
                     current_class = None  # Reset class when the section changes
-            # Check if this is a class definition
-            #if "class" in element_classes:
-            #    current_class = name  # Update the current class name
-            #    file.write(f"{name}~class\n")
-            # Check for methods or properties within a class           
+
+            # Now include the description HTML in the output
             if "method" in element_classes or "property" in element_classes:
                 if current_class:
-                    file.write(f"{current_class}.{name}~{element_classes[1]}\n")
+                    file.write(f"{current_class}.{name}~{element_classes[1]} -\n\n {description_html}\n\n")
                 else:
-                    file.write(f"{current_section}.{name}~{element_classes[1]}\n")
+                    file.write(f"{current_section}.{name}~{element_classes[1]} -\n\n {description_html}\n\n")
             elif "function" in element_classes:
-                    file.write(f"{name}~function\n")  # Write without parentheses
+                file.write(f"{name}~function -\n\n {description_html}\n\n")  # Write without parentheses
+            file.write("----------------------------------------------------------------------------------\n\n")  # Write without parentheses
     except requests.exceptions.RequestException as e:
         logging.error(f"HTTP request error while fetching URL {url}: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
-    
+
 def process_toctree_item(item, base_url, file,visited_urls=None):
     if visited_urls is None:
         visited_urls = set() 
@@ -114,6 +130,6 @@ def scrape_sympy_functions():
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-    #with open('test.txt','w',encoding='utf-8') as file:
-    #    scrape_functions_from_page('https://docs.sympy.org/latest/modules/combinatorics/permutations.html#sympy.combinatorics.permutations.Permutation.cardinality',file)
-    scrape_sympy_functions()
+    with open('test.txt','w',encoding='utf-8') as file:
+        scrape_functions_from_page('https://docs.sympy.org/latest/modules/combinatorics/permutations.html#sympy.combinatorics.permutations.Permutation.cardinality',file)
+    #scrape_sympy_functions()

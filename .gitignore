@@ -1,6 +1,6 @@
-__pycache__
-asciimathml
-newenv
-node_modules
-simplbar
-vectors
+__pycache__/
+asciimathml/
+newenv/
+node_modules/
+simplebar/
+vectors/

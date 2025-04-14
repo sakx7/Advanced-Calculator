@@ -297,121 +297,101 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownOptions = document.querySelector('.dropdown-options');
     const parametersInput = document.getElementById('parameters');
     const txtFilePath = 'sympy_list.txt';
-
     let allOptions = []; // Store all options here
     let currentIndex = -1; // Track the currently highlighted option
-
     // Fetch options from the file
     fetch(txtFilePath)
         .then(response => response.text())
         .then(data => {
             allOptions = data.split('\n').map(line => {
-                const [text, type] = line.split('~'); // Split into text and type
+                const [text, type] = line.split('~');
                 const trimmedText = text.trim();
                 let methodName, className;
-
-                // Check for '.' in the text to separate method and class names
                 if (trimmedText.includes('.')) {
                     const parts = trimmedText.split('.');
-                    methodName = parts.pop().trim(); // Get the last part as method name
-                    className = parts.join('.').trim(); // Join remaining parts as class name
+                    methodName = parts.pop().trim();
+                    className = parts.join('.').trim();
                 } else {
-                    methodName = trimmedText; // Use whole text as method name
-                    className = null; // No class name available
+                    methodName = trimmedText;
+                    className = null;
                 }
-                return { text: methodName, className, type: type ? type.trim() : 'unknown' }; // Return method and class names
+                return { text: methodName, className, type: type ? type.trim() : 'unknown' };
             });
-            updateDropdownOptions(allOptions); // Initialize dropdown with all options
+            updateDropdownOptions(allOptions);
         })
         .catch(error => console.error('Error loading dropdown options:', error));
 
     function updateDropdownOptions(options) {
-        dropdownOptions.innerHTML = ''; // Clear existing options
+        dropdownOptions.innerHTML = '';
         options.forEach((option, index) => {
             const optionElement = document.createElement('div');
-
-            const textElement = document.createElement('span'); // Create a span for the method name
-            textElement.textContent = `${option.text}()`; // Append parentheses to method name
-            textElement.classList.add(`option-${option.type}`); // Add CSS class based on type
-
-            optionElement.appendChild(textElement); // Append the method name span to the div
-
-            if (option.className) { // Only add class name if it exists
-                const classNameElement = document.createElement('span'); // Create a span for the class name
-                classNameElement.textContent = option.className; // Display the class name
-                classNameElement.classList.add('class-name'); // Add a class for styling
-                optionElement.appendChild(classNameElement); // Append the class name element
+            const textElement = document.createElement('span');
+            textElement.textContent = `${option.text}()`;
+            textElement.classList.add(`option-${option.type}`);
+            optionElement.appendChild(textElement);
+            if (option.className) {
+                const classNameElement = document.createElement('span');
+                classNameElement.textContent = option.className;
+                classNameElement.classList.add('class-name');
+                optionElement.appendChild(classNameElement);
             }
-
-            optionElement.setAttribute('data-index', index); // Add index for keyboard navigation
-
-            // Click event for selecting an option
+            optionElement.setAttribute('data-index', index);
             optionElement.addEventListener('click', () => {
-                parametersInput.value = textElement.textContent; // Set input value to selected method with parentheses
-                dropdownOptions.style.display = 'none'; // Hide dropdown after selection
+                parametersInput.value = textElement.textContent;
+                dropdownOptions.style.display = 'none';
             });
-
-            dropdownOptions.appendChild(optionElement); // Add the option to the dropdown
+            dropdownOptions.appendChild(optionElement);
         });
-
-        // Reset scroll position to the top
         dropdownOptions.scrollTop = 0;
     }
 
-    // Event listener for typing in the input field
     parametersInput.addEventListener('input', () => {
         const inputValue = parametersInput.value.trim().toLowerCase();
-        currentIndex = -1; // Reset index on input change
+        currentIndex = -1;
         if (!inputValue) {
-            dropdownOptions.style.display = 'none'; // Hide dropdown if input is empty
-            return updateDropdownOptions(allOptions); // Show all options
+            dropdownOptions.style.display = 'none';
+            return updateDropdownOptions(allOptions);
         }
-        // Rank and filter options based on input
         const rankedOptions = allOptions
             .map(option => {
-                const remainingText = option.text.toLowerCase().replace(inputValue, ''); // Remove input value from method name
+                const remainingText = option.text.toLowerCase().replace(inputValue, '');
                 return {
                     ...option,
-                    remainingLength: remainingText.length, // Length of remaining text
+                    remainingLength: remainingText.length,
                 };
             })
-            .filter(option => option.remainingLength < option.text.length) // Only include options that match
-            .sort((a, b) => a.remainingLength - b.remainingLength); // Sort by remaining length (best match first)
-
-        updateDropdownOptions(rankedOptions); // Update the dropdown
-        dropdownOptions.style.display = rankedOptions.length ? 'block' : 'none'; // Show/hide dropdown
+            .filter(option => option.remainingLength < option.text.length)
+            .sort((a, b) => a.remainingLength - b.remainingLength);
+        updateDropdownOptions(rankedOptions);
+        dropdownOptions.style.display = rankedOptions.length ? 'block' : 'none';
     });
 
-    // Handle keyboard navigation
     parametersInput.addEventListener('keydown', (event) => {
-        const visibleOptions = dropdownOptions.querySelectorAll('div'); // Get visible options
-        if (!visibleOptions.length) return; // Exit if no options are visible
-
+        const visibleOptions = dropdownOptions.querySelectorAll('div');
+        if (!visibleOptions.length) return;
         if (event.key === 'ArrowDown') {
-            event.preventDefault(); // Prevent cursor from moving in input
-            currentIndex = (currentIndex + 1) % visibleOptions.length; // Move down
+            event.preventDefault();
+            currentIndex = (currentIndex + 1) % visibleOptions.length;
             highlightOption(visibleOptions, currentIndex);
         } else if (event.key === 'ArrowUp') {
-            event.preventDefault(); // Prevent cursor from moving in input
-            currentIndex = (currentIndex - 1 + visibleOptions.length) % visibleOptions.length; // Move up
+            event.preventDefault();
+            currentIndex = (currentIndex - 1 + visibleOptions.length) % visibleOptions.length;
             highlightOption(visibleOptions, currentIndex);
         } else if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent form submission or other actions
+            event.preventDefault();
             if (currentIndex >= 0 && visibleOptions[currentIndex]) {
-                visibleOptions[currentIndex].click(); // Select the highlighted option
+                visibleOptions[currentIndex].click();
             }
         }
     });
 
-    // Highlight selected option
     function highlightOption(options, index) {
-        options.forEach(option => option.classList.remove('active')); // Remove 'active' from all
-        const selectedOption = options[index]; // Get the current option
-        selectedOption.classList.add('active'); // Add 'active' class
-        selectedOption.scrollIntoView({ block: 'nearest' }); // Ensure it's visible
+        options.forEach(option => option.classList.remove('active'));
+        const selectedOption = options[index];
+        selectedOption.classList.add('active');
+        selectedOption.scrollIntoView({ block: 'nearest' });
     }
 
-    // Hide dropdown when clicking outside
     document.addEventListener('click', (event) => {
         if (!event.target.closest('.custom-dropdown')) {
             dropdownOptions.style.display = 'none';
