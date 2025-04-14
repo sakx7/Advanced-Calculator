@@ -7,16 +7,15 @@
     <title>Advanced Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="\simplebar\dist\simplebar.css">
+    <link rel="stylesheet" href="themes.css">
     <script src="simplebar/dist/simplebar.min.js"></script>
-
     <script src="setting.js"></script> <!--mathjax settings-->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
     <script src="asciimathml/ASCIIMathML.js"></script>
     <script src="asciimathml/LaTeXMathML.js"></script>
     <script src="asciimathml/asciimath-based/ASCIIMathTeXImg.js"></script>
 
-<body>
+<body class="theme-1">
     <div id="calc">
         <div id="main">
 
@@ -99,12 +98,12 @@
 
         <div id="ans">
             <div id="ansoutput">
-                <div id="ans1"></div>
+                <div id="ans1">
+                </div>
             </div>
         </div>
-
     </div>
-
+    <button onclick="switchTheme()">Switch Theme</button>
     <script type="module" src="mathinput.js"></script><!--sendtoAPI(execute)-->
     <script type="module" src="simple.js"></script> <!--custom scrollbar-->
     <script type="module" src="index.js"></script><!--main functions-->

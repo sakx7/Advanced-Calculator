@@ -293,29 +293,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         enter(keyinputs.value, paramater.value, rawLatexExpression);
     });
-
     const dropdownOptions = document.querySelector('.dropdown-options');
     const parametersInput = document.getElementById('parameters');
-    const txtFilePath = 'sympy_list.txt';
-    let allOptions = []; // Store all options here
-    let currentIndex = -1; // Track the currently highlighted option
-    // Fetch options from the file
-    fetch(txtFilePath)
-        .then(response => response.text())
+    const jsonFilePath = 'sympy_functions.json';
+    let allOptions = [];
+    let currentIndex = -1;
+
+    // Fetch and parse options from the JSON file
+    fetch(jsonFilePath)
+        .then(response => response.json())
         .then(data => {
-            allOptions = data.split('\n').map(line => {
-                const [text, type] = line.split('~');
-                const trimmedText = text.trim();
-                let methodName, className;
-                if (trimmedText.includes('.')) {
-                    const parts = trimmedText.split('.');
-                    methodName = parts.pop().trim();
-                    className = parts.join('.').trim();
-                } else {
-                    methodName = trimmedText;
-                    className = null;
-                }
-                return { text: methodName, className, type: type ? type.trim() : 'unknown' };
+            allOptions = data.map(entry => {
+                const methodName = entry.name.trim();
+                const className = entry.full_id.replace(`.${methodName}`, '').trim();
+                return {
+                    text: methodName,
+                    className,
+                    type: entry.type || 'unknown',
+                    section: entry.section,
+                    url: entry.url,
+                    description: entry.description?.trim() || ''
+                };
             });
             updateDropdownOptions(allOptions);
         })
@@ -329,17 +327,24 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.textContent = `${option.text}()`;
             textElement.classList.add(`option-${option.type}`);
             optionElement.appendChild(textElement);
+
             if (option.className) {
                 const classNameElement = document.createElement('span');
                 classNameElement.textContent = option.className;
                 classNameElement.classList.add('class-name');
                 optionElement.appendChild(classNameElement);
             }
+            // Store the full option data as a JSON string
+            optionElement.dataset.option = JSON.stringify(option);
+            if (option.description) {
+                optionElement.title = option.description;
+            }
             optionElement.setAttribute('data-index', index);
             optionElement.addEventListener('click', () => {
-                parametersInput.value = textElement.textContent;
+                parametersInput.value = option.text + '()';
                 dropdownOptions.style.display = 'none';
             });
+
             dropdownOptions.appendChild(optionElement);
         });
         dropdownOptions.scrollTop = 0;
@@ -350,7 +355,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = -1;
         if (!inputValue) {
             dropdownOptions.style.display = 'none';
-            return updateDropdownOptions(allOptions);
+            updateDropdownOptions(allOptions);
+            return;
         }
         const rankedOptions = allOptions
             .map(option => {
@@ -363,12 +369,20 @@ document.addEventListener("DOMContentLoaded", function () {
             .filter(option => option.remainingLength < option.text.length)
             .sort((a, b) => a.remainingLength - b.remainingLength);
         updateDropdownOptions(rankedOptions);
-        dropdownOptions.style.display = rankedOptions.length ? 'block' : 'none';
+        const visibleOptions = dropdownOptions.querySelectorAll('div');
+        if (visibleOptions.length > 0) {
+            currentIndex = 0;
+            highlightOption(visibleOptions, currentIndex);
+            dropdownOptions.style.display = 'block';
+        } else {
+            dropdownOptions.style.display = 'none';
+        }
     });
 
     parametersInput.addEventListener('keydown', (event) => {
         const visibleOptions = dropdownOptions.querySelectorAll('div');
         if (!visibleOptions.length) return;
+
         if (event.key === 'ArrowDown') {
             event.preventDefault();
             currentIndex = (currentIndex + 1) % visibleOptions.length;
@@ -386,10 +400,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function highlightOption(options, index) {
-        options.forEach(option => option.classList.remove('active'));
+        options.forEach((opt, i) => {
+            opt.classList.remove('highlighted', 'active');
+            if (i === index) opt.classList.add('highlighted', 'active');
+        });
         const selectedOption = options[index];
-        selectedOption.classList.add('active');
         selectedOption.scrollIntoView({ block: 'nearest' });
+        const visibleOptions = Array.from(dropdownOptions.querySelectorAll('div'));
+        const actualOption = visibleOptions[index]?.dataset.option;
+        if (actualOption) {
+            const optionData = JSON.parse(actualOption);
+            const ansDescription = document.getElementById('ans1');
+            ansDescription.textContent = optionData.description || '';
+        } else {
+            ansDescription.textContent = '';
+        }
     }
 
     document.addEventListener('click', (event) => {

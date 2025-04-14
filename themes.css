@@ -1,0 +1,137 @@
+.theme-1 {
+    /* Theme Variables */
+    --bg-primary: #1f0d0d;
+    --bg-secondary: #2e0b0b;
+    --bg-tertiary: #331515;
+    --bg-quaternary: #602020;
+    --bg-quinary: #6e2a2a;
+
+    --border-primary: #8a3a3a;
+    --border-active: #aa4a4a;
+    --border-accent: #ff5555;
+
+    --text-primary: #ffe0e0;
+    --text-secondary: #ffffff;
+    --text-accent: #ffb3a7;
+    --text-error: #ffd6d6;
+
+    --type-class: #f97316;
+    /* warm orange */
+    --type-function: #84cc16;
+    /* lime green */
+    --type-property: #facc15;
+    /* yellow */
+    --type-method: #ef4444;
+    /* soft red */
+    --type-unknown: grey;
+
+    --shadow-primary: 0 0 20px rgba(0, 0, 0, 0.4);
+    --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-active: inset 0 1px 5px rgba(0, 0, 0, 0.4);
+    --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    --text-shadow-heavy: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    --scrollbar-thumb: #8a3a3a;
+    --scrollbar-track: #602020;
+    --scrollbar-thumb-hover: #aa5c5c;
+
+    --button-primary: var(--bg-quinary);
+    --button-hover: #994444;
+    --button-operator: #994444;
+    --button-operator-hover: #b85d5d;
+    --button-special: #8c3a3a;
+    --button-special-hover: #b85d5d;
+
+    --blurred-text: rgba(255, 255, 255, 0.5);
+}
+
+.theme-2 {
+    /* Theme Variables */
+    --bg-primary: #0d0d1f;
+    --bg-secondary: #0b0b2e;
+    --bg-tertiary: #151533;
+    --bg-quaternary: #202060;
+    --bg-quinary: #2a2a6e;
+
+    --border-primary: #3a3a8a;
+    --border-active: #4a4aaa;
+    --border-accent: #5555ff;
+
+    --text-primary: #e0e0ff;
+    --text-secondary: #ffffff;
+    --text-accent: #d493ff;
+    --text-error: #c6c6ec;
+
+    --type-class: #3b82f6;
+    --type-function: #22c55e;
+    --type-property: #f59e0b;
+    --type-method: #ef4444;
+    --type-unknown: grey;
+
+    --shadow-primary: 0 0 20px rgba(0, 0, 0, 0.5);
+    --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-active: inset 0 1px 5px rgba(0, 0, 0, 0.5);
+    --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    --text-shadow-heavy: 1px 1px 2px rgba(0, 0, 0, 0.7);
+
+    --scrollbar-thumb: #3a3a8a;
+    --scrollbar-track: #202060;
+    --scrollbar-thumb-hover: #6060a0;
+
+    --button-primary: var(--bg-quinary);
+    --button-hover: #333399;
+    --button-operator: #333399;
+    --button-operator-hover: #4d4db8;
+    --button-special: #3a3a8c;
+    --button-special-hover: #4d4db8;
+
+    --blurred-text: rgba(255, 255, 255, 0.5);
+}
+
+.theme-3 {
+    /* Theme Variables */
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #2a2a2a;
+    --bg-quaternary: #333333;
+    --bg-quinary: #3f3f3f;
+
+    --border-primary: #444;
+    --border-active: #666;
+    --border-accent: #00ffff;
+    /* neon cyan */
+
+    --text-primary: #f0f0f0;
+    --text-secondary: #ffffff;
+    --text-accent: #00ffd0;
+    --text-error: #ffaaaa;
+
+    --type-class: #00bcd4;
+    /* cyan */
+    --type-function: #8bc34a;
+    /* light green */
+    --type-property: #ffc107;
+    /* amber */
+    --type-method: #e91e63;
+    /* pink */
+    --type-unknown: #888;
+
+    --shadow-primary: 0 0 10px rgba(0, 255, 255, 0.3);
+    --shadow-inset: inset 0 1px 2px rgba(255, 255, 255, 0.05);
+    --shadow-active: inset 0 1px 3px rgba(0, 255, 255, 0.2);
+    --text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --text-shadow-heavy: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    --scrollbar-thumb: #666;
+    --scrollbar-track: #2a2a2a;
+    --scrollbar-thumb-hover: #888;
+
+    --button-primary: var(--bg-quinary);
+    --button-hover: #555;
+    --button-operator: #009688;
+    --button-operator-hover: #00bfa5;
+    --button-special: #00bcd4;
+    --button-special-hover: #1de9b6;
+
+    --blurred-text: rgba(255, 255, 255, 0.3);
+}

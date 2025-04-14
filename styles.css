@@ -1,4 +1,5 @@
 @import 'simplebar/dist/simplebar.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -7,27 +8,27 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d0d1f;
+    background-color: var(--bg-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #e0e0ff;
+    color: var(--text-primary);
 }
 
-#calc{
+#calc {
     display: flex;
-    background-color: #0b0b2e;
+    background-color: var(--bg-secondary);
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
 #main {
-    background-color: #151533;
+    background-color: var(--bg-tertiary);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-primary);
     padding: 20px;
     min-width: 360px;
     max-width: 800px;
@@ -39,46 +40,70 @@ body {
     margin: 0 auto;
 }
 
-
 #ans {
-    background-color: #151533;
+    background-color: var(--bg-tertiary);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-primary);
     padding: 20px;
     min-width: 360px;
     max-width: 800px;
     width: 450px;
     text-align: center;
-    display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 0 auto;
 }
+
 #ansoutput {
-    display: flex;
-    height: 100%;
-    background-color: #0b0b2e;
+    background-color: var(--bg-secondary);
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
 }
+
 #ans1 {
-    background-color: #202060;
-    border: 1px solid #2a2a6e;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding: 10px;
-    width: 450px;
-    max-width: 100%;
+    height: 465px;
+    background-color: var(--bg-quaternary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    padding: 15px 20px;
+    box-shadow: var(--shadow-inset);
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+    text-align: left;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    text-shadow: var(--text-shadow);
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
+#ans1::-webkit-scrollbar {
+    width: 30px;
+}
 
+#ans1::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 30px;
+}
+
+#ans1::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 30px;
+}
+
+#ans1:hover {
+    border-color: var(--border-active);
+    box-shadow: var(--shadow-active);
+}
 
 #output {
     display: flex;
     min-height: 130px;
-    background-color: #0b0b2e;
+    background-color: var(--bg-secondary);
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -88,8 +113,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #202060;
-    border: 1px solid #2a2a6e;
+    background-color: var(--bg-quaternary);
+    border: 1px solid var(--border-primary);
     border-radius: 5px;
     max-height: 120px;
     max-width: 100%;
@@ -102,7 +127,7 @@ body {
     font-size: 0.8em;
     letter-spacing: 0.02em;
     line-height: 1.2em;
-    color: #d493ff;
+    color: var(--text-accent);
     position: relative;
 }
 
@@ -116,7 +141,7 @@ body {
     opacity: 0.8;
     filter: blur(4px);
     pointer-events: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--blurred-text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +150,7 @@ body {
 #latexdisplay .error {
     position: relative;
     z-index: 1;
-    color: #c6c6ec;
+    color: var(--text-error);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
@@ -136,7 +161,7 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     background: transparent;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    text-shadow: var(--text-shadow-heavy);
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
@@ -146,13 +171,12 @@ body {
     max-width: 100%;
     width: 100%;
     text-align: center;
-    color: #ffffff;
+    color: var(--text-secondary);
 }
 
 mjx-container[jax="CHTML"][display="true"] mjx-math {
     padding: 10px;
 }
-
 
 .scrollable-content {
     display: flex;
@@ -170,32 +194,37 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
     font-size: 1.5em;
     letter-spacing: 0.05em;
     line-height: 1.2em;
-    color: #d493ff;
+    color: var(--text-accent);
     position: relative;
 }
+
 .simplebar-scrollable-x {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     transition: opacity 0.5s ease, background-color 0.5s ease;
 }
+
 #latexdisplay .simplebar-scrollbar::before {
     height: 8px !important;
     min-height: 8px !important;
     max-height: 8px !important;
-    background-color: #d493ff !important;
+    background-color: var(--text-accent) !important;
     border-radius: 5px !important;
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 #latexdisplay .simplebar-scrollbar.simplebar-visible::before {
     opacity: 0.5;
 }
+
 .simplebar-content-wrapper {
     display: flex;
     align-items: center;
     min-height: 100%;
 }
+
 #latexdisplay .simplebar-content {
     display: flex;
     justify-content: center;
@@ -206,22 +235,17 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
     margin: 0;
 }
 
-
-
-
-
 #export {
     display: flex;
-    background-color: #0b0b2e;
+    background-color: var(--bg-secondary);
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
-
 #main-inputs {
     display: flex;
-    background-color: #202060;
+    background-color: var(--bg-quaternary);
     flex-direction: column;
     width: 100%;
     gap: 5px;
@@ -231,46 +255,41 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
 
 #keyinputs {
     width: 100%;
-    background-color: #2a2a6e;
+    background-color: var(--bg-quinary);
     border: none;
     padding: 8px;
     border-radius: 5px;
     font-size: 1rem;
-    color: #ffffff;
-    caret-color: white;
-}
-#keyinputs::selection {
-    background-color: #5555ff;
-    color: #ffffff;
-}
-#parameters{
-    width: 100%;
-    height:30px;
-    background-color: #2a2a6e;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #ffffff;
+    color: var(--text-secondary);
     caret-color: white;
 }
 
-.enter{
+#keyinputs::selection {
+    background-color: var(--border-accent);
+    color: var(--text-secondary);
+}
+
+#parameters {
+    width: 100%;
+    height: 30px;
+    background-color: var(--bg-quinary);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    caret-color: white;
+}
+
+.enter {
     width: 20%;
 }
 
-
-
-
-
-
-/* Style the custom dropdown container */
 .custom-dropdown {
     position: relative;
     width: 100%;
 }
 
-/* Style the dropdown options container */
 .dropdown-options {
     position: absolute;
     top: 100%;
@@ -278,95 +297,81 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
     width: 100%;
     max-height: 200px;
     overflow-y: auto;
-    background-color: #2a2a6e;
-    border: 2px solid #5555ff;
+    background-color: var(--bg-quinary);
+    border: 2px solid var(--border-accent);
     border-radius: 5px;
     margin-top: 5px;
-    display: none; /* Hidden by default */
+    display: none;
     z-index: 1000;
 }
 
-/* Style individual options */
 .dropdown-options div {
     margin: 5px 0;
-    color: #ffffff;
+    color: var(--text-secondary);
     cursor: pointer;
     border-radius: 5px;
     text-align: left;
-    white-space: pre-wrap; /* Allow wrapping for long text */
+    white-space: pre-wrap;
     position: relative;
     padding: 10px;
     cursor: pointer;
 }
 
-/* Specific styles for types */
 .option-class {
-    background-color: #3b82f6; /* Box color */
+    background-color: var(--type-class);
 }
 
 .option-function {
-    background-color: #22c55e; /* Box color */
+    background-color: var(--type-function);
 }
 
 .option-property {
-    background-color: #f59e0b; /* Box color */
+    background-color: var(--type-property);
 }
 
 .option-method {
-    background-color: #ef4444; /* Box color */
+    background-color: var(--type-method);
 }
 
-/* Style for spans within options */
 .dropdown-options span {
-    display: inline-block; /* Make it a block element */
-    padding: 4px 8px; /* Add padding inside the box */
-    border-radius: 3px; /* Round corners */
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
 }
 
-/* Hover effect */
 .dropdown-options div:hover {
-    opacity: 0.9; /* Slightly transparent on hover */
+    opacity: 0.9;
 }
 
-/* Active state for keyboard navigation */
 .dropdown-options div.active {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background to indicate active state */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Unknown option styling */
 .option-unknown {
-    color: grey;
+    color: var(--type-unknown);
 }
 
-/* Class name styling */
 .class-name {
     position: absolute;
     bottom: 2px;
     right: 5px;
     font-size: 12px;
-    color: white; /* Small and white */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional, adds contrast */
+    color: var(--text-secondary);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2px;
 }
-
-
-
-
-
-
-
-
-
 
 #keys {
     display: flex;
     gap: 10px;
-    background-color: #0b0b2e;
+    background-color: var(--bg-secondary);
     padding: 10px;
     border-radius: 10px;
 }
 
-#set-keys1, #set-keys2, #set-keys3 {
+#set-keys1,
+#set-keys2,
+#set-keys3 {
     display: grid;
     gap: 7px;
     padding: 7px;
@@ -376,18 +381,18 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
 
 #set-keys1 {
     grid-template-columns: repeat(4, 65px);
-    background-color: #202060;
+    background-color: var(--bg-quaternary);
 }
 
 #set-keys2 {
     grid-template-columns: repeat(2, 1fr);
-    background-color: #202060;
+    background-color: var(--bg-quaternary);
 }
 
 #set-keys3 {
     max-height: 208px;
     min-width: 250px;
-    background-color: #202060;
+    background-color: var(--bg-quaternary);
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
@@ -422,19 +427,19 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
     text-align: center;
 }
 
-.simplebar-content::before{
-    opacity: 0;
-    content: none !important; 
-}
+.simplebar-content::before,
 .simplebar-content::after {
+    opacity: 0;
     content: none !important;
 }
+
 #set-keys3 .simplebar-scrollbar::before {
-    background-color: #505080;
+    background-color: var(--scrollbar-thumb);
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
+
 #set-keys3 .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1;
 }
@@ -445,12 +450,12 @@ mjx-container[jax="CHTML"][display="true"] mjx-math {
 }
 
 #set-keys3 .simplebar-track:hover .simplebar-scrollbar::before {
-    background-color: #6060a0;
+    background-color: var(--scrollbar-thumb-hover);
 }
 
 button {
-    background-color: #2a2a6e;
-    color: #e0e0ff;
+    background-color: var(--button-primary);
+    color: var(--text-primary);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -461,15 +466,33 @@ button {
 }
 
 button:hover {
-    background-color: #333399;
+    background-color: var(--button-hover);
 }
 
 .operator-btn {
-    background-color: #333399;
+    background-color: var(--button-operator);
 }
 
 .operator-btn:hover {
-    background-color: #4d4db8;
+    background-color: var(--button-operator-hover);
+}
+
+.backspace,
+.space,
+.clear,
+.back,
+.forward,
+.enter {
+    background-color: var(--button-special);
+}
+
+.backspace:hover,
+.space:hover,
+.clear:hover,
+.back:hover,
+.forward:hover,
+.enter:hover {
+    background-color: var(--button-special-hover);
 }
 
 .backspace {
@@ -484,22 +507,13 @@ button:hover {
     grid-column: span 2;
 }
 
-
-.back, .forward, .backspace, .enter, .space, .clear, .enter  {
-    background-color: #3a3a8c;
-}
-
-.equals:hover, .back:hover, .forward:hover, .backspace:hover, .space:hover, .clear:hover .enter:hover{
-    background-color: #4d4db8;
-}
-
-.backspace, .space {
+.backspace,
+.space {
     max-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3a3a8c;
-    color: #e0e0ff;
+    color: var(--text-primary);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -508,29 +522,25 @@ button:hover {
     transition: background-color 0.3s;
 }
 
-.backspace:hover, .space:hover {
-    background-color: #4d4db8;
-}
-
-.backspace img {
+.backspace img,
+.space img {
     fill: white;
     width: 30px;
     height: 35px;
 }
 
 .space img {
-    fill: white;
     width: 100px;
     height: 40px;
 }
 
-.back, .forward {
+.back,
+.forward {
     max-width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3a3a8c;
-    color: #e0e0ff;
+    color: var(--text-primary);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -539,19 +549,16 @@ button:hover {
     transition: background-color 0.3s;
 }
 
-.back:hover, .forward:hover {
-    background-color: #4d4db8;
-}
-
-.back img, .forward img {
-    fill: white;
+.back img,
+.forward img {
     width: 30px;
     height: 35px;
 }
 
 #hiddenLatexDisplay {
-    display: none; /* Hide the mimicking container */
+    display: none;
 }
+
 .marker {
     color: red;
     font-weight: bold;

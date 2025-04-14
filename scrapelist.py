@@ -6,29 +6,44 @@ import time
 from urllib.parse import urljoin
 import sys
 import io
+import json
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_help_string(function_name):
-    buffer = io.StringIO()
-    sys.stdout = buffer
-    help(function_name)
-    sys.stdout = sys.__stdout__    
-    return buffer.getvalue()
+import importlib
+
+def get_deep_attr(obj, path):
+    for part in path:
+        obj = getattr(obj, part)
+    return obj
+
+def get_docstring_from_qualified_name(qualified_name: str):
+    try:
+        parts = qualified_name.split(".")
+        for i in range(len(parts), 0, -1):
+            try:
+                module = importlib.import_module(".".join(parts[:i]))
+                obj = get_deep_attr(module, parts[i:])
+                return obj.__doc__ or "No description available"
+            except (ModuleNotFoundError, AttributeError):
+                continue
+        return "Doc not available."
+    except Exception as e:
+        return f"Doc not available: {e}"
+
+
 
 def get_function_name(element):
     while element.find("span", recursive=False):
         element = element.find("span", recursive=False)
-    function_name = element.get_text(strip=True)
-    return function_name if function_name else "Unnamed Function/Method"
+    return element.get_text(strip=True) or "Unnamed Function/Method"
 
 def clean_text(element):
-    """Removes unnecessary symbols and extracts clean text."""
     for unwanted in element.find_all("span", {"aria-hidden": "true"}):
-        unwanted.extract()  # Remove ¶ or similar elements
+        unwanted.extract()
     return element.get_text(strip=True)
 
-def scrape_functions_from_page(url, file):
+def scrape_functions_from_page(url, functions_data):
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -39,65 +54,89 @@ def scrape_functions_from_page(url, file):
         if not main_content:
             logging.warning(f"No main content section found on the page: {url}")
             return
+
         elements = main_content.find_all("dl", class_=["py function", "py method", "py property", "py class"])
-        current_section = None  # To track the current section
-        current_class = None  # To track the current class name
+        current_section = None
+        current_class = None
+
         for idx, element in enumerate(elements, start=1):
             element_classes = element.get("class", [])
             name_span = element.find("dt", class_="sig sig-object py").find("span", class_="sig-name descname")
             if not name_span:
                 logging.warning(f"Name span not found for element {idx}. Skipping this element.")
-                continue            
-            name = name_span.get_text(strip=True)
+                continue
 
-            fullname = (element.find("dt", class_="sig sig-object py").get('id'))            
-            print(fullname)
-            if fullname:
-                description_html = get_help_string(fullname)
-            else:
-                description_html = "No description available"  # If no description, add a default HTML block
-            
+            name = name_span.get_text(strip=True)
             section = element.find_previous(["h1", "h2", "h3", "h4", "h5", "h6"])
+
+            sig_obj = element.find("dt", class_="sig sig-object py")
+            if sig_obj and sig_obj.get('id'):
+                fullname = sig_obj.get('id')
+            else:
+                desc_classname = element.find(class_="sig-prename descclassname")
+                desc_name = element.find(class_="sig-name descname")
+                classname_text = desc_classname.get_text(strip=True) if desc_classname else ""
+                name_text = desc_name.get_text(strip=True) if desc_name else ""
+                fullname = classname_text + name_text
+
             if section:
                 section_text = next(section.stripped_strings)
                 if section_text != current_section:
                     current_section = section_text
-                    current_class = None  # Reset class when the section changes
+                    current_class = None  # reset on new section
 
-            # Now include the description HTML in the output
-            if "method" in element_classes or "property" in element_classes:
-                if current_class:
-                    file.write(f"{current_class}.{name}~{element_classes[1]} -\n\n {description_html}\n\n")
-                else:
-                    file.write(f"{current_section}.{name}~{element_classes[1]} -\n\n {description_html}\n\n")
-            elif "function" in element_classes:
-                file.write(f"{name}~function -\n\n {description_html}\n\n")  # Write without parentheses
-            file.write("----------------------------------------------------------------------------------\n\n")  # Write without parentheses
+                entry_type = None
+                if "function" in element_classes:
+                    entry_type = "function"
+                elif "method" in element_classes:
+                    entry_type = "method"
+                elif "property" in element_classes:
+                    entry_type = "property"
+
+                # Update current_class if it's a class definition
+                if "class" in element_classes:
+                    current_class = fullname
+
+                if entry_type is not None:
+                    if entry_type in ["method", "property"]:
+                        qualified_name = f"{current_class}.{name}" if current_class else f"{current_section}.{name}"
+                        description = get_docstring_from_qualified_name(qualified_name)
+                    else:  # function
+                        qualified_name = fullname
+                        description = get_docstring_from_qualified_name(qualified_name)
+
+                    entry = {
+                        "name": name,
+                        "full_id": qualified_name,
+                        "type": entry_type,
+                        "description": description,
+                        "section": current_section,
+                        "url": url,
+                        }
+                    functions_data.append(entry)
+
+
     except requests.exceptions.RequestException as e:
         logging.error(f"HTTP request error while fetching URL {url}: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
 
-def process_toctree_item(item, base_url, file,visited_urls=None):
+def process_toctree_item(item, base_url, functions_data, visited_urls=None):
     if visited_urls is None:
-        visited_urls = set() 
+        visited_urls = set()
     link = item.find("a")
     if link:
         item_name = link.get_text(strip=True)
         item_url = link.get("href")
-        if item_url.startswith("http"):
-            full_url = item_url
-        else:
-            full_url = urljoin(base_url, item_url)
+        full_url = item_url if item_url.startswith("http") else urljoin(base_url, item_url)
         if full_url in visited_urls:
             return
         visited_urls.add(full_url)
-        #logging.info(f"{' ' * indent_level}- Fetching page: {item_name}")
-        scrape_functions_from_page(full_url, file)
+        scrape_functions_from_page(full_url, functions_data)
         if "has-children" in item.get("class", []):
             children = item.find_all(class_=lambda x: x and x.startswith("toctree-l"))
             for child in children:
-                process_toctree_item(child, base_url, file,visited_urls)
+                process_toctree_item(child, base_url, functions_data, visited_urls)
 
 def scrape_sympy_functions():
     base_url = "https://docs.sympy.org/latest/reference/index.html"
@@ -105,17 +144,21 @@ def scrape_sympy_functions():
         response = requests.get(base_url)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
-        with open("sympy_docs_index.html", "w", encoding="utf-8") as file:
-            file.write(soup.prettify())
+
         api_reference_section = soup.find("a", string="API Reference")
         if api_reference_section:
             api_reference_list = api_reference_section.find_next("ul")
             if api_reference_list:
                 modules = api_reference_list.find_all("li", class_="toctree-l2")
-                with open("sympy_list.txt", "w", encoding="utf-8") as file:
-                    for section in tqdm(modules, desc="Modules", unit="module"):
-                        process_toctree_item(section, base_url, file)
-                logging.info("Scraping complete!")
+                functions_data = []
+                for section in tqdm(modules, desc="Modules", unit="module"):
+                    process_toctree_item(section, base_url, functions_data)
+
+                # Save JSON
+                with open("sympy_functions.json", "w", encoding="utf-8") as json_file:
+                    json.dump(functions_data, json_file, ensure_ascii=False, indent=2)
+
+                logging.info("Scraping complete and saved to sympy_functions.json!")
                 return True
             else:
                 logging.error("API Reference list not found.")
@@ -127,9 +170,14 @@ def scrape_sympy_functions():
         logging.error(f"Error fetching documentation index: {e}")
         return False
 
-
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    with open('test.txt','w',encoding='utf-8') as file:
-        scrape_functions_from_page('https://docs.sympy.org/latest/modules/combinatorics/permutations.html#sympy.combinatorics.permutations.Permutation.cardinality',file)
-    #scrape_sympy_functions()
+    #functions_data = []
+    #scrape_functions_from_page(
+    #    'https://docs.sympy.org/latest/modules/assumptions/index.html',
+    #    functions_data
+    #)
+    #with open("test_single_page.json", "w", encoding="utf-8") as json_file:
+    #    json.dump(functions_data, json_file, ensure_ascii=False, indent=2)
+
+    #scrape all:
+    scrape_sympy_functions()
